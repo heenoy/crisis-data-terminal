@@ -1,0 +1,22 @@
+{
+  "name": "crisis-data-terminal",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean:emdat": "node scripts/clean-emdat.js"
+  },
+  "devDependencies": {
+    "csv-parse": "^5.6.0",
+    "csv-stringify": "^6.5.2",
+    "vite": "^8.1.1",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.110.0",
+    "echarts": "^6.1.0"
+  }
+}

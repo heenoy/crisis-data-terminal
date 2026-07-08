@@ -1,0 +1,303 @@
+body.game-page .terminal-stage {
+  display: none;
+}
+
+body.game-page #radar-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.game-page #app {
+  position: relative;
+  z-index: 2;
+}
+
+body.game-page.game-glitch-active {
+  animation: none !important;
+}
+
+body.game-page .game-scene-block {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  max-width: 680px;
+  width: calc(100% - 220px);
+  line-height: 2;
+  text-align: left;
+  z-index: 2;
+  border: 1px dashed rgba(0, 255, 65, 0.3);
+  box-shadow:
+    0 0 12px rgba(0, 255, 65, 0.15),
+    inset 0 0 12px rgba(0, 255, 65, 0.05);
+  padding: 20px 20px 16px;
+  animation: glitch-border 8s infinite;
+  animation-delay: var(--glitch-border-delay);
+}
+
+body.game-page .game-line-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+body.game-page .game-line-layer.game-line-current {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.game-page .game-line-layer.game-line-exiting {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+body.game-page .terminal-line.scene-line {
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 2;
+}
+
+body.game-page .terminal-line.scene-line.has-prompt::before {
+  font-family: var(--font);
+  font-size: 17px;
+}
+
+body.game-page .terminal-line.round-header {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  line-height: 2.2;
+}
+
+body.game-page .terminal-line.round-header.has-prompt::before {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+}
+
+body.game-page .terminal-line.scanning,
+body.game-page .choice-btn.scanning {
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.8);
+  transition: text-shadow 0.1s;
+}
+
+body.game-page .glitch-locked {
+  animation: glitch-flash 150ms ease forwards;
+}
+
+@keyframes glitch-flash {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body.game-page .corner-log-glitch {
+  color: rgba(255, 50, 50, 0.7) !important;
+}
+
+body.game-page #ai-face,
+body.result-page #ai-face,
+#ai-face {
+  display: block;
+  position: absolute;
+  right: 16px;
+  top: 40px;
+  width: 200px;
+  height: 220px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: #000;
+  z-index: 3;
+  pointer-events: none;
+  overflow: visible;
+}
+
+#ai-svg {
+  display: block;
+  width: 200px;
+  height: 220px;
+}
+
+body.game-page #ai-face.face-attention,
+body.result-page #ai-face.face-attention {
+  filter: drop-shadow(0 0 16px rgba(142, 234, 155, 0.42));
+  transform: scale(1.05);
+  transition:
+    filter 0.15s ease,
+    transform 0.15s ease;
+}
+
+body.game-page #ai-face.face-error-alert,
+body.result-page #ai-face.face-error-alert {
+  animation: face-alert 0.8s ease infinite;
+}
+
+body.game-page #ai-face.face-error-alert #jaw,
+body.game-page #ai-face.face-error-alert #head-group path[fill="none"],
+body.game-page #ai-face.face-error-alert #head-group line,
+body.game-page #ai-face.face-error-alert #head-group circle:not(#eye-left):not(#eye-right),
+body.result-page #ai-face.face-error-alert #jaw,
+body.result-page #ai-face.face-error-alert #head-group path[fill="none"],
+body.result-page #ai-face.face-error-alert #head-group line,
+body.result-page #ai-face.face-error-alert #head-group circle:not(#eye-left):not(#eye-right) {
+  stroke: rgba(255, 50, 50, 0.8);
+}
+
+body.game-page #ai-face[hidden],
+body.result-page #ai-face[hidden],
+#ai-face[hidden] {
+  display: none;
+}
+
+body.game-page #ai-face.face-to-anomaly,
+body.result-page #ai-face.face-to-anomaly {
+  transition:
+    color 2s ease,
+    border-color 2s ease,
+    box-shadow 2s ease;
+}
+
+body.game-page #ai-face.face-glitch {
+  animation: face-glitch 0.3s ease 1;
+}
+
+body.game-page #ai-face.face-tear-shake,
+body.result-page #ai-face.face-tear-shake {
+  animation: face-tear-shake 0.3s ease;
+}
+
+body.game-page .corner-log-line--anomaly-warning {
+  color: rgba(255, 180, 0, 0.7) !important;
+}
+
+body.game-page .corner-log-line--critical,
+body.result-page .corner-log-line--critical {
+  color: rgba(255, 50, 50, 0.75) !important;
+}
+
+@keyframes face-alert {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes face-tear-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes face-glitch {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+}
+
+body.game-page .ai-comment-divider {
+  margin-top: 24px;
+  font-family: var(--font);
+  font-size: 14px;
+  color: rgba(0, 255, 65, 0.5);
+  line-height: 2;
+}
+
+body.game-page .ai-comment-line {
+  font-family: var(--font);
+  font-size: 14px;
+  color: rgba(0, 255, 65, 0.5);
+  line-height: 2;
+  white-space: pre-wrap;
+}
+
+body.game-page .ai-comment-line--log {
+  color: rgba(0, 255, 65, 0.5);
+}
+
+body.game-page .ai-comment-line--anomaly {
+  color: rgba(255, 180, 0, 0.6);
+}
+
+body.game-page .ai-comment-line--corrupted {
+  color: rgba(255, 50, 50, 0.7);
+}
+
+body.game-page .ai-comment-line--error {
+  color: rgba(255, 68, 68, 0.85);
+}
+
+body.game-page .choice-row--selected .choice-btn {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+body.game-page .anomaly-text-jolt {
+  transition: transform 0.05s;
+}
+
+body.game-page.anomaly-white-flash {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.game-page.anomaly-scan-dense::after {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 1px,
+    rgba(0, 0, 0, 0.08) 1px,
+    rgba(0, 0, 0, 0.08) 2px
+  );
+}
+
+body.game-page .corner-log-line--anomaly-dup {
+  color: rgba(255, 100, 100, 0.4) !important;
+}
+
+body.game-page #screen.anomaly-rgb-1,
+body.result-page #screen.anomaly-rgb-1 {
+  filter: drop-shadow(2px 0 0 rgba(255, 0, 0, 0.5));
+}
+
+body.game-page #screen.anomaly-rgb-2,
+body.result-page #screen.anomaly-rgb-2 {
+  filter: drop-shadow(-2px 0 0 rgba(0, 255, 255, 0.5));
+}
+
+body.game-page.anomaly-frozen *,
+body.game-page.anomaly-frozen *::before,
+body.game-page.anomaly-frozen *::after,
+body.result-page.anomaly-frozen *,
+body.result-page.anomaly-frozen *::before,
+body.result-page.anomaly-frozen *::after {
+  animation-play-state: paused !important;
+}

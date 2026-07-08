@@ -1,0 +1,814 @@
+:root {
+  --vault-bg-black: #010201;
+  --vault-metal: #101711;
+  --vault-metal-hi: #1b241c;
+  --vault-metal-lo: #050806;
+  --vault-green: #82e99a;
+  --vault-green-soft: #60c977;
+  --vault-green-dim: #244f32;
+  --vault-green-faint: rgba(130, 233, 154, 0.11);
+  --vault-amber: #caa85f;
+  --vault-red: #9a4b45;
+  --vault-text: #b8f5c2;
+  --vault-muted: rgba(184, 245, 194, 0.48);
+  --vault-line: rgba(130, 233, 154, 0.2);
+  --vault-panel: rgba(1, 14, 6, 0.58);
+}
+
+html,
+body {
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(15, 26, 16, 0.55), transparent 54%),
+    linear-gradient(180deg, #020403 0%, #000 100%) !important;
+  color: var(--vault-text);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(74, 95, 68, 0.1), transparent 22%),
+    radial-gradient(circle at 78% 82%, rgba(34, 62, 39, 0.12), transparent 24%);
+}
+
+body::after {
+  opacity: 0.72;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(90, 255, 140, 0.34) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: rgba(90, 255, 140, 0.24);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(90, 255, 140, 0.44);
+}
+
+.vault-terminal-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding: clamp(14px, 2.3vw, 34px);
+  pointer-events: none;
+}
+
+.vault-tv-shell {
+  position: relative;
+  width: min(94vw, 1540px);
+  height: min(92vh, 980px);
+  padding: clamp(18px, 2.1vw, 34px) clamp(20px, 2.5vw, 42px) clamp(42px, 5.3vh, 70px);
+  border: 1px solid rgba(188, 209, 178, 0.08);
+  border-radius: 26px 26px 34px 34px / 22px 22px 44px 44px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 18%, transparent 80%, rgba(0, 0, 0, 0.34)),
+    radial-gradient(ellipse at 50% 0%, rgba(61, 76, 58, 0.24), transparent 42%),
+    linear-gradient(180deg, var(--vault-metal-hi), var(--vault-metal) 45%, var(--vault-metal-lo));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -18px 42px rgba(0, 0, 0, 0.58),
+    0 24px 70px rgba(0, 0, 0, 0.76),
+    0 0 0 2px rgba(0, 0, 0, 0.34);
+  pointer-events: auto;
+}
+
+.vault-tv-shell::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  pointer-events: none;
+  border: 1px solid rgba(130, 233, 154, 0.045);
+  border-radius: inherit;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 9px),
+    radial-gradient(circle at 14% 20%, rgba(255, 255, 255, 0.035), transparent 16%);
+  opacity: 0.62;
+  mix-blend-mode: screen;
+}
+
+.vault-tv-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: clamp(12px, 1.1vw, 18px);
+  border-radius: 18px 18px 24px 24px / 16px 16px 28px 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.26)),
+    #050806;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 0 34px rgba(0, 0, 0, 0.82);
+}
+
+.vault-tv-bezel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: clamp(8px, 0.8vw, 13px);
+  border-radius: 13px;
+  background:
+    radial-gradient(ellipse at 50% 50%, transparent 60%, rgba(0, 0, 0, 0.54)),
+    #020402;
+  box-shadow:
+    inset 0 0 0 1px rgba(130, 233, 154, 0.08),
+    inset 0 0 28px rgba(0, 0, 0, 0.9);
+}
+
+.vault-tv-screw {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.18), transparent 20%),
+    radial-gradient(circle at center, #0d130e 0 32%, #030503 33% 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(130, 233, 154, 0.12),
+    0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.vault-tv-screw::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 7px;
+  height: 1px;
+  background: rgba(130, 233, 154, 0.18);
+  transform: rotate(-18deg);
+}
+
+.vault-tv-screw--tl { left: 13px; top: 13px; }
+.vault-tv-screw--tr { right: 13px; top: 13px; }
+.vault-tv-screw--bl { left: 13px; bottom: 18px; }
+.vault-tv-screw--br { right: 13px; bottom: 18px; }
+
+.vault-tv-hardware {
+  position: absolute;
+  left: clamp(42px, 4vw, 72px);
+  right: clamp(42px, 4vw, 72px);
+  bottom: clamp(11px, 1.8vh, 21px);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  color: rgba(184, 245, 194, 0.34);
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  letter-spacing: 0.08em;
+}
+
+.vault-tv-status-light {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #6ee887;
+  box-shadow:
+    0 0 8px rgba(110, 232, 135, 0.65),
+    0 0 18px rgba(110, 232, 135, 0.18);
+}
+
+.vault-tv-hardware-label {
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0.58;
+}
+
+.vault-tv-hardware-slots {
+  width: clamp(70px, 8vw, 120px);
+  height: 14px;
+  background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0 4px, rgba(130, 233, 154, 0.08) 4px 5px, transparent 5px 9px);
+  border: 1px solid rgba(130, 233, 154, 0.07);
+}
+
+#screen {
+  position: relative !important;
+  inset: auto !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  border-radius: 12px !important;
+  background-color: #021008 !important;
+  background-image:
+    radial-gradient(ellipse at 50% 45%, rgba(49, 127, 61, 0.34), rgba(6, 35, 15, 0.82) 46%, rgba(0, 7, 3, 0.98) 100%) !important;
+  box-shadow:
+    inset 0 0 46px rgba(0, 0, 0, 0.78),
+    inset 0 0 118px rgba(0, 0, 0, 0.58),
+    inset 0 0 72px rgba(82, 190, 101, 0.09),
+    0 0 22px rgba(92, 255, 137, 0.06) !important;
+}
+
+#screen::before {
+  opacity: 0.78 !important;
+  background:
+    radial-gradient(ellipse at center, transparent 47%, rgba(0, 0, 0, 0.72) 100%),
+    repeating-linear-gradient(to bottom, rgba(184, 245, 194, 0.034) 0px, rgba(184, 245, 194, 0.034) 1px, transparent 1px, transparent 4px) !important;
+}
+
+#screen::after {
+  opacity: 0.36 !important;
+  background:
+    radial-gradient(ellipse at 50% 34%, rgba(130, 233, 154, 0.035), transparent 60%),
+    linear-gradient(108deg, rgba(255, 255, 255, 0.02), transparent 30%, transparent 80%, rgba(0, 0, 0, 0.22)) !important;
+}
+
+.screen-corner {
+  box-shadow: none !important;
+  opacity: 0.54;
+}
+
+.screen-bar {
+  color: rgba(130, 233, 154, 0.64) !important;
+  text-shadow: 0 0 8px rgba(130, 233, 154, 0.18);
+}
+
+.screen-bar--top,
+.screen-bar--bottom {
+  background: rgba(0, 8, 3, 0.18);
+  border-color: rgba(130, 233, 154, 0.14) !important;
+}
+
+#screen-content {
+  filter: saturate(0.92) contrast(0.98);
+}
+
+.vault-title,
+.vault-subtitle,
+.vault-panel,
+.vault-menu,
+.vault-menu-item,
+.vault-button,
+.vault-input,
+.vault-warning,
+.vault-status-line,
+.vault-ai-face {
+  font-family: var(--font);
+}
+
+button,
+.vault-button,
+.survivor-auth-actions button,
+.survivor-access-actions button,
+.admission-complete-actions button,
+.archive-hub-menu button,
+.archive-lookup button,
+.shelter-console-menu button,
+.choice-btn,
+.wake-init-btn {
+  border-radius: 0 !important;
+  border: 1px solid rgba(130, 233, 154, 0.24) !important;
+  background:
+    linear-gradient(90deg, rgba(34, 91, 45, 0.18), rgba(1, 12, 5, 0.36)) !important;
+  color: rgba(184, 245, 194, 0.82) !important;
+  box-shadow:
+    inset 0 0 14px rgba(0, 0, 0, 0.34),
+    0 0 0 rgba(130, 233, 154, 0) !important;
+  text-shadow: 0 0 7px rgba(130, 233, 154, 0.12);
+}
+
+button:hover,
+button:focus-visible,
+.vault-button:hover,
+.vault-button:focus-visible,
+.survivor-auth-actions button:hover,
+.survivor-auth-actions button:focus-visible,
+.survivor-access-actions button:hover,
+.survivor-access-actions button:focus-visible,
+.admission-complete-actions button:hover,
+.admission-complete-actions button:focus-visible,
+.archive-hub-menu button:hover,
+.archive-hub-menu button:focus-visible,
+.archive-lookup button:hover,
+.archive-lookup button:focus-visible,
+.shelter-console-menu button:hover,
+.shelter-console-menu button:focus-visible,
+.choice-btn:hover,
+.choice-btn:focus-visible,
+.wake-init-btn:hover,
+.wake-init-btn:focus-visible {
+  color: rgba(130, 233, 154, 0.96) !important;
+  border-color: rgba(130, 233, 154, 0.46) !important;
+  background:
+    linear-gradient(90deg, rgba(42, 116, 55, 0.24), rgba(3, 20, 8, 0.52)) !important;
+  box-shadow:
+    inset 0 0 16px rgba(0, 0, 0, 0.36),
+    0 0 12px rgba(130, 233, 154, 0.11) !important;
+  outline: none;
+}
+
+input,
+select,
+textarea,
+.vault-input,
+.survivor-auth-form input,
+.archive-lookup input {
+  border-radius: 0 !important;
+  border: 1px solid rgba(130, 233, 154, 0.22) !important;
+  background: rgba(0, 9, 4, 0.72) !important;
+  color: rgba(184, 245, 194, 0.92) !important;
+  caret-color: var(--vault-green);
+  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.46) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.vault-input:focus,
+.survivor-auth-form input:focus,
+.archive-lookup input:focus {
+  border-color: rgba(130, 233, 154, 0.5) !important;
+  box-shadow:
+    inset 0 0 18px rgba(0, 0, 0, 0.46),
+    0 0 14px rgba(130, 233, 154, 0.13) !important;
+  outline: none;
+}
+
+.vault-panel,
+.survivor-auth-panel,
+.survivor-access-card,
+.admission-complete-panel,
+.archive-hub-shell,
+.shelter-console-shell,
+.archive-global-report article,
+.archive-wide-panel,
+.vault-placeholder,
+.vault-docs,
+.vault-sector-page {
+  border-radius: 0 !important;
+  border-color: rgba(130, 233, 154, 0.16) !important;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(64, 160, 82, 0.08), transparent 54%),
+    rgba(0, 12, 5, 0.48) !important;
+  box-shadow:
+    inset 0 0 28px rgba(0, 0, 0, 0.58),
+    inset 0 0 28px rgba(64, 160, 82, 0.04) !important;
+}
+
+.vault-warning,
+.survivor-auth-error,
+.archive-empty,
+.archive-note {
+  color: rgba(202, 168, 95, 0.86) !important;
+  text-shadow: 0 0 8px rgba(202, 168, 95, 0.12);
+}
+
+.vault-status-line {
+  color: var(--vault-muted);
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  letter-spacing: 0.08em;
+}
+
+.vault-home-screen {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  grid-template-rows: minmax(20px, 0.42fr) auto auto minmax(18px, 0.36fr) !important;
+  align-content: center !important;
+}
+
+.vault-home-screen::before,
+.vault-home-screen::after {
+  display: none !important;
+}
+
+.vault-home-topline,
+.vault-home-status {
+  color: rgba(184, 245, 194, 0.24) !important;
+  text-shadow: none !important;
+}
+
+.vault-home-titlebar {
+  margin-bottom: clamp(10px, 1.5vw, 20px) !important;
+  overflow: visible !important;
+}
+
+.vault-brand-row {
+  gap: clamp(12px, 1.4vw, 22px) !important;
+  flex-wrap: nowrap !important;
+  overflow: visible !important;
+}
+
+.vault-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0;
+  flex: 0 0 auto;
+  max-width: none;
+  width: fit-content;
+  margin: 0;
+  overflow: visible !important;
+  white-space: nowrap;
+  color: rgba(130, 233, 154, 0.93);
+  font-family: var(--font-pixel), "Arial Black", Impact, monospace;
+  line-height: 0.9;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  opacity: 0.94;
+  text-shadow:
+    2px 2px 0 rgba(3, 28, 11, 0.96),
+    -1px -1px 0 rgba(184, 245, 194, 0.12),
+    0 0 8px rgba(130, 233, 154, 0.28),
+    0 0 26px rgba(64, 160, 82, 0.16);
+  filter: contrast(1.02) saturate(0.94);
+}
+
+.vault-logo::after {
+  content: '';
+  position: absolute;
+  inset: -0.06em -0.04em;
+  pointer-events: none;
+  opacity: 0.26;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(2, 16, 8, 0) 0 7px,
+    rgba(2, 16, 8, 0.62) 7px 9px
+  );
+  mix-blend-mode: multiply;
+}
+
+.vault-logo-main {
+  display: inline-block;
+  flex: 0 0 auto;
+  font-size: clamp(88px, 7.8vw, 132px);
+  transform: scaleX(0.96);
+}
+
+.vault-logo-model {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-left: -0.06em;
+  font-size: clamp(52px, 5vw, 86px);
+  transform: translateY(-0.12em);
+}
+
+.vault-brand-block p {
+  margin-top: clamp(4px, 0.7vw, 10px) !important;
+  color: rgba(184, 245, 194, 0.4) !important;
+  font-family: "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", monospace !important;
+  font-size: clamp(12px, 1vw, 15px) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em !important;
+}
+
+.vault-home-menu {
+  justify-self: center !important;
+  width: min(330px, 46vw) !important;
+  gap: 1px !important;
+}
+
+.vault-home-item {
+  grid-template-columns: 22px minmax(0, 1fr) minmax(70px, auto) !important;
+  min-height: 32px !important;
+  column-gap: 10px !important;
+  padding: 3px 12px !important;
+  border: 0 !important;
+  border-left: 2px solid transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-family: "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", monospace !important;
+  letter-spacing: 0.08em !important;
+}
+
+.vault-home-item:hover,
+.vault-home-item:focus-visible,
+.vault-home-item--primary {
+  border-left-color: rgba(130, 233, 154, 0.5) !important;
+  background: linear-gradient(90deg, rgba(64, 160, 82, 0.16), transparent 78%) !important;
+}
+
+.vault-home-item strong {
+  font-size: clamp(16px, 1.05vw, 20px) !important;
+  font-weight: 500 !important;
+  text-shadow: 0 0 7px rgba(130, 233, 154, 0.08) !important;
+}
+
+.vault-home-item em {
+  display: none !important;
+}
+
+.vault-menu-lock {
+  font-family: var(--font-pixel), monospace !important;
+  letter-spacing: 0 !important;
+}
+
+.vault-menu-lock {
+  justify-self: end;
+  color: rgba(202, 168, 95, 0.52) !important;
+  font-size: 6px !important;
+}
+
+.vault-home-status {
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 8px 18px !important;
+  font-size: 7px !important;
+}
+
+.vault-code-log {
+  display: none !important;
+}
+
+.launch-overlay,
+.wake-overlay {
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(35, 111, 52, 0.24), rgba(5, 29, 13, 0.88) 54%, rgba(0, 6, 2, 0.98) 100%) !important;
+}
+
+.survivor-access-shell {
+  grid-template-columns: minmax(330px, 0.88fr) minmax(300px, 1fr) !important;
+  grid-template-rows: minmax(0, 1fr) auto !important;
+  gap: clamp(16px, 2vw, 28px) !important;
+  padding: clamp(14px, 2vw, 26px) !important;
+}
+
+.survivor-access-card {
+  overflow: hidden !important;
+  padding: clamp(16px, 2vw, 24px) !important;
+}
+
+.survivor-access-card h1 {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  gap: 7px !important;
+  margin: 0 0 clamp(12px, 1.5vw, 18px) !important;
+  font-family: "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", monospace !important;
+  font-size: clamp(26px, 2.45vw, 36px) !important;
+  font-weight: 500 !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.survivor-access-card h1 span {
+  margin: 0 !important;
+  color: rgba(202, 168, 95, 0.66) !important;
+  font-family: var(--font-pixel), monospace !important;
+  font-size: 7px !important;
+  line-height: 1 !important;
+  letter-spacing: 0.05em !important;
+}
+
+.survivor-access-id {
+  margin-bottom: clamp(12px, 1.45vw, 18px) !important;
+  font-size: clamp(28px, 2.9vw, 42px) !important;
+  line-height: 0.95 !important;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.survivor-access-grid {
+  gap: 3px !important;
+}
+
+.survivor-access-row {
+  grid-template-columns: minmax(112px, 0.48fr) minmax(0, 1fr) !important;
+  gap: 12px !important;
+  padding: 5px 0 !important;
+}
+
+.survivor-access-row span {
+  font-size: 7px !important;
+}
+
+.survivor-access-row strong {
+  font-family: "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", monospace !important;
+  font-size: clamp(16px, 1.25vw, 19px) !important;
+  line-height: 1.15 !important;
+}
+
+.survivor-access-ai {
+  gap: clamp(10px, 1.3vw, 16px) !important;
+  align-content: center !important;
+}
+
+.survivor-access-face-slot {
+  height: clamp(96px, 11vw, 142px) !important;
+}
+
+.survivor-access-face-slot #ai-face {
+  width: clamp(104px, 10vw, 142px) !important;
+  height: clamp(114px, 11vw, 156px) !important;
+}
+
+.survivor-access-lines {
+  max-width: 480px !important;
+  padding-left: 14px !important;
+}
+
+.survivor-access-lines p {
+  margin: 0 0 8px !important;
+  font-size: clamp(18px, 1.48vw, 23px) !important;
+  line-height: 1.22 !important;
+}
+
+.survivor-access-actions {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  padding-top: 0 !important;
+}
+
+.survivor-access-actions button {
+  min-height: 34px !important;
+  padding: 7px 8px !important;
+  font-size: 7px !important;
+}
+
+@media (max-width: 860px) {
+  .vault-terminal-stage {
+    padding: 8px;
+  }
+
+  .vault-tv-shell {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    padding: 12px 12px 42px;
+  }
+
+  .vault-tv-screw {
+    display: none;
+  }
+
+  .vault-tv-hardware {
+    left: 18px;
+    right: 18px;
+  }
+
+  #screen-content {
+    left: clamp(16px, 4vw, 28px);
+    right: clamp(16px, 4vw, 28px);
+  }
+
+  .vault-logo {
+    max-width: 86vw;
+  }
+
+  .vault-logo-main {
+    font-size: clamp(58px, 14vw, 96px);
+  }
+
+  .vault-logo-model {
+    font-size: clamp(36px, 9vw, 62px);
+  }
+
+  .vault-home-menu {
+    width: min(360px, 74vw) !important;
+  }
+
+  .vault-home-item {
+    grid-template-columns: 20px minmax(0, 1fr) !important;
+  }
+
+  .vault-menu-lock {
+    display: none;
+  }
+
+  .survivor-access-shell {
+    overflow: auto !important;
+  }
+
+  .survivor-access-actions {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* VAULT-0 HOME TITLE SEQUENCE */
+.vault-home-screen {
+  animation: vaultScreenWake 0.62s ease-out both !important;
+}
+
+.vault-logo {
+  animation: vaultLogoScanIn 0.72s ease-out 0.08s both;
+}
+
+.vault-title-face-slot,
+#ai-face.vault-core-ai-face {
+  animation: vaultAiWake 0.46s ease-out 0.32s both;
+}
+
+.vault-home-item {
+  opacity: 0;
+  animation: vaultMenuStagger 0.42s ease-out 0.46s both;
+}
+
+.vault-home-item--primary .vault-menu-cursor {
+  animation: vaultCursorPulse 0.95s steps(1, end) 0.78s infinite;
+}
+
+.vault-home-status {
+  animation: vaultMenuStagger 0.34s ease-out 0.56s both;
+}
+
+@keyframes vaultScreenWake {
+  0% {
+    opacity: 0;
+    filter: brightness(0.72) contrast(1.16);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) contrast(1);
+  }
+}
+
+@keyframes vaultLogoScanIn {
+  0% {
+    opacity: 0;
+    filter: brightness(0.5) contrast(1.18);
+    transform: translateY(4px) scaleX(0.98);
+  }
+  58% {
+    opacity: 0.9;
+    filter: brightness(1.12) contrast(1.04);
+  }
+  100% {
+    opacity: 0.94;
+    filter: contrast(1.02) saturate(0.94);
+    transform: translateY(0) scaleX(1);
+  }
+}
+
+@keyframes vaultAiWake {
+  0% {
+    opacity: 0;
+    filter: brightness(0.45) saturate(0.55) blur(0.5px);
+  }
+  55% {
+    opacity: 0.48;
+    filter: brightness(1.18) saturate(0.9) blur(0.2px);
+  }
+  100% {
+    opacity: 0.88;
+    filter: drop-shadow(0 0 10px rgba(142, 234, 155, 0.34)) saturate(0.95) brightness(0.98) contrast(0.98);
+  }
+}
+
+@keyframes vaultMenuStagger {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: brightness(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+}
+
+@keyframes vaultCursorPulse {
+  0%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0.34;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vault-home-screen,
+  .vault-logo,
+  .vault-title-face-slot,
+  #ai-face.vault-core-ai-face,
+  .vault-home-item,
+  .vault-home-status,
+  .vault-home-item--primary .vault-menu-cursor {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .vault-home-item,
+  .vault-home-status,
+  .vault-logo,
+  .vault-title-face-slot,
+  #ai-face.vault-core-ai-face {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}

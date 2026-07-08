@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crisis Data Terminal · 应急灾害档案终端</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body.is-preboot .scan-vertical,
+      body.is-preboot #screen .screen-corner,
+      body.is-preboot #screen .screen-bar,
+      body.is-preboot #screen-content,
+      body.is-preboot #ai-face {
+        visibility: hidden !important;
+      }
+      body.is-preboot #screen {
+        background-image: none !important;
+      }
+      body.is-preboot #screen::before {
+        opacity: 0 !important;
+      }
+    </style>
+  </head>
+  <body class="is-preboot">
+    <div id="scan-vertical" class="scan-vertical" aria-hidden="true"></div>
+    <div id="screen">
+      <span class="screen-corner screen-corner--tl" aria-hidden="true"></span>
+      <span class="screen-corner screen-corner--tr" aria-hidden="true"></span>
+      <span class="screen-corner screen-corner--bl" aria-hidden="true"></span>
+      <span class="screen-corner screen-corner--br" aria-hidden="true"></span>
+      <header class="screen-bar screen-bar--top">
+        <span class="screen-bar__label screen-bar__label--left" id="screen-bar-tl">[CRISIS DATA]</span>
+        <span class="screen-bar__divider"></span>
+        <span class="screen-bar__label screen-bar__label--right" id="screen-bar-tr">[DISASTER_ARCHIVE]</span>
+      </header>
+      <footer class="screen-bar screen-bar--bottom">
+        <span class="screen-bar__label screen-bar__label--left" id="screen-bar-bl">[SYSTEM: ONLINE]</span>
+        <span class="screen-bar__label screen-bar__label--right" id="screen-bar-br">[TERMINAL: READY]</span>
+      </footer>
+      <div id="screen-content">
+        <div id="view-intro"></div>
+        <div id="view-result" style="display: none"></div>
+        <div id="app"></div>
+        <div id="ai-face" aria-hidden="true" hidden></div>
+      </div>
+      <div id="launch-overlay" class="launch-overlay" aria-label="系统初始化">
+        <h1 class="launch-overlay__title">CRISIS DATA</h1>
+        <p class="launch-overlay__subtitle">应急灾害档案终端 · Disaster Event Archive</p>
+        <hr class="launch-overlay__divider" aria-hidden="true" />
+        <p class="launch-overlay__action">[ CLICK ANYWHERE TO INITIALIZE ]</p>
+      </div>
+      <div id="wake-overlay" class="wake-overlay" aria-label="系统唤醒" hidden>
+        <p class="wake-prompt" aria-hidden="true">
+          <span class="wake-prompt__chevron">&gt;</span><span class="wake-prompt__cursor">_</span>
+        </p>
+        <button type="button" id="wake-init-btn" class="wake-init-btn" hidden>
+          [ INITIALIZE TERMINAL ]
+        </button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
