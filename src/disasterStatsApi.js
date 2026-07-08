@@ -17,6 +17,16 @@ async function queryView(viewName, { single = false, limit, order } = {}) {
   return { data: data ?? [], error }
 }
 
+async function queryDisasterRelationEvents() {
+  const { data, error } = await supabase
+    .from('disaster_events')
+    .select('country, disaster_type, severity')
+    .order('event_date', { ascending: false, nullsFirst: false })
+    .limit(5000)
+
+  return { data: data ?? [], error }
+}
+
 function settleResult(result, fallback) {
   if (result.status === 'fulfilled') return result.value
   const reason = result.reason
@@ -105,6 +115,7 @@ export async function fetchAnalyticsBundle({ force = false } = {}) {
     queryView('top_impact_events'),
     queryView('latest_events'),
     queryView('map_events_sample'),
+    queryDisasterRelationEvents(),
   ])
 
   const [
@@ -115,8 +126,9 @@ export async function fetchAnalyticsBundle({ force = false } = {}) {
     topRes,
     latestRes,
     mapRes,
+    relationRes,
   ] = settled.map((item, index) => {
-    const fallbacks = [null, [], [], [], [], [], []]
+    const fallbacks = [null, [], [], [], [], [], [], []]
     return settleResult(item, fallbacks[index])
   })
 
@@ -128,6 +140,7 @@ export async function fetchAnalyticsBundle({ force = false } = {}) {
     topImpactEvents: topRes.data,
     latestEvents: latestRes.data,
     mapEventsSample: mapRes.data,
+    relationEvents: relationRes.data,
     lastSync: syncTimestamp(),
     errors: {
       summary: statsRes.error?.message || null,
@@ -135,7 +148,7 @@ export async function fetchAnalyticsBundle({ force = false } = {}) {
       trend: yearlyRes.error?.message || null,
       category: typeRes.error?.message || null,
       impact: topRes.error?.message || null,
-      timeline: topRes.error?.message || latestRes.error?.message || null,
+      relation: relationRes.error?.message || null,
     },
   }
 
@@ -145,7 +158,8 @@ export async function fetchAnalyticsBundle({ force = false } = {}) {
     bundle.yearlyDisasterStats.length ||
     bundle.topImpactEvents.length ||
     bundle.latestEvents.length ||
-    bundle.mapEventsSample.length
+    bundle.mapEventsSample.length ||
+    bundle.relationEvents.length
 
   if (!hasAnyData) {
     const firstError =
@@ -155,6 +169,7 @@ export async function fetchAnalyticsBundle({ force = false } = {}) {
       topRes.error ||
       latestRes.error ||
       mapRes.error ||
+      relationRes.error ||
       new Error('统计视图不可用，请在 Supabase 运行 scripts/disaster_stats_views.sql')
     return { bundle: null, error: firstError }
   }

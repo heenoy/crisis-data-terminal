@@ -11,9 +11,9 @@ import {
   renderDonutChart,
   renderDualLineChart,
   renderImpactBarChart,
-  renderMapLegend,
 } from './intelligenceCharts.js'
 import { renderEchartsWorldMap } from './intelligenceEchartsMap.js'
+import { renderDisasterRelationNetwork } from './intelligenceRelationNetwork.js'
 
 const TOTAL_PAGES = INTELLIGENCE_MODULES.length
 const TRANSITION_MS = 520
@@ -23,7 +23,7 @@ const MODULE_DISPLAY = {
   trend: { label: 'DISASTER TREND', zh: '灾害年度趋势分析' },
   category: { label: 'DISASTER CATEGORY', zh: '灾害类型分布' },
   impact: { label: 'IMPACT ANALYSIS', zh: '灾害影响规模排行' },
-  timeline: { label: 'EVENT TIMELINE', zh: '灾害事件时间轴' },
+  relation: { label: 'GLOBAL DISASTER RELATION NETWORK', zh: 'GLOBAL DISASTER RELATION NETWORK 全球灾害关系图谱' },
 }
 
 let state = {
@@ -35,6 +35,7 @@ let state = {
   currentPage: 1,
   onNavigate: null,
   mapCleanup: null,
+  relationCleanup: null,
 }
 
 const MODULE_ERROR_TEXT = '&gt; 该模块同步失败，请稍后重试。'
@@ -68,13 +69,19 @@ function renderSummaryStrip() {
   if (!summary) return ''
 
   return `
-    <div class="intel-center__summary" aria-label="数据库实时统计">
-      <span>档案总量 <strong>${formatCompactNumber(summary.totalEvents)}</strong></span>
-      <span>涉及国家 <strong>${formatCompactNumber(summary.countryCount)}</strong></span>
-      <span>重大灾害 <strong>${formatCompactNumber(summary.criticalCount)}</strong></span>
-      <span>累计受影响 <strong>${formatCompactNumber(summary.totalAffected)}</strong></span>
-      <span>同步时间 <strong>${escapeHtml(summary.lastSync)}</strong></span>
-    </div>
+    ${renderSideMetric('TOTAL EVENTS', formatCompactNumber(summary.totalEvents))}
+    ${renderSideMetric('COUNTRIES', formatCompactNumber(summary.countryCount))}
+    ${renderSideMetric('CRITICAL', formatCompactNumber(summary.criticalCount))}
+    ${renderSideMetric('DEATHS', formatCompactNumber(summary.totalCasualties))}
+  `
+}
+
+function renderSideMetric(label, value) {
+  return `
+    <article class="intel-side-metric">
+      <span>${label}</span>
+      <strong>${value}</strong>
+    </article>
   `
 }
 
@@ -82,50 +89,39 @@ function renderIntelHeader() {
   const display = moduleDisplay()
   return `
     <header class="intel-center__header">
-      <p class="intel-center__brand">应急灾害档案 · 数据分析中心</p>
-      <h1 class="intel-center__module-en">${escapeHtml(display.zh)}</h1>
-      <p class="intel-center__page-label">第 ${padPage(state.currentPage)} 页 / 共 ${padPage(TOTAL_PAGES)} 页</p>
-      ${state.analytics ? renderSummaryStrip() : ''}
+      <div class="intel-frame-label">
+        <span>[CRISIS_DATA / ANALYTICS_CENTER]</span>
+      </div>
+      <div class="intel-frame-line"></div>
+      <div class="intel-frame-label intel-frame-label--right">
+        <span>[DATABASE: ONLINE]</span>
+      </div>
     </header>
   `
 }
 
-function renderTimeline(events) {
-  if (!events?.length) {
-    return '<p class="intel-timeline-empty">暂无时间轴记录</p>'
-  }
+function renderSidePanel() {
+  const summary = state.analytics?.summary
+  const display = moduleDisplay()
 
   return `
-    <div class="intel-timeline-axis">
-      ${events
-        .map((event, index) => {
-          const isCritical = event.severity === 'critical'
-          const cardClass = isCritical ? 'intel-timeline-card--critical' : 'intel-timeline-card--normal'
-          const isLast = index === events.length - 1
-          return `
-        <div class="intel-timeline-entry">
-          <div class="intel-timeline-rail" aria-hidden="true">
-            <span class="intel-timeline-dot ${isCritical ? 'intel-timeline-dot--critical' : ''}"></span>
-            ${isLast ? '' : '<span class="intel-timeline-line"></span>'}
-          </div>
-          <article class="intel-timeline-card ${cardClass}">
-            <dl class="intel-timeline-card__grid">
-              <div><dt>日期</dt><dd>${escapeHtml(event.date)}</dd></div>
-              <div class="intel-timeline-card__span-2"><dt>事件</dt><dd>${escapeHtml(event.title)}</dd></div>
-              <div><dt>国家</dt><dd>${escapeHtml(event.country)}</dd></div>
-              <div><dt>灾害类型</dt><dd>${escapeHtml(event.typeLabel)}</dd></div>
-              <div><dt>影响等级</dt><dd>${escapeHtml(event.severityLabel)}</dd></div>
-              <div class="intel-timeline-card__span-2">
-                <dt>影响规模</dt>
-                <dd>死亡人数：${formatCompactNumber(event.casualties)} · 受影响人数：${formatCompactNumber(event.affected_population)}</dd>
-              </div>
-            </dl>
-          </article>
-        </div>
-      `
-        })
-        .join('')}
-    </div>
+    <aside class="intel-side-panel" aria-label="分析中心状态栏">
+      <div class="intel-side-actions">
+        ${renderBackToMainMenu()}
+      </div>
+      <div class="intel-side-transmission">
+        <p>&gt; DATA_ANALYSIS_MODULE</p>
+        <strong>${escapeHtml(display.label)}</strong>
+        <span>${escapeHtml(display.zh)}</span>
+      </div>
+      <div class="intel-side-face" data-ai-face-slot aria-label="AI 状态槽">
+        <span>AI CORE</span>
+      </div>
+      <div class="intel-side-metrics">
+        ${summary ? renderSummaryStrip() : ''}
+      </div>
+      <p class="intel-side-sync">&gt; LAST_SYNC: ${escapeHtml(summary?.lastSync || '--')}</p>
+    </aside>
   `
 }
 
@@ -140,12 +136,13 @@ function renderModuleBody() {
       return `
         <div class="intel-module intel-module--map">
           <div class="intel-module__meta">
-            <span>已标注事件：<strong>${formatCompactNumber(data.summary.mappedEvents)}</strong></span>
-            <span>地图展示：<strong>${formatCompactNumber(data.mapPoints.length)}</strong>${data.mapPointsTotal > data.mapPoints.length ? ` / ${formatCompactNumber(data.mapPointsTotal)}` : ''}</span>
-            <span>档案总量：<strong>${formatCompactNumber(data.summary.totalEvents)}</strong></span>
+            <span>已标注事件数量：<strong>${formatCompactNumber(data.mapPoints.length)}</strong>${data.mapPointsTotal > data.mapPoints.length ? ` / ${formatCompactNumber(data.mapPointsTotal)}` : ''}</span>
+            <span>涉及国家数量：<strong>${formatCompactNumber(data.summary.countryCount)}</strong></span>
+            <span>重大灾害数量：<strong>${formatCompactNumber(data.summary.criticalCount)}</strong></span>
           </div>
-          <div class="terminal-chart intel-chart intel-chart--map" id="intel-chart-map"></div>
-          <div class="intel-map-legend" id="intel-map-legend"></div>
+          <div class="terminal-chart intel-chart intel-chart--map">
+            <div id="intel-chart-map"></div>
+          </div>
         </div>
       `
     case 'trend':
@@ -176,10 +173,17 @@ function renderModuleBody() {
           <div class="terminal-chart intel-chart intel-chart--wide" id="intel-chart-impact"></div>
         </div>
       `
-    case 'timeline':
+    case 'relation':
       return `
-        <div class="intel-module intel-module--timeline">
-          ${renderTimeline(data.eventTimeline)}
+        <div class="intel-module intel-module--relation">
+          <div class="intel-module__meta intel-relation-meta">
+            <span>展示事件数量最高国家与主要灾害类型之间的关联。</span>
+            <span>节点：<strong>${formatCompactNumber(data.relationNetwork.metrics.nodeCount)}</strong></span>
+            <span>关系：<strong>${formatCompactNumber(data.relationNetwork.metrics.linkCount)}</strong></span>
+          </div>
+          <div class="intel-relation-stage">
+            <div class="terminal-chart intel-chart intel-chart--relation" id="intel-chart-relation"></div>
+          </div>
         </div>
       `
     default:
@@ -203,10 +207,18 @@ export function renderAnalyticsPage() {
   if (state.loading) {
     return `
       <section class="vault-console vault-console--subpage" aria-label="数据分析中心">
-        ${renderBackToMainMenu()}
         <div class="intel-center">
           ${renderIntelHeader()}
-          <p class="intel-center__loading">&gt; 正在同步灾害数据库...</p>
+          <div class="intel-archive-layout">
+            <main class="intel-archive-main">
+              <p class="intel-center__loading">&gt; 正在同步灾害数据库...</p>
+            </main>
+            ${renderSidePanel()}
+          </div>
+          <footer class="intel-frame-footer">
+            <span>[CIVILIZATION_ENGINE: ONLINE]</span>
+            <span>[RECORD: PERMANENT]</span>
+          </footer>
         </div>
       </section>
     `
@@ -215,13 +227,21 @@ export function renderAnalyticsPage() {
   if (state.error) {
     return `
       <section class="vault-console vault-console--subpage" aria-label="数据分析中心">
-        ${renderBackToMainMenu()}
         <div class="intel-center">
           ${renderIntelHeader()}
-          <p class="intel-center__error">&gt; [错误] ${escapeHtml(state.error)}</p>
-          <div class="intel-center__actions">
-            <button type="button" class="intel-pager__arrow" id="analytics-refresh">↻</button>
+          <div class="intel-archive-layout">
+            <main class="intel-archive-main">
+              <p class="intel-center__error">&gt; [错误] ${escapeHtml(state.error)}</p>
+              <div class="intel-center__actions">
+                <button type="button" class="intel-pager__arrow" id="analytics-refresh">↻</button>
+              </div>
+            </main>
+            ${renderSidePanel()}
           </div>
+          <footer class="intel-frame-footer">
+            <span>[CIVILIZATION_ENGINE: ONLINE]</span>
+            <span>[RECORD: PERMANENT]</span>
+          </footer>
         </div>
       </section>
     `
@@ -233,17 +253,29 @@ export function renderAnalyticsPage() {
 
   return `
     <section class="vault-console vault-console--subpage" aria-label="数据分析中心">
-      ${renderBackToMainMenu()}
       <div class="intel-center">
         ${renderIntelHeader()}
-        <div class="${viewportClass}">
-          ${
-            state.transitioning
-              ? '<p class="intel-center__module-loading">&gt; 正在同步灾害数据库...</p>'
-              : `<div class="intel-viewport__content intel-viewport__content--fade-in">${renderModuleBody()}</div>`
-          }
+        <div class="intel-archive-layout">
+          <main class="intel-archive-main">
+            <div class="intel-report-kicker">
+              <span>${escapeHtml(moduleDisplay().label)}</span>
+              <em>/ ${escapeHtml(moduleDisplay().zh)}</em>
+            </div>
+            <div class="${viewportClass}">
+              ${
+                state.transitioning
+                  ? '<p class="intel-center__module-loading">&gt; 正在同步灾害数据库...</p>'
+                  : `<div class="intel-viewport__content intel-viewport__content--fade-in">${renderModuleBody()}</div>`
+              }
+            </div>
+            ${renderPager()}
+          </main>
+          ${renderSidePanel()}
         </div>
-        ${renderPager()}
+        <footer class="intel-frame-footer">
+          <span>[CIVILIZATION_ENGINE: ONLINE]</span>
+          <span>[RECORD: PERMANENT]</span>
+        </footer>
       </div>
     </section>
   `
@@ -254,16 +286,16 @@ function paintCurrentModule() {
 
   state.mapCleanup?.()
   state.mapCleanup = null
+  state.relationCleanup?.()
+  state.relationCleanup = null
 
   const mod = currentModule()
   const data = state.analytics
 
   if (mod.key === 'map') {
-    const el = document.getElementById('intel-chart-map')
-    renderEchartsWorldMap(el, data.mapPoints).then((cleanup) => {
+    renderEchartsWorldMap(document.getElementById('intel-chart-map'), data.mapPoints).then((cleanup) => {
       state.mapCleanup = cleanup
     })
-    renderMapLegend(document.getElementById('intel-map-legend'))
   } else if (mod.key === 'trend') {
     renderDualLineChart(
       document.getElementById('intel-chart-trend'),
@@ -275,6 +307,13 @@ function paintCurrentModule() {
     renderDonutChart(document.getElementById('intel-chart-category'), data.categoryDistribution)
   } else if (mod.key === 'impact') {
     renderImpactBarChart(document.getElementById('intel-chart-impact'), data.impactTop10)
+  } else if (mod.key === 'relation') {
+    renderDisasterRelationNetwork(
+      document.getElementById('intel-chart-relation'),
+      data.relationNetwork,
+    ).then((cleanup) => {
+      state.relationCleanup = cleanup
+    })
   }
 }
 
@@ -356,6 +395,8 @@ async function loadAnalytics({ notify = false, force = false } = {}) {
     if (analytics) {
       state.mapCleanup?.()
       state.mapCleanup = null
+      state.relationCleanup?.()
+      state.relationCleanup = null
       state.analytics = analytics
       state.moduleErrors = analytics.moduleErrors || {}
       state.loading = false
@@ -373,6 +414,8 @@ async function loadAnalytics({ notify = false, force = false } = {}) {
 
   state.mapCleanup?.()
   state.mapCleanup = null
+  state.relationCleanup?.()
+  state.relationCleanup = null
   state.loading = true
   state.error = null
   state.currentPage = 1
