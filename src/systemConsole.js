@@ -1,7 +1,7 @@
 import { bindAuthPage, renderAuthPage } from './authPage.js'
 import { bindDisasterDashboard, renderDisasterDashboard } from './disasterEventsPage.js'
 import { initAnalyticsPage, renderAnalyticsPage } from './disasterAnalyticsPage.js'
-import { initSituationDashboard } from './dashboardPage.js'
+import { destroySituationDashboard, initSituationDashboard } from './dashboardPage.js'
 import { initKnowledgePage } from './disasterKnowledgePage.js'
 import { bindTerminalNavigation } from './terminalNav.js'
 
@@ -189,6 +189,7 @@ export function renderSystemPage({
 }) {
   const app = document.getElementById('app')
   if (!app) return
+  destroySituationDashboard()
 
   const pages = {
     start: () => renderHomeScreen({ isLoggedIn }),

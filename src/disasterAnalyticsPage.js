@@ -293,9 +293,14 @@ function paintCurrentModule() {
   const data = state.analytics
 
   if (mod.key === 'map') {
-    renderEchartsWorldMap(document.getElementById('intel-chart-map'), data.mapPoints).then((cleanup) => {
-      state.mapCleanup = cleanup
-    })
+    renderEchartsWorldMap(document.getElementById('intel-chart-map'), data.mapPoints)
+      .then((cleanup) => {
+        state.mapCleanup = cleanup
+      })
+      .catch((error) => {
+        console.error('[Analytics map] failed:', error)
+        state.mapCleanup = null
+      })
   } else if (mod.key === 'trend') {
     renderDualLineChart(
       document.getElementById('intel-chart-trend'),

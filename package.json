@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.110.0",
-    "echarts": "^6.1.0"
+    "echarts": "^6.1.0",
+    "three": "^0.185.1"
   }
 }

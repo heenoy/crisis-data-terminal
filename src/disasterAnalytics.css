@@ -384,6 +384,15 @@
   box-shadow: 0 0 6px currentColor;
 }
 
+.intel-map-error {
+  margin: auto;
+  color: rgba(255, 120, 120, 0.88);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .intel-module--relation {
   gap: 5px;
 }

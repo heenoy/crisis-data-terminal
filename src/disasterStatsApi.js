@@ -51,49 +51,27 @@ export async function fetchDashboardBundle({ force = false } = {}) {
     return { bundle: dashboardCache, error: null }
   }
 
-  const settled = await Promise.allSettled([
-    queryView('dashboard_stats', { single: true }),
-    queryView('disaster_type_stats', { order: { column: 'count', ascending: false } }),
-    queryView('severity_stats', { order: { column: 'count', ascending: false } }),
-    queryView('top_impact_events'),
-    queryView('latest_events'),
-  ])
-
-  const [statsRes, typeRes, severityRes, topRes, latestRes] = settled.map((item, index) => {
-    const fallbacks = [null, [], [], [], []]
-    return settleResult(item, fallbacks[index])
-  })
+  const statsRes = await queryView('dashboard_stats', { single: true })
 
   const bundle = {
     dashboardStats: statsRes.data,
-    disasterTypeStats: typeRes.data,
-    severityStats: severityRes.data,
-    topImpactEvents: topRes.data,
-    latestEvents: latestRes.data,
+    disasterTypeStats: [],
+    severityStats: [],
+    topImpactEvents: [],
+    latestEvents: [],
     lastSync: syncTimestamp(),
     errors: {
       dashboardStats: statsRes.error?.message || null,
-      disasterTypeStats: typeRes.error?.message || null,
-      severityStats: severityRes.error?.message || null,
-      topImpactEvents: topRes.error?.message || null,
-      latestEvents: latestRes.error?.message || null,
+      disasterTypeStats: null,
+      severityStats: null,
+      topImpactEvents: null,
+      latestEvents: null,
     },
   }
 
-  const hasAnyData =
-    bundle.dashboardStats ||
-    bundle.disasterTypeStats.length ||
-    bundle.severityStats.length ||
-    bundle.topImpactEvents.length ||
-    bundle.latestEvents.length
-
-  if (!hasAnyData) {
+  if (!bundle.dashboardStats) {
     const firstError =
       statsRes.error ||
-      typeRes.error ||
-      severityRes.error ||
-      topRes.error ||
-      latestRes.error ||
       new Error('统计视图不可用，请在 Supabase 运行 scripts/disaster_stats_views.sql')
     return { bundle: null, error: firstError }
   }
