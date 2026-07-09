@@ -33,6 +33,7 @@ let mouseY = 0
 let rafPending = false
 let mouseMoveHandler = null
 let mascotPositionListeners = new Set()
+let mascotBubbleEl = null
 
 export function subscribeMascotPosition(listener) {
   mascotPositionListeners.add(listener)
@@ -47,6 +48,7 @@ function notifyMascotPositionListeners() {
       // ignore listener errors
     }
   })
+  syncAiMascotBubble()
 }
 let mascotDragging = false
 let mascotPointerId = null
@@ -313,6 +315,77 @@ function ensureMascotPosition() {
   const saved = readMascotPosition()
   const position = saved ? clampMascotPosition(saved.x, saved.y) : getDefaultMascotPosition()
   applyMascotPosition(position)
+}
+
+function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+}
+
+function ensureMascotBubbleElement() {
+  const screenContent = getScreenContentEl()
+  if (!screenContent) return null
+
+  mascotBubbleEl = mascotBubbleEl || document.getElementById('ai-mascot-bubble')
+  if (!mascotBubbleEl) {
+    mascotBubbleEl = document.createElement('aside')
+    mascotBubbleEl.id = 'ai-mascot-bubble'
+    mascotBubbleEl.className = 'ai-mascot-bubble'
+    mascotBubbleEl.setAttribute('aria-label', 'AI 提示')
+    screenContent.appendChild(mascotBubbleEl)
+  } else if (mascotBubbleEl.parentElement !== screenContent) {
+    screenContent.appendChild(mascotBubbleEl)
+  }
+
+  return mascotBubbleEl
+}
+
+export function syncAiMascotBubble() {
+  const bubble = mascotBubbleEl || document.getElementById('ai-mascot-bubble')
+  const face = getFaceEl()
+  const screenContent = getScreenContentEl()
+  if (!bubble || !face || !screenContent || face.hidden || !bubble.textContent.trim()) {
+    if (bubble) bubble.hidden = true
+    return
+  }
+
+  bubble.hidden = false
+  const faceRect = face.getBoundingClientRect()
+  const contentRect = screenContent.getBoundingClientRect()
+  const bubbleWidth = bubble.offsetWidth || 260
+  const bubbleHeight = bubble.offsetHeight || 86
+  const gap = 12
+
+  let left = faceRect.left - contentRect.left - bubbleWidth - gap
+  if (left < 10) left = faceRect.right - contentRect.left + gap
+  const maxLeft = Math.max(10, contentRect.width - bubbleWidth - 10)
+  left = Math.min(Math.max(10, left), maxLeft)
+
+  const top = Math.min(
+    Math.max(10, faceRect.top - contentRect.top + faceRect.height * 0.08),
+    Math.max(10, contentRect.height - bubbleHeight - 10),
+  )
+
+  bubble.style.left = `${left}px`
+  bubble.style.top = `${top}px`
+}
+
+export function ensureAiMascotBubble(message) {
+  const bubble = ensureMascotBubbleElement()
+  if (!bubble) return
+  bubble.innerHTML = `<p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>`
+  bubble.hidden = false
+  requestAnimationFrame(syncAiMascotBubble)
+}
+
+export function hideAiMascotBubble({ clear = false } = {}) {
+  const bubble = mascotBubbleEl || document.getElementById('ai-mascot-bubble')
+  if (bubble) {
+    bubble.hidden = true
+    if (clear) bubble.innerHTML = ''
+  }
 }
 
 function onMascotPointerDown(event) {
@@ -655,6 +728,7 @@ export function ensureFloatingAiMascot({ state = currentFaceState } = {}) {
   ensureMascotDrag()
   ensureMascotPosition()
   setFace(state)
+  syncAiMascotBubble()
 }
 
 export function restoreAiFaceAfterCollapse({ state = 'detected' } = {}) {
@@ -692,6 +766,7 @@ export function cleanupAiFace() {
       el.setAttribute('aria-hidden', 'true')
     }
   }
+  hideAiMascotBubble({ clear: true })
 }
 
 export function triggerFaceAttention() {

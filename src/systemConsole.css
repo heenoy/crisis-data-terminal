@@ -1460,10 +1460,61 @@ body.game-page #ai-face #ai-svg {
   z-index: 0;
 }
 
+#screen-content > .ai-mascot-bubble {
+  position: absolute;
+  z-index: 9;
+  width: min(280px, calc(100% - 24px));
+  max-height: min(180px, 32vh);
+  padding: 11px 13px;
+  border: 1px solid rgba(92, 255, 137, 0.24);
+  background:
+    linear-gradient(rgba(92, 255, 137, 0.025) 1px, transparent 1px),
+    rgba(0, 18, 7, 0.84);
+  background-size: 100% 4px;
+  box-shadow:
+    inset 0 0 24px rgba(0, 0, 0, 0.5),
+    0 0 18px rgba(92, 255, 137, 0.1);
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(92, 255, 137, 0.42) rgba(0, 10, 4, 0.45);
+}
+
+#screen-content > .ai-mascot-bubble[hidden] {
+  display: none !important;
+}
+
+#screen-content > .ai-mascot-bubble p {
+  margin: 0;
+  color: rgba(184, 245, 194, 0.82);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+#screen-content > .ai-mascot-bubble::-webkit-scrollbar {
+  width: 8px;
+}
+
+#screen-content > .ai-mascot-bubble::-webkit-scrollbar-track {
+  background: rgba(0, 10, 4, 0.45);
+}
+
+#screen-content > .ai-mascot-bubble::-webkit-scrollbar-thumb {
+  background: rgba(92, 255, 137, 0.34);
+  box-shadow: 0 0 8px rgba(92, 255, 137, 0.18);
+}
+
 @media (max-width: 760px) {
   #screen-content > #ai-face.ai-mascot {
     width: clamp(96px, 22vw, 128px) !important;
     height: clamp(106px, 24vw, 142px) !important;
+  }
+
+  #screen-content > .ai-mascot-bubble {
+    width: min(240px, calc(100% - 20px));
   }
 }
 
@@ -1616,7 +1667,7 @@ body.game-page #ai-face #ai-svg {
   overflow: hidden;
 }
 
-.vault-console--subpage .dkb-terminal {
+.vault-console--subpage .aiq-terminal {
   flex: 1;
   min-height: 0;
   overflow: hidden;
@@ -1697,4 +1748,3 @@ body.game-page #ai-face #ai-svg {
 .vault-home-item.is-locked .vault-menu-cursor {
   color: transparent;
 }
-

@@ -2,7 +2,7 @@ import { bindAuthPage, renderAuthPage } from './authPage.js'
 import { bindDisasterDashboard, renderDisasterDashboard } from './disasterEventsPage.js'
 import { initAnalyticsPage, renderAnalyticsPage } from './disasterAnalyticsPage.js'
 import { destroySituationDashboard, initSituationDashboard } from './dashboardPage.js'
-import { initKnowledgePage } from './disasterKnowledgePage.js'
+import { destroyKnowledgePage, initKnowledgePage } from './disasterKnowledgePage.js'
 import { bindTerminalNavigation } from './terminalNav.js'
 
 const BRAND_SUBTITLE = 'CRISIS DATA TERMINAL / 应急灾害监测终端 · Disaster Event Monitor'
@@ -70,8 +70,8 @@ function renderAuthenticatedHomeScreen() {
         })}
         ${renderHomeMenuItem({
           action: 'knowledge',
-          label: '灾害知识库',
-          subtitle: 'DISASTER KNOWLEDGE BASE',
+          label: 'AI 灾害问询',
+          subtitle: 'AI CRISIS INQUIRY',
         })}
         ${renderHomeMenuItem({
           action: 'logout',
@@ -140,8 +140,8 @@ function renderGuestHomeScreen() {
         })}
         ${renderHomeMenuItem({
           action: 'knowledge',
-          label: '灾害知识库',
-          subtitle: 'DISASTER KNOWLEDGE BASE',
+          label: 'AI 灾害问询',
+          subtitle: 'AI CRISIS INQUIRY',
           locked: true,
         })}
         ${renderHomeMenuItem({
@@ -190,6 +190,7 @@ export function renderSystemPage({
   const app = document.getElementById('app')
   if (!app) return
   destroySituationDashboard()
+  destroyKnowledgePage()
 
   const pages = {
     start: () => renderHomeScreen({ isLoggedIn }),
@@ -205,8 +206,8 @@ export function renderSystemPage({
     analytics: () => renderAnalyticsPage(),
     situation: () => renderAnalyticsPage(),
     knowledge: () => `
-      <section class="vault-console vault-console--subpage" aria-label="灾害知识库">
-        <p class="situation-loading">&gt; 正在加载参考资料库…</p>
+      <section class="vault-console vault-console--subpage" aria-label="AI 灾害问询终端">
+        <p class="situation-loading">&gt; 正在加载 AI 灾害问询终端...</p>
       </section>
     `,
   }

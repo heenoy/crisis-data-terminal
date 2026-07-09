@@ -56,7 +56,7 @@ function renderTerminalMenu() {
         <span>&gt;</span> 数据分析中心
       </button>
       <button type="button" class="situation-home-menu__item" data-route="knowledge">
-        <span>&gt;</span> 灾害知识库
+        <span>&gt;</span> AI 灾害问询
       </button>
       <button type="button" class="situation-home-menu__item situation-home-menu__item--warn" id="dashboard-logout-btn">
         <span>&gt;</span> 退出登录
@@ -102,10 +102,6 @@ function renderInfoPanel(overview) {
         </ul>
       </div>
       ${renderStats(overview)}
-      <p class="situation-home-ai-status">
-        <strong>SYSTEM READY</strong>
-        <span>数据库连接正常，等待用户指令。</span>
-      </p>
       ${renderTerminalMenu()}
     </aside>
   `

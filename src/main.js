@@ -11,12 +11,13 @@ import './aiFace.css'
 import { runLaunchSequence } from './launchScreen.js'
 import { ensureAudioContext, playGeigerClick } from './audio.js'
 import {
+  ensureAiMascotBubble,
   ensureFloatingAiMascot,
+  hideAiMascotBubble,
   initAiFaceEarly,
   notifyTypewriterEnd,
   notifyTypewriterStart,
 } from './aiFace.js'
-import { ensureAiSummaryBubble, hideAiSummaryBubble } from './aiSummaryBubble.js'
 import { getCurrentUser, initAuth, isLoggedIn, refreshSessionUser, signOut, subscribeAuth } from './auth.js'
 import { renderSystemPage } from './systemConsole.js'
 import { showTerminalNotice } from './terminalNotice.js'
@@ -75,7 +76,7 @@ const SCREEN_BAR_LABELS = {
   },
   knowledge: {
     tl: '[CRISIS DATA / REFERENCE]',
-    tr: '[DISASTER KNOWLEDGE BASE]',
+    tr: '[AI CRISIS INQUIRY]',
     bl: '[MODULE: ACTIVE]',
     br: '[DB: CONNECTED]',
   },
@@ -335,8 +336,16 @@ async function runBootSequence() {
 }
 
 const AI_FACE_ROUTES = new Set(['start', 'dashboard', 'query', 'analytics', 'knowledge'])
+const AI_ROUTE_MESSAGES = {
+  start: '欢迎接入 Crisis Data Terminal。',
+  dashboard: 'VAULT-0：\n全球灾害数据库已连接。',
+  analytics: 'VAULT-0：\n正在分析全球灾害数据。',
+  query: 'VAULT-0：\n请输入查询条件。',
+  knowledge: 'VAULT-0：\n请直接向我提问。',
+}
+let aiFaceRouteToken = 0
 
-function mountConsoleAiFace() {
+function mountConsoleAiFace(message = AI_ROUTE_MESSAGES.start) {
   const slot = document.querySelector('[data-ai-face-slot]')
   const face = document.getElementById('ai-face')
   const screenContent = document.getElementById('screen-content')
@@ -366,24 +375,40 @@ function mountConsoleAiFace() {
     consoleAiFaceSpeakTimer = null
   }, 2200)
 
-  ensureAiSummaryBubble({ refresh: false })
+  ensureAiMascotBubble(message)
 }
 
 function ensureGlobalAiFace(route) {
+  const routeToken = ++aiFaceRouteToken
+  hideAiMascotBubble({ clear: true })
+
   if (!AI_FACE_ROUTES.has(route)) {
     hideAiFace()
-    hideAiSummaryBubble()
+    hideAiMascotBubble({ clear: true })
     return
   }
 
   if (route === 'start') {
-    requestAnimationFrame(() => mountConsoleAiFace())
+    requestAnimationFrame(() => {
+      if (routeToken !== aiFaceRouteToken) return
+      mountConsoleAiFace(AI_ROUTE_MESSAGES.start)
+    })
+    return
+  }
+
+  if (route === 'knowledge') {
+    requestAnimationFrame(() => {
+      if (routeToken !== aiFaceRouteToken) return
+      ensureFloatingAiMascot({ state: 'detected' })
+      hideAiMascotBubble({ clear: true })
+    })
     return
   }
 
   requestAnimationFrame(() => {
+    if (routeToken !== aiFaceRouteToken) return
     ensureFloatingAiMascot({ state: 'detected' })
-    ensureAiSummaryBubble({ refresh: true })
+    ensureAiMascotBubble(AI_ROUTE_MESSAGES[route] || AI_ROUTE_MESSAGES.start)
   })
 }
 
@@ -393,6 +418,7 @@ function hideAiFace() {
     face.hidden = true
     face.setAttribute('aria-hidden', 'true')
   }
+  hideAiMascotBubble({ clear: true })
 }
 
 function bindStartKeyboard() {

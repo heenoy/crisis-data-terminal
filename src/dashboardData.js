@@ -29,10 +29,6 @@ export async function fetchDashboardOverview({ force = false } = {}) {
   return { error: null, overview: mapDashboardBundleToOverview(bundle) }
 }
 
-export function buildAiSummaryText() {
-  return 'SYSTEM READY\n数据库连接正常，等待用户指令。'
-}
-
 export function formatDashboardNumber(value) {
   return formatStatNumber(value)
 }
