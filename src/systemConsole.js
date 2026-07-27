@@ -1,9 +1,15 @@
 import { bindAuthPage, renderAuthPage } from './authPage.js'
-import { bindDisasterDashboard, renderDisasterDashboard } from './disasterEventsPage.js'
-import { initAnalyticsPage, renderAnalyticsPage } from './disasterAnalyticsPage.js'
-import { destroySituationDashboard, initSituationDashboard } from './dashboardPage.js'
-import { destroyKnowledgePage, initKnowledgePage } from './disasterKnowledgePage.js'
 import { bindTerminalNavigation } from './terminalNav.js'
+import { ROUTES } from './router/routes.js'
+import { destroyUserOverview, initUserOverview, renderUserOverview } from './pages/user/overview.js'
+import { initUserSearch, renderUserSearch } from './pages/user/search.js'
+import { initUserAnalysis, renderUserAnalysis } from './pages/user/analysis.js'
+import { destroyUserAiInquiry, initUserAiInquiry } from './pages/user/aiInquiry.js'
+import { initAdminDashboard, renderAdminDashboard, resetAdminDashboard } from './pages/admin/dashboard.js'
+import { initAdminDisasterManage, renderAdminDisasterManage } from './pages/admin/disasterManage.js'
+import { initAdminUserManage, renderAdminUserManage } from './pages/admin/userManage.js'
+import { initAdminSystemMonitor, renderAdminSystemMonitor } from './pages/admin/systemMonitor.js'
+import { initAdminModelManage, renderAdminModelManage } from './pages/admin/modelManage.js'
 
 const BRAND_SUBTITLE = 'CRISIS DATA TERMINAL / 应急灾害监测终端 · Disaster Event Monitor'
 
@@ -30,7 +36,7 @@ function renderHomeMenuItem({ action, label, subtitle, primary = false, locked =
   `
 }
 
-function renderAuthenticatedHomeScreen() {
+function renderAuthenticatedHomeScreen(user) {
   const body = `
     <div class="vault-home-screen">
       <div class="vault-home-topline" aria-label="terminal header">
@@ -52,6 +58,16 @@ function renderAuthenticatedHomeScreen() {
       </div>
 
       <main class="vault-home-menu" aria-label="Crisis Data Terminal menu">
+        ${
+          user?.role === 'admin'
+            ? renderHomeMenuItem({
+                action: 'admin-dashboard',
+                label: '管理控制台',
+                subtitle: 'ADMIN PORTAL',
+                primary: true,
+              })
+            : ''
+        }
         ${renderHomeMenuItem({
           action: 'dashboard',
           label: '灾害事件总览',
@@ -94,8 +110,8 @@ function renderAuthenticatedHomeScreen() {
   `
 }
 
-function renderHomeScreen({ isLoggedIn }) {
-  return isLoggedIn ? renderAuthenticatedHomeScreen() : renderGuestHomeScreen()
+function renderHomeScreen({ isLoggedIn, user }) {
+  return isLoggedIn ? renderAuthenticatedHomeScreen(user) : renderGuestHomeScreen()
 }
 
 function renderGuestHomeScreen() {
@@ -189,12 +205,26 @@ export function renderSystemPage({
 }) {
   const app = document.getElementById('app')
   if (!app) return
-  destroySituationDashboard()
-  destroyKnowledgePage()
+  destroyUserOverview()
+  destroyUserAiInquiry()
+  resetAdminDashboard()
 
   const pages = {
-    start: () => renderHomeScreen({ isLoggedIn }),
+    start: () => renderHomeScreen({ isLoggedIn, user }),
     auth: renderAuthPage,
+    [ROUTES.USER_OVERVIEW]: () => renderUserOverview(),
+    [ROUTES.USER_SEARCH]: () => renderUserSearch(user),
+    [ROUTES.USER_ANALYSIS]: () => renderUserAnalysis(),
+    [ROUTES.USER_AI_INQUIRY]: () => `
+      <section class="vault-console vault-console--subpage" aria-label="AI 灾害问询终端">
+        <p class="situation-loading">&gt; 正在加载 AI 灾害问询终端...</p>
+      </section>
+    `,
+    [ROUTES.ADMIN_DASHBOARD]: () => renderAdminDashboard(),
+    [ROUTES.ADMIN_DISASTERS]: () => renderAdminDisasterManage(user),
+    [ROUTES.ADMIN_USERS]: () => renderAdminUserManage(),
+    [ROUTES.ADMIN_SYSTEM]: () => renderAdminSystemMonitor(),
+    [ROUTES.ADMIN_MODELS]: () => renderAdminModelManage(),
     dashboard: () => `
       <section class="vault-console vault-console--subpage" aria-label="灾害事件总览">
         <div class="situation-dashboard">
@@ -202,9 +232,6 @@ export function renderSystemPage({
         </div>
       </section>
     `,
-    query: () => renderDisasterDashboard({ user, mode: 'console' }),
-    analytics: () => renderAnalyticsPage(),
-    situation: () => renderAnalyticsPage(),
     knowledge: () => `
       <section class="vault-console vault-console--subpage" aria-label="AI 灾害问询终端">
         <p class="situation-loading">&gt; 正在加载 AI 灾害问询终端...</p>
@@ -222,30 +249,58 @@ export function renderSystemPage({
 
   if (route === 'auth') {
     bindAuthPage({
-      onSuccess: () => onNavigate('dashboard'),
+      onSuccess: () => onNavigate(ROUTES.AUTH),
       onBack: () => onNavigate('start'),
     })
     return
   }
 
-  if (route === 'dashboard') {
-    initSituationDashboard({ onNavigate, onLogout })
+  if (route === ROUTES.USER_OVERVIEW) {
+    initUserOverview({ onNavigate, onLogout })
     return
   }
 
-  if (route === 'query') {
-    bindDisasterDashboard({ user, onNavigate, mode: 'console' })
+  if (route === ROUTES.USER_SEARCH) {
+    initUserSearch({ user, onNavigate })
     bindTerminalNavigation({ onNavigate, root: app })
     return
   }
 
-  if (route === 'analytics' || route === 'situation') {
-    initAnalyticsPage({ onNavigate })
+  if (route === ROUTES.USER_ANALYSIS) {
+    initUserAnalysis({ onNavigate })
     bindTerminalNavigation({ onNavigate, root: app })
     return
   }
 
-  if (route === 'knowledge') {
-    initKnowledgePage({ onNavigate })
+  if (route === ROUTES.USER_AI_INQUIRY) {
+    initUserAiInquiry({ onNavigate })
+    return
   }
+
+  if (route === ROUTES.ADMIN_DASHBOARD) {
+    initAdminDashboard({ onNavigate, onLogout })
+    return
+  }
+
+  if (route === ROUTES.ADMIN_DISASTERS) {
+    initAdminDisasterManage({ user, onNavigate })
+    bindTerminalNavigation({ onNavigate, root: app })
+    return
+  }
+
+  if (route === ROUTES.ADMIN_USERS) {
+    initAdminUserManage(onNavigate)
+    return
+  }
+
+  if (route === ROUTES.ADMIN_SYSTEM) {
+    initAdminSystemMonitor(onNavigate)
+    return
+  }
+
+  if (route === ROUTES.ADMIN_MODELS) {
+    initAdminModelManage(onNavigate)
+    return
+  }
+
 }

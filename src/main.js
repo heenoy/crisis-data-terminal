@@ -8,6 +8,7 @@ import './disasterAnalytics.css'
 import './dashboardPage.css'
 import './disasterKnowledgePage.css'
 import './aiFace.css'
+import './adminPortal.css'
 import { runLaunchSequence } from './launchScreen.js'
 import { ensureAudioContext, playGeigerClick } from './audio.js'
 import {
@@ -21,6 +22,12 @@ import {
 import { getCurrentUser, initAuth, isLoggedIn, refreshSessionUser, signOut, subscribeAuth } from './auth.js'
 import { renderSystemPage } from './systemConsole.js'
 import { showTerminalNotice } from './terminalNotice.js'
+import {
+  ROUTES,
+  authorizeRoute,
+  defaultRouteForRole,
+  normalizeRoute,
+} from './router/routes.js'
 import {
   buildTerminalShell,
   delay,
@@ -80,6 +87,60 @@ const SCREEN_BAR_LABELS = {
     bl: '[MODULE: ACTIVE]',
     br: '[DB: CONNECTED]',
   },
+  'user/overview': {
+    tl: '[USER PORTAL / OVERVIEW]',
+    tr: '[DISASTER EVENT DB]',
+    bl: '[MONITOR: ACTIVE]',
+    br: '[DB: CONNECTED]',
+  },
+  'user/search': {
+    tl: '[USER PORTAL / SEARCH]',
+    tr: '[RECORD SEARCH]',
+    bl: '[MODULE: ACTIVE]',
+    br: '[ACCESS: READ]',
+  },
+  'user/analysis': {
+    tl: '[USER PORTAL / ANALYSIS]',
+    tr: '[DATA VISUALIZATION]',
+    bl: '[MODULE: ACTIVE]',
+    br: '[FEED: SYNCED]',
+  },
+  'user/ai-inquiry': {
+    tl: '[USER PORTAL / AI INQUIRY]',
+    tr: '[VAULT-0]',
+    bl: '[MODULE: ACTIVE]',
+    br: '[DB: CONNECTED]',
+  },
+  'admin/dashboard': {
+    tl: '[ADMIN PORTAL / DASHBOARD]',
+    tr: '[SYSTEM CONTROL]',
+    bl: '[ACCESS: ADMIN]',
+    br: '[MONITOR: ACTIVE]',
+  },
+  'admin/disasters': {
+    tl: '[ADMIN PORTAL / DISASTERS]',
+    tr: '[DATA MANAGEMENT]',
+    bl: '[ACCESS: ADMIN]',
+    br: '[CRUD: ENABLED]',
+  },
+  'admin/users': {
+    tl: '[ADMIN PORTAL / USERS]',
+    tr: '[USER CONTROL]',
+    bl: '[ACCESS: ADMIN]',
+    br: '[MODULE: RESERVED]',
+  },
+  'admin/system': {
+    tl: '[ADMIN PORTAL / SYSTEM]',
+    tr: '[SYSTEM MONITOR]',
+    bl: '[ACCESS: ADMIN]',
+    br: '[MODULE: RESERVED]',
+  },
+  'admin/models': {
+    tl: '[ADMIN PORTAL / MODELS]',
+    tr: '[MODEL CONTROL]',
+    bl: '[ACCESS: ADMIN]',
+    br: '[MODULE: RESERVED]',
+  },
   intro: {
     tl: '[CRISIS DATA]',
     tr: '[DISASTER_ARCHIVE]',
@@ -88,33 +149,13 @@ const SCREEN_BAR_LABELS = {
   },
 }
 
-const ROUTE_ALIASES = {
-  '': 'start',
-  start: 'start',
-  auth: 'auth',
-  login: 'auth',
-  register: 'auth',
-  dashboard: 'dashboard',
-  home: 'dashboard',
-  situation: 'analytics',
-  status: 'analytics',
-  analytics: 'analytics',
-  analysis: 'analytics',
-  query: 'query',
-  archive: 'archive',
-  docs: 'knowledge',
-  documentation: 'knowledge',
-  knowledge: 'knowledge',
-}
-
-const PUBLIC_ROUTES = new Set(['start', 'auth'])
-const PROTECTED_ROUTES = new Set(['dashboard', 'query', 'analytics', 'archive', 'situation', 'knowledge'])
 const MENU_ACTION_ROUTES = {
-  login: 'auth',
-  dashboard: 'dashboard',
-  query: 'query',
-  analytics: 'analytics',
-  knowledge: 'knowledge',
+  login: ROUTES.AUTH,
+  dashboard: ROUTES.USER_OVERVIEW,
+  query: ROUTES.USER_SEARCH,
+  analytics: ROUTES.USER_ANALYSIS,
+  knowledge: ROUTES.USER_AI_INQUIRY,
+  'admin-dashboard': ROUTES.ADMIN_DASHBOARD,
   exit: null,
   logout: null,
 }
@@ -124,7 +165,11 @@ let hasCompletedBoot = false
 let lastKnownUserId = null
 
 function goFromStart() {
-  handleMenuAction(isLoggedIn() ? 'dashboard' : 'login')
+  if (!isLoggedIn()) {
+    handleMenuAction('login')
+    return
+  }
+  navigateTo(defaultRouteForRole(getCurrentUser()?.role))
 }
 
 function handleAccessDenied() {
@@ -167,50 +212,34 @@ function handleMenuAction(action) {
   const route = MENU_ACTION_ROUTES[action]
   if (!route) return
 
-  if (!isLoggedIn() && PROTECTED_ROUTES.has(route)) {
-    handleAccessDenied()
-    return
-  }
-
   navigateTo(route)
 }
 
 function navigateTo(route, options = {}) {
   const normalized = normalizeRoute(route)
+  const authorization = options.bypassGuard
+    ? { route: normalized, allowed: true }
+    : authorizeRoute(normalized, getCurrentUser())
 
-  if (!options.bypassGuard && !isLoggedIn() && PROTECTED_ROUTES.has(normalized)) {
-    handleAccessDenied()
-    return
+  if (!authorization.allowed) {
+    const message =
+      authorization.reason === 'admin-required'
+        ? '权限不足：仅管理员可以访问管理端。'
+        : authorization.reason === 'invalid-role'
+          ? '账号角色无效，请联系管理员。'
+          : '访问受限，请先登录系统。'
+    showTerminalNotice(message, 'error', 1800)
   }
 
-  setRouteHash(normalized)
-  renderRoute(normalized, options)
-}
-
-function normalizeRoute(route) {
-  let key = String(route || '').trim().toLowerCase()
-  key = key.replace(/^#\/?/, '').replace(/^\//, '')
-  return ROUTE_ALIASES[key] || 'start'
+  setRouteHash(authorization.route)
+  renderRoute(authorization.route, options)
 }
 
 function resolveRoute(route, { bypassGuard = false } = {}) {
   const normalized = normalizeRoute(route)
 
   if (bypassGuard) return normalized
-
-  if (!isLoggedIn() && PROTECTED_ROUTES.has(normalized)) {
-    return 'auth'
-  }
-
-  if (normalized === 'auth' && isLoggedIn()) {
-    return 'dashboard'
-  }
-
-  if (PUBLIC_ROUTES.has(normalized) || PROTECTED_ROUTES.has(normalized)) {
-    return normalized
-  }
-
-  return 'start'
+  return authorizeRoute(normalized, getCurrentUser()).route
 }
 
 function updateScreenBars(view) {
@@ -227,7 +256,7 @@ function updateScreenBars(view) {
 
 function setRouteHash(route, replace = false) {
   const normalized = normalizeRoute(route)
-  const hash = `#${normalized}`
+  const hash = `#/${normalized}`
   if (window.location.hash === hash) return
   if (replace) window.history.replaceState(null, '', hash)
   else window.location.hash = hash
@@ -335,8 +364,18 @@ async function runBootSequence() {
   content.innerHTML = ''
 }
 
-const AI_FACE_ROUTES = new Set(['start', 'dashboard', 'query', 'analytics', 'knowledge'])
+const AI_FACE_ROUTES = new Set([
+  ROUTES.START,
+  ROUTES.USER_OVERVIEW,
+  ROUTES.USER_SEARCH,
+  ROUTES.USER_ANALYSIS,
+  ROUTES.USER_AI_INQUIRY,
+])
 const AI_ROUTE_MESSAGES = {
+  [ROUTES.USER_OVERVIEW]: 'VAULT-0：\n全球灾害数据库已连接。',
+  [ROUTES.USER_SEARCH]: 'VAULT-0：\n请输入查询条件。',
+  [ROUTES.USER_ANALYSIS]: 'VAULT-0：\n正在分析全球灾害数据。',
+  [ROUTES.USER_AI_INQUIRY]: 'VAULT-0：\n请直接向我提问。',
   start: '欢迎接入 Crisis Data Terminal。',
   dashboard: 'VAULT-0：\n全球灾害数据库已连接。',
   analytics: 'VAULT-0：\n正在分析全球灾害数据。',
@@ -388,7 +427,7 @@ function ensureGlobalAiFace(route) {
     return
   }
 
-  if (route === 'start') {
+  if (route === ROUTES.START) {
     requestAnimationFrame(() => {
       if (routeToken !== aiFaceRouteToken) return
       mountConsoleAiFace(AI_ROUTE_MESSAGES.start)
@@ -396,7 +435,7 @@ function ensureGlobalAiFace(route) {
     return
   }
 
-  if (route === 'knowledge') {
+  if (route === ROUTES.USER_AI_INQUIRY) {
     requestAnimationFrame(() => {
       if (routeToken !== aiFaceRouteToken) return
       ensureFloatingAiMascot({ state: 'detected' })
@@ -433,15 +472,18 @@ function bindStartKeyboard() {
 function handleLogout() {
   signOut()
   showTerminalNotice('已退出登录', 'success')
-  setRouteHash('start')
-  renderRoute('start', { bypassGuard: true })
+  setRouteHash(ROUTES.START)
+  renderRoute(ROUTES.START, { bypassGuard: true })
 }
 
 function renderRoute(route, options = {}) {
   const requested = normalizeRoute(route)
-  const normalized = resolveRoute(route, options)
+  const authorization = options.bypassGuard
+    ? { route: requested, allowed: true }
+    : authorizeRoute(requested, getCurrentUser())
+  const normalized = authorization.route
 
-  if (!options.bypassGuard && !isLoggedIn() && PROTECTED_ROUTES.has(requested)) {
+  if (!authorization.allowed) {
     showTerminalNotice('访问受限，请先登录系统', 'error', 1400)
   }
 
@@ -465,7 +507,12 @@ function renderRoute(route, options = {}) {
 
 function onHashChange() {
   if (!hasCompletedBoot) return
-  renderRoute(window.location.hash)
+  const requested = normalizeRoute(window.location.hash)
+  const expected = resolveRoute(requested)
+  if (requested !== expected) {
+    setRouteHash(expected, true)
+  }
+  renderRoute(expected)
 }
 
 function onAuthStateChanged(user) {

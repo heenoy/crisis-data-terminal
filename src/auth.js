@@ -119,7 +119,7 @@ export async function signUp(username, password, displayName) {
       username,
       password,
       display_name: displayName,
-      role: 'operator',
+      role: 'user',
     })
     .select('id, username, display_name, role, created_at')
     .single()
