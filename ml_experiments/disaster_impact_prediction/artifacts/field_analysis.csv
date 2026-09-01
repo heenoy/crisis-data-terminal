@@ -1,0 +1,48 @@
+field,dtype,non_null,missing_rate,unique_values,spearman_with_total_deaths,categorical_eta_with_total_deaths,selected_feature,leakage_excluded,exclusion_reason
+DisNo.,object,16858,0.0,16858,,,False,False,
+Historic,object,16858,0.0,1,,,False,False,
+Classification Key,object,16858,0.0,63,,0.15811964066357378,False,False,
+Disaster Group,object,16858,0.0,2,,0.031110420348202897,True,False,
+Disaster Subgroup,object,16858,0.0,9,,0.09874311023647797,True,False,
+Disaster Type,object,16858,0.0,31,,0.10966966320636,True,False,
+Disaster Subtype,object,16858,0.0,63,,0.15811964066357378,True,False,
+External IDs,object,4379,0.7402420215921224,3249,,,False,False,
+Event Name,object,5339,0.6832957646221378,2244,,,False,False,
+ISO,object,16858,0.0,223,,0.08346598012446277,True,False,
+Country,object,16858,0.0,223,,0.08346598012446277,True,False,
+Subregion,object,16858,0.0,17,,0.026378942227389013,True,False,
+Region,object,16858,0.0,5,,0.018508637507266397,True,False,
+Location,object,16061,0.04727725708862261,14419,,,False,False,
+Origin,object,4320,0.7437418436350695,845,,,False,False,
+Associated Types,object,3692,0.7809941867362676,140,,0.17229667089986686,False,False,
+OFDA/BHA Response,object,16858,0.0,2,,0.092109950739734,False,False,
+Appeal,object,16858,0.0,2,,0.08605980704584465,False,False,
+Declaration,object,16858,0.0,2,,0.021243459051814333,False,False,
+AID Contribution ('000 US$),float64,489,0.9709930003559141,428,0.42518003269635984,,False,True,response outcome that may follow impact assessment
+Magnitude,float64,3392,0.7987898920393879,1611,0.1210908833087573,,True,False,
+Magnitude Scale,object,10590,0.37181160279985764,6,,0.10507421298905309,True,False,
+Latitude,float64,1854,0.8900225412267173,1648,-0.056864511819967614,,True,False,
+Longitude,float64,1854,0.8900225412267173,1644,0.11398951000815775,,True,False,
+River Basin,object,1346,0.9201566022066675,1276,,,False,False,
+Start Year,int64,16858,0.0,27,-0.06841432372496105,,True,False,
+Start Month,float64,16784,0.004389607308102977,12,-0.0010813005639351986,,True,False,
+Start Day,float64,15266,0.09443587614189108,31,-0.005109311971564264,,True,False,
+End Year,int64,16858,0.0,28,-0.06641157227730861,,False,False,
+End Month,float64,16687,0.010143552022778503,12,0.023673476373276943,,False,False,
+End Day,float64,15351,0.08939375963934038,31,0.0026016884647149653,,False,False,
+Total Deaths,float64,13582,0.19432910191007238,598,0.9999999999999999,,False,True,prediction target
+No. Injured,float64,6339,0.6239767469450705,720,0.25059983583670137,,False,True,same-event impact outcome unavailable at prediction time
+No. Affected,float64,7843,0.5347609443587614,3324,0.21989092585952388,,False,True,same-event impact outcome unavailable at prediction time
+No. Homeless,float64,1358,0.9194447739945426,595,0.37411538366558267,,False,True,same-event impact outcome unavailable at prediction time
+Total Affected,float64,12593,0.2529956103926919,4530,0.005675563214390554,,False,True,derived same-event impact outcome
+Reconstruction Costs ('000 US$),float64,34,0.9979831533989797,32,0.6694231544977814,,False,True,post-event economic outcome
+"Reconstruction Costs, Adjusted ('000 US$)",float64,34,0.9979831533989797,33,0.667338916370496,,False,True,post-event economic outcome
+Insured Damage ('000 US$),float64,721,0.9572309882548345,286,0.10785391034536938,,False,True,post-event economic outcome
+"Insured Damage, Adjusted ('000 US$)",float64,721,0.9572309882548345,586,0.10551452717599595,,False,True,post-event economic outcome
+Total Damage ('000 US$),float64,3327,0.8026456281883972,1090,0.1943492370302903,,False,True,post-event economic outcome and future target
+"Total Damage, Adjusted ('000 US$)",float64,3313,0.8034760944358761,2414,0.2005701791433001,,False,True,post-event economic outcome
+CPI,float64,16697,0.00955036184600783,26,-0.06796348741731302,,False,False,
+Admin Units,object,8394,0.5020761656186974,6898,,,False,False,
+GADM Admin Units,object,7831,0.5354727725708862,6446,,,False,False,
+Entry Date,object,16858,0.0,2723,,,False,False,
+Last Update,object,16858,0.0,304,,0.1647111153552064,False,False,

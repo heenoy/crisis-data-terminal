@@ -1,0 +1,200 @@
+{
+  "created_at_utc": "2026-08-04T08:39:21.516422+00:00",
+  "input_sha256": {
+    "data/processed_hdro/disaster_hdi_merged.csv": "075738f8debb621dca42c8fc1d9f940a7078ed54377f00fe78f7fd09fe9c4caa",
+    "data/emdat_raw.xlsx": "f7c4993adcc8eeecf8806fb68cd0426649ea320482a7ac6636fbfd01fa9afe45",
+    "ml_experiments/data_preparation/world_bank/event_indicator_matches.csv": "c9efafbb21ad4b9566d60cf07f1e240eff04215ba5effefd2b86b4ae5de7c1de",
+    "ml_experiments/modeling/artifacts/model_metadata.json": "b0fc26ce29f08457c2a6494a6251f8316aa4ca102a0110124a3144338d8f1f72"
+  },
+  "script_sha256": "c7ab7d521ec87e0386f66bd1a552760d3f0981aa115fe2d7060f6ff6d0335faa",
+  "python": "3.12.13",
+  "libraries": {
+    "pandas": "2.3.3",
+    "numpy": "2.5.1",
+    "scikit_learn": "1.9.0",
+    "joblib": "1.5.3"
+  },
+  "frozen_files_checked": 117,
+  "recommended_feature_version": "T2",
+  "test_prediction_files": [],
+  "test_metrics_computed": false,
+  "maturity_features_constructed": false,
+  "runtime_seconds": 27.858569600008195,
+  "files": [
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/experiment_config.json",
+      "sha256": "aa0299930677cebbec9fdf115137bc3f7fdd1807a9074af7b9e45eca9afd9802",
+      "bytes": 2985
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/magnitude_training_groups.csv",
+      "sha256": "038700796f16d5586214cdf8186cab99a9cd12873403ce3d30307313d2f32993",
+      "bytes": 824
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/reproducibility_check.json",
+      "sha256": "05f60281057cdd7719e727ec610e0e5704fe9993eca91fea37d8b6e589cde040",
+      "bytes": 273
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/reproducibility_reference_validation_predictions.csv",
+      "sha256": "3c936e059aa4dd926f80b1f07234f9289d63ba7795fb27d5a707bf412d82b4a2",
+      "bytes": 302010
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/reproducibility_signature.json",
+      "sha256": "ceb58559ba97daa8145a0a9abe5828330712d593cd0af3e5bfae77d45fad8223",
+      "bytes": 5061
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/T0_random_forest_pipeline.joblib",
+      "sha256": "eb6f93847fa44fd5e4827f0371c68a706d1cd0d0173d4752c5ec8278f04a2fe2",
+      "bytes": 16352931
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/T1_random_forest_pipeline.joblib",
+      "sha256": "0ed228aced5f867b6d9b796de9236370dc96309016f2a9c05cafb5283b64549d",
+      "bytes": 17045507
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/T2_random_forest_pipeline.joblib",
+      "sha256": "56ab6fbfea5eac2214c3e7fa3c24c9f76a41f6587e5344c2ab95f290ccfc3a25",
+      "bytes": 18323731
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/T3_random_forest_pipeline.joblib",
+      "sha256": "d804ae3d299ac54859d6756905fb7f3de31c52efad95c118900121772b7ce799",
+      "bytes": 19216003
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/training_category_vocabularies.json",
+      "sha256": "eec6ab90918ed3747b79c32422168be21aaa13cba1f064b56e5a8c14d4590bfe",
+      "bytes": 23267
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/artifacts/training_numeric_imputer_statistics.csv",
+      "sha256": "45178d218a8aeb8896bcbc006bb34164b0e541cdb502c1a7ed42e559a2b44380",
+      "bytes": 1063
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/logs/experiment.log",
+      "sha256": "bfcede4da2f277ab6084f4c5fcc0bf29f73d4b1817adf139d5c681b58ad8ae39",
+      "bytes": 1098
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/predictions/validation_prediction_changes.csv",
+      "sha256": "864b2d098b1cec4f24a86aee41e7dc43146d11f0d267bc7cb57e7ddc157b3f08",
+      "bytes": 3791
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/predictions/validation_predictions_all.csv",
+      "sha256": "32b898d4b3cb91163f1c03891fb3b04b97db316aa79ccdfe011bcee2be646abe",
+      "bytes": 302009
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/predictions/validation_predictions_T0.csv",
+      "sha256": "25bf20356d0098058ab022568ff7d9fef902b9d1bcbc0819cd4f27152b68467e",
+      "bytes": 74868
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/predictions/validation_predictions_T1.csv",
+      "sha256": "b536984145be18fdc8db917c8ba16f389bc133ae3e68786fc0cb0f62fa68e419",
+      "bytes": 76140
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/predictions/validation_predictions_T2.csv",
+      "sha256": "34d9895534c4da3240210fe9c74481f70015512a61e4e462a68f8f90f5ad0e86",
+      "bytes": 75074
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/predictions/validation_predictions_T3.csv",
+      "sha256": "72e20f9b73ce1cb3dd30c684c0e6adf660ff591f74b49a75b7023de3d5b6bbfb",
+      "bytes": 76263
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/README.md",
+      "sha256": "ea9e7d98c423311448a794033d717afccfee4fa709c86d2f373142025f096901",
+      "bytes": 742
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/confusion_matrix_T0_train.csv",
+      "sha256": "da69b39bee62fc1eafdf7fc24171d2805573b9ffa785750c16d8a5c303249197",
+      "bytes": 95
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/confusion_matrix_T0_validation.csv",
+      "sha256": "4750356529b77477679426608c4bdee9c018ee573ef724bc9722a10b703f8cce",
+      "bytes": 84
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/confusion_matrix_T1_train.csv",
+      "sha256": "3cb7afdac15cea4a976377b6e83f753de161179809b9a03490a6b758dff4af87",
+      "bytes": 94
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/confusion_matrix_T1_validation.csv",
+      "sha256": "baa750e8d317c5ace17e3ce224229dd416567d5a21c7116aec0fe2ebb04aa5b2",
+      "bytes": 84
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/confusion_matrix_T2_train.csv",
+      "sha256": "af0fe5f83bd81332804e10cc4b9e5794b356fb6b5653768629a1fac920ce516b",
+      "bytes": 94
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/confusion_matrix_T2_validation.csv",
+      "sha256": "5dc5edd9a6649c28d56a7db7aa23aa220db16fe3a7ea57ce290443f380d4df6d",
+      "bytes": 84
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/confusion_matrix_T3_train.csv",
+      "sha256": "28cd804887742a58bd45d072e98a09c426d379058e890b6ff1cbc3e38ebcd38c",
+      "bytes": 94
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/confusion_matrix_T3_validation.csv",
+      "sha256": "8cd02abdd3994dbb8b6e8f9920b3444791dabefaf47a0136082d0c3b1580af6b",
+      "bytes": 84
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/feature_manifest.csv",
+      "sha256": "b18a64f3708c4ad56c7c58169bd48706b450d6127478b05b1a0d65a512e16b17",
+      "bytes": 1902
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/incremental_contribution.csv",
+      "sha256": "b987b435f988f1b8fd28c6c86d0f08a11742fc6f7c9e33c38a4a64adf18757ca",
+      "bytes": 1320
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/incremental_feature_coverage.csv",
+      "sha256": "ad43bdd2f9907a6fe96a82fc41c2c87ff311eb0aa5b3e4428c78c1183e50002c",
+      "bytes": 262
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/label_distribution.csv",
+      "sha256": "9f466d75e72ae5cde5bab450460ac72e93a287c8b5a2648fd27e6fc60d5f06eb",
+      "bytes": 837
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/metrics.csv",
+      "sha256": "ed108ae67f88b50eb4707a7cb61337ae7530a72450de6bfd4538ccac53b3b1f0",
+      "bytes": 2009
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/per_class_metrics.csv",
+      "sha256": "c39013506ec91362407c9b9e5a41fd84743d0ca413b62ed72a54e8146ae66343",
+      "bytes": 1965
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/reports/three_class_t0_t3_report.md",
+      "sha256": "8db60ccd650336a130bfc6801954c6a78e9711ee90bc2cc3cf33d72cbb1753b7",
+      "bytes": 2876
+    },
+    {
+      "path": "ml_experiments/modeling/three_class/run_t0_t3_random_forest.py",
+      "sha256": "c7ab7d521ec87e0386f66bd1a552760d3f0981aa115fe2d7060f6ff6d0335faa",
+      "bytes": 35447
+    }
+  ]
+}

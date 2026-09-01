@@ -1,7 +1,4 @@
 import { supabase } from './supabase.js'
-import { signOut } from './auth.js'
-
-const STALE_USER_MESSAGE = '登录用户不存在，请重新登录'
 
 export const DISASTER_TYPE_LABELS = {
   earthquake: '地震',
@@ -207,60 +204,21 @@ export async function listDisasterEvents(filters = {}) {
   return { data: data || [], error }
 }
 
-const UUID_RE =
-  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
-
-function normalizeUserRef(userRef) {
-  if (!userRef) return null
-  if (typeof userRef === 'string') {
-    return { id: userRef, username: null }
-  }
-  return {
-    id: userRef.id ?? null,
-    username: userRef.username?.trim() || null,
-  }
-}
-
-async function resolveCreatedByForInsert(userRef) {
-  const user = normalizeUserRef(userRef)
-  if (!user?.id && !user?.username) {
-    return { createdBy: null, error: { message: STALE_USER_MESSAGE }, stale: true }
-  }
-
-  let query = supabase.from('app_users').select('id')
-
-  if (user.username) {
-    query = query.eq('username', user.username)
-  } else if (user.id && UUID_RE.test(String(user.id))) {
-    query = query.eq('id', user.id)
-  } else {
-    return { createdBy: null, error: { message: STALE_USER_MESSAGE }, stale: true }
-  }
-
-  const { data, error } = await query.maybeSingle()
-
-  if (error || !data?.id) {
-    return { createdBy: null, error: { message: STALE_USER_MESSAGE }, stale: true }
-  }
-
-  return { createdBy: data.id, error: null, stale: false }
+function crudError(action) {
+  return { message: `${action}失败，请确认当前账号权限后重试。` }
 }
 
 export async function createDisasterEvent(payload, userRef) {
-  const { createdBy, error: userError, stale } = await resolveCreatedByForInsert(userRef)
-
-  if (userError) {
-    if (stale) signOut()
-    return { data: null, error: userError, stale: !!stale }
-  }
+  if (!userRef?.id) return { data: null, error: crudError('创建') }
 
   const safePayload = { ...(payload || {}) }
   delete safePayload.created_by
+  delete safePayload.created_by_auth
 
   const insertRow = {
     ...safePayload,
     updated_at: new Date().toISOString(),
-    created_by: createdBy,
+    created_by_auth: userRef.id,
   }
 
   const { data, error } = await supabase
@@ -269,7 +227,7 @@ export async function createDisasterEvent(payload, userRef) {
     .select('*')
     .single()
 
-  return { data, error }
+  return { data, error: error ? crudError('创建') : null }
 }
 
 export async function updateDisasterEvent(id, payload) {
@@ -283,12 +241,15 @@ export async function updateDisasterEvent(id, payload) {
     .select('*')
     .single()
 
-  return { data, error }
+  return { data, error: error ? crudError('更新') : data ? null : crudError('更新') }
 }
 
 export async function deleteDisasterEvent(id) {
-  const { error } = await supabase.from('disaster_events').delete().eq('id', id)
-  return { error }
+  const { data, error } = await supabase.from('disaster_events').delete().eq('id', id).select('id').maybeSingle()
+  return {
+    data,
+    error: error ? crudError('删除') : data ? null : { message: '未找到可删除的灾害事件。' },
+  }
 }
 
 export async function countDisasterEvents() {

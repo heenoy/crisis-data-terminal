@@ -1,0 +1,62 @@
+{
+  "loaded": {
+    "countries": 223,
+    "types": 32,
+    "countryValues": [
+      "AFG",
+      "AGO",
+      "AIA",
+      "ALB"
+    ],
+    "dialogue": "分析模块已就绪，等待你输入。死亡人数、受影响人数和经济损失属于事件发生后的结果，不会参与本次判断。",
+    "dialogueCount": 1,
+    "legacyFloatingDialogueVisible": false
+  },
+  "magnitudeHint": "当前类型与量表具有冻结的同语义组依据；数值只表示该组内相对位置，不能跨类型比较。",
+  "analyzingDialogue": "信息已接收，正在与历史灾害档案进行比对。",
+  "prediction": {
+    "level": "低影响",
+    "probabilityRows": 3,
+    "probabilityLabels": [
+      "低影响",
+      "中等影响",
+      "严重影响"
+    ],
+    "disclaimerVisible": true,
+    "dialogue": "分析已完成，当前模型输出倾向于“低影响”。请同时查看三类模型输出概率；该结果不是确定事实，也不表示因果关系。"
+  },
+  "refreshCountries": 223,
+  "breadcrumbRoutes": [
+    "start",
+    "user/overview"
+  ],
+  "userBreadcrumbKeyboardNavigation": true,
+  "mainBreadcrumbNavigation": true,
+  "retryVisible": true,
+  "retryDialogue": "输入选项没有成功载入。你可以重新尝试；在数据恢复前，我不会提交不完整的分析。",
+  "retryRecovered": true,
+  "optionAttempts": 2,
+  "network": [
+    {
+      "url": "http://127.0.0.1:5173/api/impact-options",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/predict-impact",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/impact-options",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:5173/api/impact-options",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    }
+  ],
+  "consoleErrors": []
+}

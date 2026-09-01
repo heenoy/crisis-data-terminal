@@ -1,0 +1,13 @@
+scope,outcome,count,rate
+all,both_correct,573,0.6044303797468354
+all,rf_only_correct,42,0.04430379746835443
+all,lightgbm_only_correct,63,0.06645569620253164
+all,both_wrong,270,0.2848101265822785
+High,both_correct,20,0.22988505747126436
+High,rf_only_correct,12,0.13793103448275862
+High,lightgbm_only_correct,12,0.13793103448275862
+High,both_wrong,43,0.4942528735632184
+Extreme,both_correct,6,0.1875
+Extreme,rf_only_correct,11,0.34375
+Extreme,lightgbm_only_correct,3,0.09375
+Extreme,both_wrong,12,0.375

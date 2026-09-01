@@ -1,17 +1,13 @@
-import { supabase } from '../supabase.js'
 import { countDisasterEvents } from '../disasterEvents.js'
 
 export async function fetchAdminDashboardStats() {
-  const [disasterResult, userResult] = await Promise.all([
-    countDisasterEvents(),
-    supabase.from('app_users').select('id', { count: 'exact', head: true }),
-  ])
-
-  const error = disasterResult.error || userResult.error || null
+  const disasterResult = await countDisasterEvents()
+  const error = disasterResult.error || null
 
   return {
     disasterCount: disasterResult.count ?? 0,
-    userCount: userResult.count ?? 0,
+    // Auth user counts require a trusted server-side Admin API and are not read from app_users.
+    userCount: 'N/A',
     databaseStatus: error ? 'UNAVAILABLE' : 'CONNECTED',
     error,
   }

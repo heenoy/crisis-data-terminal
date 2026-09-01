@@ -1,0 +1,50 @@
+{
+  "locked_at_utc": "2026-08-04T09:07:26.132703+00:00",
+  "locked_before_test_evaluation": true,
+  "locked_configuration": {
+    "feature_version": "T2",
+    "features": [
+      "country_code",
+      "region",
+      "disaster_type",
+      "disaster_subtype",
+      "date_granularity",
+      "year",
+      "date_imputed",
+      "historical_frequency",
+      "hdi",
+      "hdi_missing",
+      "event_month",
+      "month_missing",
+      "magnitude_robust_z",
+      "magnitude_missing",
+      "magnitude_group_unknown"
+    ],
+    "rf_params": {
+      "n_estimators": 500,
+      "max_depth": 10,
+      "min_samples_leaf": 5,
+      "max_features": 0.5,
+      "class_weight": "balanced_subsample",
+      "random_state": 20260803,
+      "n_jobs": -1
+    },
+    "labels": [
+      "Low",
+      "Moderate",
+      "Severe"
+    ],
+    "development": "2000-2021",
+    "test": "2022-2023",
+    "maturity": "2024-2026 sealed",
+    "input_hashes": {
+      "data/processed_hdro/disaster_hdi_merged.csv": "075738f8debb621dca42c8fc1d9f940a7078ed54377f00fe78f7fd09fe9c4caa",
+      "data/emdat_raw.xlsx": "f7c4993adcc8eeecf8806fb68cd0426649ea320482a7ac6636fbfd01fa9afe45",
+      "ml_experiments/modeling/three_class/artifacts/experiment_config.json": "aa0299930677cebbec9fdf115137bc3f7fdd1807a9074af7b9e45eca9afd9802",
+      "ml_experiments/modeling/three_class/artifacts/magnitude_training_groups.csv": "038700796f16d5586214cdf8186cab99a9cd12873403ce3d30307313d2f32993",
+      "ml_experiments/modeling/three_class/manifest.json": "fce2e9801df5ddeeeb801c2f5ab4289da2939b0fa4b46ff52eef47916578767f",
+      "ml_experiments/modeling/three_class/artifacts/T2_random_forest_pipeline.joblib": "56ab6fbfea5eac2214c3e7fa3c24c9f76a41f6587e5344c2ab95f290ccfc3a25"
+    },
+    "magnitude_rules": "8 frozen semantic groups; development-only median/IQR; n>=20; IQR>0; clip[-5,5]"
+  }
+}

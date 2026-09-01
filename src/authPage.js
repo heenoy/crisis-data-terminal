@@ -38,7 +38,7 @@ function updateModeUI() {
     hint.textContent =
       activeMode === 'login'
         ? '输入用户名与密码以接入 Crisis Data Terminal。'
-        : '创建操作员账号，注册后可立即登录。'
+        : '创建普通用户账号，用户名支持 3–24 位字母、数字和下划线。'
   }
 }
 
@@ -61,7 +61,7 @@ export function renderAuthPage() {
         <form class="survivor-auth-form" id="auth-form" novalidate>
           <label>
             <span>USERNAME / 用户名</span>
-            <input type="text" name="username" autocomplete="username" required placeholder="admin" />
+            <input type="text" name="username" autocomplete="username" required minlength="3" maxlength="24" pattern="[A-Za-z0-9_]+" placeholder="vault_user" />
           </label>
           <label id="auth-display-name-field" hidden>
             <span>DISPLAY NAME / 昵称</span>
@@ -102,7 +102,7 @@ export function bindAuthPage({ onSuccess, onBack }) {
     setError('')
 
     const form = e.currentTarget
-    const username = form.username.value.trim()
+    const username = form.username.value
     const password = form.password.value
     const displayName = form.display_name?.value.trim() || username
 
@@ -138,8 +138,8 @@ export function bindAuthPage({ onSuccess, onBack }) {
       activeMode = 'login'
       form.password.value = ''
       updateModeUI()
-    } catch (err) {
-      setError(err?.message || '认证请求失败，请稍后重试。')
+    } catch {
+      setError('认证请求失败，请稍后重试。')
     } finally {
       setLoading(false)
     }

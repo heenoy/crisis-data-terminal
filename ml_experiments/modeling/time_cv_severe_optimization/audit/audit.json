@@ -1,0 +1,19 @@
+{
+  "model_sha256": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+  "historical_frequency_mismatches": 0,
+  "frequency_source_events": 14348,
+  "development_labeled_events": 11590,
+  "input_hashes": {
+    "data/processed_hdro/disaster_hdi_merged.csv": "075738f8debb621dca42c8fc1d9f940a7078ed54377f00fe78f7fd09fe9c4caa",
+    "data/emdat_raw.xlsx": "f7c4993adcc8eeecf8806fb68cd0426649ea320482a7ac6636fbfd01fa9afe45",
+    "ml_experiments/modeling/lightgbm/artifacts/selected_lightgbm_config.json": "dcb2e02eb7d0430b007763ddd74f94a5d201e7d8cda2c361b4bca4a31b26fc0d"
+  },
+  "test_features_labels_read": false,
+  "maturity_features_labels_read": false,
+  "archive_access": "shared file bytes scanned; CSV year and XLSX ID are exclusion gates; no Test/Maturity feature/label frame",
+  "historical_frequency": "all labeled/unlabeled events in 2000-2021; same country and previous interval upper < current lower; truncated-prefix invariant verified",
+  "historical_limitations": "causal within-year sequential archive arrivals assumed; historical HDI/magnitude availability is not a publication-vintage backtest",
+  "historical_lgbm_selection": "LGBM-V2_P3_low_rate_balanced",
+  "historical_lgbm_best_iteration": 291,
+  "test_count_source": "existing frozen declaration only; no new Test file opened"
+}

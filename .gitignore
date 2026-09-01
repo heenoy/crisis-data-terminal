@@ -8,12 +8,24 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.venv/
+.python-deps/
+__pycache__/
+*.py[cod]
 dist
 dist-ssr
 *.local
 
 # Environment variables
 .env
+
+# Local production backup snapshots (never commit)
+backups/private/
+
+# Generated HDRO API snapshots and normalized extracts
+data/raw/hdro_*.json
+data/raw/hdro_*.csv
+data/processed_hdro/
 
 # Editor directories and files
 .vscode/*
@@ -25,3 +37,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.vercel
+.env*

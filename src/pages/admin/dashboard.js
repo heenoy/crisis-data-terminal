@@ -67,7 +67,7 @@ export function renderAdminDashboard() {
           ${moduleEntry('admin/users', 'USER CONTROL', '用户管理')}
           ${moduleEntry('admin/system', 'SYSTEM MONITOR', '系统监控')}
           ${moduleEntry('admin/models', 'MODEL CONTROL', '模型管理')}
-          ${moduleEntry('user/overview', 'USER PORTAL', '进入用户端', true)}
+          ${moduleEntry('user/overview', 'DISASTER OVERVIEW', '世界灾害总览', true)}
         </nav>
       </div>
     </section>

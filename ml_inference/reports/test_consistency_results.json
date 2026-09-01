@@ -1,0 +1,36 @@
+{
+  "test_events": 948,
+  "pipeline_direct_reference": "frozen final Test predictions",
+  "end_to_end_source": "raw request fields reconstructed from frozen EM-DAT plus frozen lookup assets",
+  "prediction_class_match_count": 948,
+  "prediction_class_match_rate": 1.0,
+  "mismatch_event_ids": [],
+  "predict_proba_max_abs_error": 3.3306690738754696e-16,
+  "predict_proba_values_over_1e_12": 0,
+  "feature_columns_exact": true,
+  "feature_columns": [
+    "country_code",
+    "region",
+    "disaster_type",
+    "disaster_subtype",
+    "date_granularity",
+    "year",
+    "date_imputed",
+    "historical_frequency",
+    "hdi",
+    "hdi_missing",
+    "event_month",
+    "month_missing",
+    "magnitude_robust_z",
+    "magnitude_missing",
+    "magnitude_group_unknown"
+  ],
+  "class_order": [
+    "Low",
+    "Moderate",
+    "Severe"
+  ],
+  "json_field_order_class_equal": true,
+  "json_field_order_probability_max_abs_error": 1.6653345369377348e-16,
+  "passed": true
+}

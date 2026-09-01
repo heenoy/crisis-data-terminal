@@ -1,29 +1,35 @@
 import { supabase } from './supabase.js'
+import { normalizeUsername, roleFromAppMetadata, usernameToInternalEmail } from './authIdentity.js'
 
-export const SESSION_KEY = 'crisis_user'
+const LEGACY_SESSION_KEY = 'crisis_user'
 
 let currentUser = null
+let authSubscription = null
+let suppressAuthEvents = false
 const listeners = new Set()
+
+function clearLegacyAuthStorage() {
+  sessionStorage.removeItem(LEGACY_SESSION_KEY)
+  localStorage.removeItem(LEGACY_SESSION_KEY)
+}
 
 function emit(user) {
   currentUser = user
   listeners.forEach((fn) => fn(user))
 }
 
-function toPublicUser(row) {
-  if (!row) return null
-  const { password: _password, ...user } = row
-  return user
-}
+function toAppUser(authUser) {
+  if (!authUser?.id) return null
 
-function persistUser(row) {
-  const user = toPublicUser(row)
-  if (user) {
-    sessionStorage.setItem(SESSION_KEY, JSON.stringify(user))
-  } else {
-    sessionStorage.removeItem(SESSION_KEY)
+  const username = String(authUser.user_metadata?.username || '').trim().toLowerCase()
+  const displayName = String(authUser.user_metadata?.display_name || username).trim()
+
+  return {
+    id: authUser.id,
+    username,
+    display_name: displayName || username,
+    role: roleFromAppMetadata(authUser.app_metadata),
   }
-  emit(user)
 }
 
 export function getCurrentUser() {
@@ -40,98 +46,99 @@ export function subscribeAuth(fn) {
   return () => listeners.delete(fn)
 }
 
-export function initAuth() {
-  try {
-    const raw = sessionStorage.getItem(SESSION_KEY)
-    const user = raw ? JSON.parse(raw) : null
-    emit(user && user.id ? user : null)
-  } catch (err) {
-    console.warn('[Crisis Data Terminal] session restore failed:', err)
-    sessionStorage.removeItem(SESSION_KEY)
-    emit(null)
+export async function initAuth() {
+  // Remove the legacy identity cache. Supabase Auth owns session persistence now.
+  clearLegacyAuthStorage()
+
+  if (!authSubscription) {
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (suppressAuthEvents) return
+      emit(toAppUser(session?.user))
+    })
+    authSubscription = data.subscription
   }
+
+  const { data, error } = await supabase.auth.getSession()
+  if (error) {
+    emit(null)
+    return { user: null, error }
+  }
+
+  const user = toAppUser(data.session?.user)
+  emit(user)
+  return { user, error: null }
 }
 
 export async function refreshSessionUser() {
-  if (!currentUser?.username && !currentUser?.id) {
-    return { user: null, stale: true }
-  }
-
-  let query = supabase
-    .from('app_users')
-    .select('id, username, display_name, role, created_at')
-
-  if (currentUser.username) {
-    query = query.eq('username', currentUser.username)
-  } else {
-    query = query.eq('id', currentUser.id)
-  }
-
-  const { data, error } = await query.maybeSingle()
-
-  if (error || !data?.id) {
-    signOut()
-    return { user: null, stale: true }
-  }
-
-  persistUser(data)
-  return { user: toPublicUser(data), stale: false }
+  const { data, error } = await supabase.auth.getUser()
+  const user = error ? null : toAppUser(data.user)
+  emit(user)
+  return { user, stale: !user, error: error || null }
 }
 
 export async function signIn(username, password) {
-  const { data, error } = await supabase
-    .from('app_users')
-    .select('id, username, display_name, role, created_at, password')
-    .eq('username', username)
-    .eq('password', password)
-    .maybeSingle()
+  let email
+  try {
+    email = usernameToInternalEmail(username)
+  } catch (error) {
+    return { data: null, error }
+  }
+
+  const { data, error } = await supabase.auth.signInWithPassword({ email, password })
 
   if (error) {
-    return { error }
+    return { data: null, error: { message: '用户名或密码错误。' } }
   }
 
-  if (!data) {
-    return { error: { message: '用户名或密码错误' } }
-  }
-
-  persistUser(data)
-  return { data: toPublicUser(data) }
+  const user = toAppUser(data.user)
+  emit(user)
+  return { data: user, error: null }
 }
 
 export async function signUp(username, password, displayName) {
-  const { data: existing, error: lookupError } = await supabase
-    .from('app_users')
-    .select('id')
-    .eq('username', username)
-    .maybeSingle()
-
-  if (lookupError) {
-    return { error: lookupError }
+  let normalizedUsername
+  let email
+  try {
+    normalizedUsername = normalizeUsername(username)
+    email = usernameToInternalEmail(normalizedUsername)
+  } catch (error) {
+    return { data: null, error }
   }
 
-  if (existing) {
-    return { error: { message: '用户名已存在，请更换后重试。' } }
-  }
-
-  const { data, error } = await supabase
-    .from('app_users')
-    .insert({
-      username,
+  suppressAuthEvents = true
+  try {
+    const { data, error } = await supabase.auth.signUp({
+      email,
       password,
-      display_name: displayName,
-      role: 'user',
+      options: {
+        data: {
+          username: normalizedUsername,
+          display_name: String(displayName || normalizedUsername).trim() || normalizedUsername,
+        },
+      },
     })
-    .select('id, username, display_name, role, created_at')
-    .single()
 
-  if (error) {
-    return { error }
+    if (error) {
+      const message = /already|registered|exists/i.test(error.message || '')
+        ? '用户名已存在，请更换后重试。'
+        : '注册失败，请稍后重试。'
+      return { data: null, error: { message } }
+    }
+
+    // With email confirmation disabled, signUp creates a session. Registration in this
+    // UI still returns to the login tab, so close that new session explicitly.
+    if (data.session) await supabase.auth.signOut()
+    emit(null)
+    return { data: { user: data.user }, error: null }
+  } finally {
+    suppressAuthEvents = false
   }
-
-  return { data }
 }
 
-export function signOut() {
-  sessionStorage.removeItem(SESSION_KEY)
+export async function signOut() {
+  clearLegacyAuthStorage()
+  const { error } = await supabase.auth.signOut()
+  if (error) return { error }
   emit(null)
+  return { error: null }
 }

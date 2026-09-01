@@ -1,0 +1,16 @@
+order,feature
+1,country_code
+2,region
+3,disaster_type
+4,disaster_subtype
+5,date_granularity
+6,year
+7,date_imputed
+8,historical_frequency
+9,hdi
+10,hdi_missing
+11,event_month
+12,month_missing
+13,magnitude_robust_z
+14,magnitude_missing
+15,magnitude_group_unknown

@@ -122,7 +122,9 @@ async function callDeepSeek({ question, history, statsContext }) {
     }),
   })
 
-  const payload = await response.json().catch(() => ({}))
+  const contentType = response.headers.get('content-type') || ''
+  if (!contentType.includes('application/json')) throw new Error('DeepSeek API returned a non-JSON response')
+  const payload = await response.json()
   if (!response.ok) {
     throw new Error(payload?.error?.message || `DeepSeek API error ${response.status}`)
   }
@@ -130,11 +132,6 @@ async function callDeepSeek({ question, history, statsContext }) {
   const answer = payload?.choices?.[0]?.message?.content?.trim()
   if (!answer) throw new Error('DeepSeek API returned an empty answer')
   return answer
-}
-
-function fallbackAnswer(question) {
-  if (!isInScope(question)) return RESTRICTED_REPLY
-  return 'AI 服务暂时不可用。请先查看数据分析中心获取数据库统计；应急处置请优先遵循当地官方预警、撤离指令与应急管理部门发布的信息。'
 }
 
 export default async function handler(req, res) {
@@ -169,10 +166,6 @@ export default async function handler(req, res) {
     })
   } catch (err) {
     console.error('[Crisis Data Terminal] ai-chat failed:', err)
-    return json(res, 200, {
-      answer: fallbackAnswer(question),
-      fallback: true,
-      error: err.message,
-    })
+    return json(res, 502, { error: 'AI service is temporarily unavailable' })
   }
 }

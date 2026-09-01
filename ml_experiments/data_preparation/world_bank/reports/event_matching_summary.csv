@@ -1,0 +1,11 @@
+indicator_code,indicator_name,match_status,event_count,indicator_event_total,event_rate
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",backtracked_1_year,515,16858,0.03054929410368964
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",backtracked_2_years,159,16858,0.009431723810653695
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",backtracked_3_years,2,16858,0.00011863803535413454
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",exact_t_minus_1,15643,16858,0.9279273935223633
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",missing_within_backtrack_window,375,16858,0.022244631628900224
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",unsupported_country,164,16858,0.009728318899039032
+SP.POP.TOTL,"Population, total",backtracked_1_year,532,16858,0.031557717404199784
+SP.POP.TOTL,"Population, total",backtracked_2_years,161,16858,0.00955036184600783
+SP.POP.TOTL,"Population, total",exact_t_minus_1,16001,16858,0.9491636018507533
+SP.POP.TOTL,"Population, total",unsupported_country,164,16858,0.009728318899039032

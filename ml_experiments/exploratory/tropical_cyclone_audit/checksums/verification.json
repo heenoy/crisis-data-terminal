@@ -1,0 +1,41 @@
+{
+  "unique_whitelist_ids": 1181,
+  "empirical_matching_statistics": "NOT_MEASURED",
+  "years": "2000-2021",
+  "protected_files_unchanged": 95,
+  "matching_executed": false,
+  "test_used": false,
+  "severe_rows": 70,
+  "figure_visual_check": "PASS",
+  "partial_source_track_rows": 0,
+  "flags": [
+    "EXPLORATORY",
+    "NOT FOR MODEL SELECTION",
+    "NOT DEPLOYED"
+  ],
+  "labeled_rows": 894,
+  "figure_dimensions": [
+    1920,
+    640
+  ],
+  "output_sha256": {
+    "ml_experiments/exploratory/tropical_cyclone_audit/reports/figures/development_scope.png": "fdf3c86536aa514c9ba20543ea4b872193330dea53a30b8ceba70a9975e223b2",
+    "ml_experiments/exploratory/tropical_cyclone_audit/checksums/matching_rules_locked.json": "35abfedf65cde4324ee08b739c8d115f0038bc40c1207d880f7d60ff888f0f36",
+    "ml_experiments/exploratory/tropical_cyclone_audit/data/raw/ibtracs.v04r01.2000_2021.INCOMPLETE.csv": "1a9584b2c6e590d02b6ffaf497f43b92bb3f11ee9c38449f95348e1e75dc7465",
+    "ml_experiments/exploratory/tropical_cyclone_audit/reports/feasibility_summary.json": "3bf411dcf1a83703dc669f084d5af197d1614e33cc88a28ff6209fec183336d9",
+    "ml_experiments/exploratory/tropical_cyclone_audit/reports/field_availability.json": "7dd471d0909353bda1bb295bf440b04b8c2a1988fc51e13e40ecf53547524887",
+    "ml_experiments/exploratory/tropical_cyclone_audit/checksums/protected_before.json": "c95694f5992dff68ec1960d0d8791de78c4f29e77b884e73a3ab9a97aa4cd600",
+    "docs/exploratory/热带气旋外部强度数据接入可行性审计.md": "652aa28d57446e002d46fe2c19738ec51b52478e7becbf5b42114921211af644",
+    "ml_experiments/exploratory/tropical_cyclone_audit/README.md": "0041d65a403482ff0e6d4f183bece577a65ec7bf40b5086cfb5d0f5787be3510",
+    "ml_experiments/exploratory/tropical_cyclone_audit/reports/emdat_tropical_cyclone_scope.csv": "e7e0aaa284143670527e179e9410602ca1c3bbd51bc15c97fb2b4b8026526faf",
+    "ml_experiments/exploratory/tropical_cyclone_audit/checksums/development_cyclone_whitelist.csv": "2cd2fb6f62a6bfd07d350183633aaa6280a6b2db58283f2d829ab364b59b6921",
+    "ml_experiments/exploratory/tropical_cyclone_audit/checksums/source_manifest.json": "e887fb97824e9eda00f3e443390c3bf27e20a21224c5fa16b6eddccabd111ce2",
+    "ml_experiments/exploratory/tropical_cyclone_audit/reports/scope_summary.json": "2bf331922a7c80819af83b594f60c8e110dc071736bbd1c5ed4ea81ae948f9dd",
+    "ml_experiments/exploratory/tropical_cyclone_audit/audit_ibtracs_feasibility.py": "398321f8b5e0b6d72d6499276894e91df6c5d8a48e2dd0676fc7f17308c301eb"
+  },
+  "distribution_totals_pass": true,
+  "maturity_extracted": false,
+  "scope_rows": 1181,
+  "repeated_csv_json_byte_comparison": "PASS",
+  "models_trained": 0
+}

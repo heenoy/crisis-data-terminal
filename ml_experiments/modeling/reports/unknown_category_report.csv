@@ -1,0 +1,11 @@
+﻿split,field,sample_count,unknown_sample_count,unknown_sample_rate,unknown_unique_count,unknown_values
+validation,country_code,804,0,0.0,0,
+validation,region,804,0,0.0,0,
+validation,disaster_type,804,2,0.0024875621890547263,1,Glacial lake outburst flood
+validation,disaster_subtype,804,4,0.004975124378109453,2,Glacial lake outburst flood | Lava flow
+validation,date_granularity,804,0,0.0,0,
+test,country_code,948,1,0.0010548523206751054,1,LIE
+test,region,948,0,0.0,0,
+test,disaster_type,948,0,0.0,0,
+test,disaster_subtype,948,0,0.0,0,
+test,date_granularity,948,0,0.0,0,

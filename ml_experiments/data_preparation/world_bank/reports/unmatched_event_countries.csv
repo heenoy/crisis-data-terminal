@@ -1,0 +1,55 @@
+indicator_code,country_code,emdat_country_name,match_status,event_count
+NY.GDP.PCAP.PP.KD,AFG,Afghanistan,missing_within_backtrack_window,6
+NY.GDP.PCAP.PP.KD,AIA,Anguilla,unsupported_country,1
+NY.GDP.PCAP.PP.KD,ANT,Netherlands Antilles,unsupported_country,1
+NY.GDP.PCAP.PP.KD,ASM,American Samoa,missing_within_backtrack_window,4
+NY.GDP.PCAP.PP.KD,AZO,Azores Islands,unsupported_country,1
+NY.GDP.PCAP.PP.KD,BLM,Saint Barthélemy,unsupported_country,1
+NY.GDP.PCAP.PP.KD,COK,Cook Islands,unsupported_country,4
+NY.GDP.PCAP.PP.KD,CUB,Cuba,missing_within_backtrack_window,64
+NY.GDP.PCAP.PP.KD,CYM,Cayman Islands,missing_within_backtrack_window,5
+NY.GDP.PCAP.PP.KD,DJI,Djibouti,missing_within_backtrack_window,12
+NY.GDP.PCAP.PP.KD,ERI,Eritrea,missing_within_backtrack_window,5
+NY.GDP.PCAP.PP.KD,GLP,Guadeloupe,unsupported_country,6
+NY.GDP.PCAP.PP.KD,GUF,French Guiana,unsupported_country,2
+NY.GDP.PCAP.PP.KD,GUM,Guam,missing_within_backtrack_window,6
+NY.GDP.PCAP.PP.KD,LIE,Liechtenstein,missing_within_backtrack_window,1
+NY.GDP.PCAP.PP.KD,MAF,Saint Martin (French Part),missing_within_backtrack_window,1
+NY.GDP.PCAP.PP.KD,MNP,Northern Mariana Islands,missing_within_backtrack_window,6
+NY.GDP.PCAP.PP.KD,MSR,Montserrat,unsupported_country,1
+NY.GDP.PCAP.PP.KD,MTQ,Martinique,unsupported_country,5
+NY.GDP.PCAP.PP.KD,MYT,Mayotte,unsupported_country,4
+NY.GDP.PCAP.PP.KD,NCL,New Caledonia,missing_within_backtrack_window,3
+NY.GDP.PCAP.PP.KD,NIU,Niue,unsupported_country,1
+NY.GDP.PCAP.PP.KD,PRK,Democratic People's Republic of Korea,missing_within_backtrack_window,42
+NY.GDP.PCAP.PP.KD,PYF,French Polynesia,missing_within_backtrack_window,3
+NY.GDP.PCAP.PP.KD,REU,Réunion,unsupported_country,10
+NY.GDP.PCAP.PP.KD,SCG,Serbia Montenegro,unsupported_country,16
+NY.GDP.PCAP.PP.KD,SHN,Saint Helena,unsupported_country,1
+NY.GDP.PCAP.PP.KD,SPI,Canary Islands,unsupported_country,16
+NY.GDP.PCAP.PP.KD,SSD,South Sudan,missing_within_backtrack_window,36
+NY.GDP.PCAP.PP.KD,TCA,Turks and Caicos Islands,missing_within_backtrack_window,1
+NY.GDP.PCAP.PP.KD,TKL,Tokelau,unsupported_country,1
+NY.GDP.PCAP.PP.KD,TWN,Taiwan (Province of China),unsupported_country,92
+NY.GDP.PCAP.PP.KD,VEN,Venezuela (Bolivarian Republic of),missing_within_backtrack_window,73
+NY.GDP.PCAP.PP.KD,VGB,British Virgin Islands,missing_within_backtrack_window,2
+NY.GDP.PCAP.PP.KD,WLF,Wallis and Futuna Islands,unsupported_country,1
+NY.GDP.PCAP.PP.KD,YEM,Yemen,missing_within_backtrack_window,105
+SP.POP.TOTL,AIA,Anguilla,unsupported_country,1
+SP.POP.TOTL,ANT,Netherlands Antilles,unsupported_country,1
+SP.POP.TOTL,AZO,Azores Islands,unsupported_country,1
+SP.POP.TOTL,BLM,Saint Barthélemy,unsupported_country,1
+SP.POP.TOTL,COK,Cook Islands,unsupported_country,4
+SP.POP.TOTL,GLP,Guadeloupe,unsupported_country,6
+SP.POP.TOTL,GUF,French Guiana,unsupported_country,2
+SP.POP.TOTL,MSR,Montserrat,unsupported_country,1
+SP.POP.TOTL,MTQ,Martinique,unsupported_country,5
+SP.POP.TOTL,MYT,Mayotte,unsupported_country,4
+SP.POP.TOTL,NIU,Niue,unsupported_country,1
+SP.POP.TOTL,REU,Réunion,unsupported_country,10
+SP.POP.TOTL,SCG,Serbia Montenegro,unsupported_country,16
+SP.POP.TOTL,SHN,Saint Helena,unsupported_country,1
+SP.POP.TOTL,SPI,Canary Islands,unsupported_country,16
+SP.POP.TOTL,TKL,Tokelau,unsupported_country,1
+SP.POP.TOTL,TWN,Taiwan (Province of China),unsupported_country,92
+SP.POP.TOTL,WLF,Wallis and Futuna Islands,unsupported_country,1

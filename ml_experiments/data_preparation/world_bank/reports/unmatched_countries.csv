@@ -1,0 +1,19 @@
+country_code,emdat_country_name,world_bank_country_name,supported_by_world_bank,issue_type,notes
+AIA,Anguilla,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+ANT,Netherlands Antilles,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+AZO,Azores Islands,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+BLM,Saint Barthélemy,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+COK,Cook Islands,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+GLP,Guadeloupe,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+GUF,French Guiana,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+MSR,Montserrat,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+MTQ,Martinique,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+MYT,Mayotte,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+NIU,Niue,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+REU,Réunion,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+SCG,Serbia Montenegro,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+SHN,Saint Helena,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+SPI,Canary Islands,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+TKL,Tokelau,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+TWN,Taiwan (Province of China),,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+WLF,Wallis and Futuna Islands,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied

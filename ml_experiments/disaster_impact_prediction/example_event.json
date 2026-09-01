@@ -1,0 +1,17 @@
+{
+  "Disaster Group": "Natural",
+  "Disaster Subgroup": "Geophysical",
+  "Disaster Type": "Earthquake",
+  "Disaster Subtype": "Ground movement",
+  "ISO": "CHN",
+  "Country": "China",
+  "Subregion": "Eastern Asia",
+  "Region": "Asia",
+  "Magnitude Scale": "Richter",
+  "Start Year": 2026,
+  "Start Month": 7,
+  "Start Day": 9,
+  "Magnitude": 6.8,
+  "Latitude": 31.2,
+  "Longitude": 103.4
+}

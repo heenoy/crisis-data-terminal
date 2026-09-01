@@ -115,33 +115,6 @@
   }
 }
 
-/* VAULT-0 CRT treatment: isolated to the Admin Portal. */
-.vault-console--subpage:has(> .admin-portal) {
-  overflow-x: hidden;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(108, 255, 139, 0.58) rgba(0, 17, 7, 0.7);
-}
-
-.vault-console--subpage:has(> .admin-portal)::-webkit-scrollbar {
-  width: 7px;
-}
-
-.vault-console--subpage:has(> .admin-portal)::-webkit-scrollbar-track {
-  background: rgba(0, 17, 7, 0.7);
-  border-left: 1px solid rgba(108, 255, 139, 0.12);
-}
-
-.vault-console--subpage:has(> .admin-portal)::-webkit-scrollbar-thumb {
-  background: rgba(108, 255, 139, 0.42);
-  border: 1px solid rgba(147, 255, 168, 0.34);
-  box-shadow: 0 0 0.45rem rgba(64, 255, 105, 0.18);
-}
-
-.vault-console--subpage:has(> .admin-portal)::-webkit-scrollbar-thumb:hover {
-  background: rgba(125, 255, 151, 0.68);
-}
-
 .admin-portal {
   position: relative;
   isolation: isolate;

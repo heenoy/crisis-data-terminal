@@ -1,0 +1,299 @@
+{
+  "baseUrl": "http://127.0.0.1:5173",
+  "routeChecks": [
+    {
+      "route": "user/overview",
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    },
+    {
+      "route": "user/search",
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    },
+    {
+      "route": "user/analysis",
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    },
+    {
+      "route": "user/ai-inquiry",
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    },
+    {
+      "route": "user/impact-analysis",
+      "cycle": 1,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.88",
+        "parent": "impact-sidebar",
+        "docked": true
+      }
+    },
+    {
+      "route": "user/overview",
+      "cycle": 1,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    },
+    {
+      "route": "user/impact-analysis",
+      "cycle": 2,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.88",
+        "parent": "impact-sidebar",
+        "docked": true
+      }
+    },
+    {
+      "route": "user/overview",
+      "cycle": 2,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    },
+    {
+      "route": "user/impact-analysis",
+      "cycle": 3,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.88",
+        "parent": "impact-sidebar",
+        "docked": true
+      }
+    },
+    {
+      "route": "user/overview",
+      "cycle": 3,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    },
+    {
+      "route": "user/impact-analysis",
+      "cycle": 4,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.88",
+        "parent": "impact-sidebar",
+        "docked": true
+      }
+    },
+    {
+      "route": "user/overview",
+      "cycle": 4,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    },
+    {
+      "route": "user/impact-analysis",
+      "cycle": 5,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.88",
+        "parent": "impact-sidebar",
+        "docked": true
+      }
+    },
+    {
+      "route": "user/overview",
+      "cycle": 5,
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.9",
+        "parent": "screen-content",
+        "docked": false
+      }
+    }
+  ],
+  "prediction": {
+    "probabilityRows": 3,
+    "messageCount": 4,
+    "mascot": {
+      "count": 1,
+      "docked": true,
+      "parent": "impact-sidebar"
+    }
+  },
+  "failureChecks": [
+    {
+      "scenario": "options failure",
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.88",
+        "parent": "impact-sidebar",
+        "docked": true
+      }
+    },
+    {
+      "scenario": "prediction failure",
+      "state": {
+        "count": 1,
+        "visible": true,
+        "hidden": false,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "0.88",
+        "parent": "impact-sidebar",
+        "docked": true
+      }
+    }
+  ],
+  "sizeChecks": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "panelWidth": 302.671875,
+      "panelHeight": 433.65625,
+      "faceHeight": 168,
+      "sticky": "sticky",
+      "messagesOverflow": "auto",
+      "pageAtBottom": true,
+      "boundaryVisible": true,
+      "mascot": {
+        "count": 1,
+        "visible": true
+      }
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 600
+      },
+      "panelWidth": 280,
+      "panelHeight": 419.78125,
+      "faceHeight": 132,
+      "sticky": "sticky",
+      "messagesOverflow": "auto",
+      "pageAtBottom": true,
+      "boundaryVisible": true,
+      "mascot": {
+        "count": 1,
+        "visible": true
+      }
+    },
+    {
+      "viewport": {
+        "width": 960,
+        "height": 600
+      },
+      "panelWidth": 280,
+      "panelHeight": 419.78125,
+      "faceHeight": 132,
+      "sticky": "sticky",
+      "messagesOverflow": "auto",
+      "pageAtBottom": true,
+      "boundaryVisible": true,
+      "mascot": {
+        "count": 1,
+        "visible": true
+      }
+    }
+  ],
+  "adminState": {
+    "count": 1,
+    "visible": true,
+    "hidden": false,
+    "display": "block",
+    "visibility": "visible",
+    "opacity": "0.9",
+    "parent": "screen-content",
+    "docked": false
+  },
+  "consoleErrors": [],
+  "failures": []
+}

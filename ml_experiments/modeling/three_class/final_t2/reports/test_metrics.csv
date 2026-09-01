@@ -1,0 +1,2 @@
+split,accuracy,balanced_accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,quadratic_weighted_kappa,severe_to_low,low_to_severe
+test,0.7151898734177216,0.7137004445126819,0.6875130606723339,0.7137004445126819,0.6811013972875063,0.7178671823414073,0.5434242822078885,31,14

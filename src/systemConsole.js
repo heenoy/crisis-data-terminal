@@ -1,9 +1,11 @@
 import { bindAuthPage, renderAuthPage } from './authPage.js'
 import { bindTerminalNavigation } from './terminalNav.js'
+import { mountBreadcrumbs } from './components/breadcrumbs.js'
 import { ROUTES } from './router/routes.js'
 import { destroyUserOverview, initUserOverview, renderUserOverview } from './pages/user/overview.js'
 import { initUserSearch, renderUserSearch } from './pages/user/search.js'
 import { initUserAnalysis, renderUserAnalysis } from './pages/user/analysis.js'
+import { initImpactAnalysis, renderImpactAnalysis } from './pages/user/impactAnalysis.js'
 import { destroyUserAiInquiry, initUserAiInquiry } from './pages/user/aiInquiry.js'
 import { initAdminDashboard, renderAdminDashboard, resetAdminDashboard } from './pages/admin/dashboard.js'
 import { initAdminDisasterManage, renderAdminDisasterManage } from './pages/admin/disasterManage.js'
@@ -11,7 +13,33 @@ import { initAdminUserManage, renderAdminUserManage } from './pages/admin/userMa
 import { initAdminSystemMonitor, renderAdminSystemMonitor } from './pages/admin/systemMonitor.js'
 import { initAdminModelManage, renderAdminModelManage } from './pages/admin/modelManage.js'
 
-const BRAND_SUBTITLE = 'CRISIS DATA TERMINAL / 应急灾害监测终端 · Disaster Event Monitor'
+const BRAND_SUBTITLE = 'CRISIS DATA TERMINAL / 灾害事件智能分析终端 · Disaster Intelligence Terminal'
+
+const AUTHENTICATED_MENU_GROUPS = [
+  {
+    label: 'DATA SERVICES',
+    items: [
+      { action: 'dashboard', label: '世界灾害总览', subtitle: 'GLOBAL DISASTER OVERVIEW', primary: true },
+      { action: 'query', label: '灾害事件查询', subtitle: 'DISASTER QUERY' },
+      { action: 'analytics', label: '数据分析中心', subtitle: 'DATA ANALYTICS' },
+      { action: 'impact-analysis', label: '灾害影响等级预测', subtitle: 'IMPACT LEVEL PREDICTION' },
+      { action: 'knowledge', label: 'AI 灾害问询', subtitle: 'AI CRISIS INQUIRY' },
+    ],
+  },
+  {
+    label: 'ADMINISTRATION',
+    roles: ['admin'],
+    items: [
+      { action: 'admin-dashboard', label: '管理控制台', subtitle: 'ADMIN CONSOLE' },
+    ],
+  },
+  {
+    label: 'SESSION',
+    items: [
+      { action: 'logout', label: '退出登录', subtitle: 'SIGN OUT' },
+    ],
+  },
+]
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -33,6 +61,18 @@ function renderHomeMenuItem({ action, label, subtitle, primary = false, locked =
       <em>${escapeHtml(subtitle)}</em>
       ${locked ? '<span class="vault-menu-lock">LOCKED</span>' : ''}
     </button>
+  `
+}
+
+function renderHomeMenuGroup(group, user) {
+  if (group.roles && !group.roles.includes(user?.role)) return ''
+  return `
+    <section class="vault-home-menu-group" aria-labelledby="menu-group-${group.label.toLowerCase()}">
+      <h2 id="menu-group-${group.label.toLowerCase()}" class="vault-home-menu-group__label">[ ${group.label} ]</h2>
+      <div class="vault-home-menu-group__items">
+        ${group.items.map(renderHomeMenuItem).join('')}
+      </div>
+    </section>
   `
 }
 
@@ -58,42 +98,7 @@ function renderAuthenticatedHomeScreen(user) {
       </div>
 
       <main class="vault-home-menu" aria-label="Crisis Data Terminal menu">
-        ${
-          user?.role === 'admin'
-            ? renderHomeMenuItem({
-                action: 'admin-dashboard',
-                label: '管理控制台',
-                subtitle: 'ADMIN PORTAL',
-                primary: true,
-              })
-            : ''
-        }
-        ${renderHomeMenuItem({
-          action: 'dashboard',
-          label: '灾害事件总览',
-          subtitle: 'DISASTER EVENT OVERVIEW',
-          primary: true,
-        })}
-        ${renderHomeMenuItem({
-          action: 'query',
-          label: '灾害事件查询',
-          subtitle: 'DISASTER QUERY',
-        })}
-        ${renderHomeMenuItem({
-          action: 'analytics',
-          label: '数据分析中心',
-          subtitle: 'DATA ANALYTICS',
-        })}
-        ${renderHomeMenuItem({
-          action: 'knowledge',
-          label: 'AI 灾害问询',
-          subtitle: 'AI CRISIS INQUIRY',
-        })}
-        ${renderHomeMenuItem({
-          action: 'logout',
-          label: '退出登录',
-          subtitle: 'SIGN OUT',
-        })}
+        ${AUTHENTICATED_MENU_GROUPS.map((group) => renderHomeMenuGroup(group, user)).join('')}
       </main>
 
       <aside class="vault-home-status" aria-label="terminal status">
@@ -182,16 +187,34 @@ function renderGuestHomeScreen() {
 }
 
 export function bindHomeScreen({ onMenuAction, onAccessDenied }) {
-  document.querySelectorAll('[data-menu-action]').forEach((button) => {
+  const buttons = [...document.querySelectorAll('[data-menu-action]:not([data-locked="true"])')]
+  let activeIndex = Math.max(0, buttons.findIndex((button) => button.classList.contains('vault-home-item--primary')))
+
+  const setActive = (index, { focus = false } = {}) => {
+    activeIndex = (index + buttons.length) % buttons.length
+    buttons.forEach((button, buttonIndex) => {
+      const isActive = buttonIndex === activeIndex
+      button.classList.toggle('vault-home-item--active', isActive)
+      button.classList.toggle('vault-home-item--primary', isActive)
+    })
+    if (focus) buttons[activeIndex]?.focus()
+  }
+
+  buttons.forEach((button, index) => {
+    button.addEventListener('focus', () => setActive(index))
     button.addEventListener('click', () => {
       const action = button.dataset.menuAction
-      if (button.dataset.locked === 'true') {
-        onAccessDenied?.()
-        return
-      }
       onMenuAction?.(action)
     })
   })
+
+  document.querySelector('.vault-home-menu')?.addEventListener('keydown', (event) => {
+    if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return
+    event.preventDefault()
+    setActive(activeIndex + (event.key === 'ArrowDown' ? 1 : -1), { focus: true })
+  })
+
+  setActive(activeIndex)
 }
 
 export function renderSystemPage({
@@ -215,6 +238,7 @@ export function renderSystemPage({
     [ROUTES.USER_OVERVIEW]: () => renderUserOverview(),
     [ROUTES.USER_SEARCH]: () => renderUserSearch(user),
     [ROUTES.USER_ANALYSIS]: () => renderUserAnalysis(),
+    [ROUTES.USER_IMPACT_ANALYSIS]: () => renderImpactAnalysis(),
     [ROUTES.USER_AI_INQUIRY]: () => `
       <section class="vault-console vault-console--subpage" aria-label="AI 灾害问询终端">
         <p class="situation-loading">&gt; 正在加载 AI 灾害问询终端...</p>
@@ -241,6 +265,7 @@ export function renderSystemPage({
 
   app.style.display = 'block'
   app.innerHTML = (pages[route] || pages.start)()
+  mountBreadcrumbs({ root: app, route, onNavigate })
 
   if (route === 'start') {
     bindHomeScreen({ onMenuAction, onAccessDenied })
@@ -268,6 +293,12 @@ export function renderSystemPage({
 
   if (route === ROUTES.USER_ANALYSIS) {
     initUserAnalysis({ onNavigate })
+    bindTerminalNavigation({ onNavigate, root: app })
+    return
+  }
+
+  if (route === ROUTES.USER_IMPACT_ANALYSIS) {
+    initImpactAnalysis({ onNavigate })
     bindTerminalNavigation({ onNavigate, root: app })
     return
   }

@@ -1,0 +1,11 @@
+split,field,training_category_count,unknown_count,unknown_rate,missing_count,missing_rate
+validation,country_code,213,0,0.0,0,0.0
+validation,region,17,0,0.0,0,0.0
+validation,disaster_type,28,2,0.0024875621890547263,0,0.0
+validation,disaster_subtype,57,4,0.004975124378109453,0,0.0
+validation,date_granularity,3,0,0.0,0,0.0
+test,country_code,213,1,0.0010548523206751054,0,0.0
+test,region,17,0,0.0,0,0.0
+test,disaster_type,29,0,0.0,0,0.0
+test,disaster_subtype,59,0,0.0,0,0.0
+test,date_granularity,3,0,0.0,0,0.0

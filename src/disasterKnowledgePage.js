@@ -1,15 +1,14 @@
 import { ensureFloatingAiMascot, notifyTypewriterEnd, notifyTypewriterStart, subscribeMascotPosition } from './aiFace.js'
 import { bindTerminalNavigation } from './terminalNav.js'
 
-const RESTRICTED_REPLY = '该终端仅支持灾害数据与应急知识相关问询。'
 const ANALYZING_TEXT = '正在分析灾害数据库……'
+const SERVICE_ERROR_TEXT = 'AI 分析：\n服务暂时不可用，请稍后重试。'
 
 const state = {
   messages: [
     {
       role: 'assistant',
       content: 'VAULT-0：\n请直接向我提问。',
-      fallback: false,
     },
   ],
   busy: false,
@@ -67,7 +66,7 @@ function renderBubbleContent() {
   const history = recentHistory()
 
   return `
-    <p class="aiq-bubble__meta">[ AI_CRISIS_CORE / ${state.busy ? 'ANALYZING' : latest?.fallback ? 'LOCAL_FALLBACK' : 'READY'} ]</p>
+    <p class="aiq-bubble__meta">[ AI_CRISIS_CORE / ${state.busy ? 'ANALYZING' : latest?.error ? 'ERROR' : 'READY'} ]</p>
     <div class="aiq-bubble__body">${escapeHtml(answer).replace(/\n/g, '<br>')}</div>
     ${history.length
       ? `
@@ -129,18 +128,6 @@ export function renderKnowledgePage() {
   `
 }
 
-function isProbablyInScope(question) {
-  return /灾害|应急|地震|洪水|台风|风暴|干旱|山火|滑坡|疫情|流行病|死亡|伤亡|受影响|经济损失|统计|数据库|disaster|crisis|emergency|earthquake|flood|storm|drought|wildfire|epidemic|casualt|death|affected|database|supabase/i.test(
-    question,
-  )
-}
-
-function localFallback(question) {
-  if (!question.trim()) return '请输入灾害数据或应急知识相关问题。'
-  if (!isProbablyInScope(question)) return RESTRICTED_REPLY
-  return 'AI 分析：\nAI 服务暂时不可用。建议先查看数据分析中心的统计图表；应急处置请优先遵循当地官方预警、撤离指令与应急管理部门发布的信息。'
-}
-
 function renderDynamicParts(root) {
   const bubble = root.querySelector('#aiq-face-bubble')
   if (bubble) bubble.innerHTML = renderBubbleContent()
@@ -176,18 +163,18 @@ async function sendQuestion(root, question) {
         history: state.messages.slice(-6).map(({ role, content }) => ({ role, content })),
       }),
     })
-    const payload = await res.json().catch(() => ({}))
-    if (!res.ok || !payload.answer) {
-      throw new Error(payload.error || 'AI request failed')
-    }
+    const contentType = res.headers.get('content-type') || ''
+    if (!contentType.includes('application/json')) throw new Error('AI response is not JSON')
+    const payload = await res.json()
+    if (!res.ok) throw new Error(payload.error || 'AI request failed')
+    if (typeof payload.answer !== 'string' || !payload.answer.trim()) throw new Error('AI response is missing an answer')
     state.messages.push({
       role: 'assistant',
       content: `AI 分析：\n${payload.answer}`,
-      fallback: Boolean(payload.fallback),
     })
   } catch (err) {
     console.warn('[Crisis Data Terminal] AI inquiry failed:', err)
-    state.messages.push({ role: 'assistant', content: localFallback(content), fallback: true })
+    state.messages.push({ role: 'assistant', content: SERVICE_ERROR_TEXT, error: true })
   } finally {
     state.busy = false
     limitHistory()

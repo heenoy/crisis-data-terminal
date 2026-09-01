@@ -1,0 +1,119 @@
+{
+  "flags": [
+    "EXPLORATORY",
+    "NOT FOR MODEL SELECTION",
+    "NOT DEPLOYED"
+  ],
+  "version": 1,
+  "emdat_scope": "year 2000..2021 AND disaster_type == Storm AND disaster_subtype == Tropical cyclone; include unlabeled events",
+  "time_window_days": 3,
+  "time_window_reason": "Candidate retrieval allowance around EM-DAT start-date interval, fixed before linkage; accommodates date-only timing and early/late impacts, not fitted to labels",
+  "date_precision": "day is one UTC calendar day; month/year intervals preserved, never impute a matching day",
+  "name_rule": "Unicode ASCII uppercase tokens; exact token overlap after removing storm descriptors and numbers; no fuzzy matching or learned aliases",
+  "track_type": "MAIN only",
+  "nature": "TS or SS within candidate window",
+  "region_rule": "EM-DAT UN subregion to plausible IBTrACS basins; coarse consistency only, not confirmed country impact",
+  "high": "Unique date/name/region consistent SID plus independently verified event-country footprint and reliable Location; no such spatial verification in this bounded audit",
+  "medium": "One plausible SID with exact name token, day-level start and compatible basin; country/Location impact is the single unresolved evidence dimension",
+  "ambiguous": "More than one plausible SID; a single candidate lacking sufficient name/date evidence remains UNMATCHED, with its evidence preserved",
+  "unmatched": "No plausible candidate under the fixed rule; no forced nearest or fuzzy fallback",
+  "unique_reliable": "HIGH_CONFIDENCE only; MEDIUM reported separately as provisional, not confirmed linkage",
+  "end_date": "Retained for potential human review only; never used by matcher or features",
+  "spatial_distances": "None. No geocoding; existing public/world.geo.json lacks verified source metadata and is not used for high-confidence spatial evidence",
+  "intensity_eligibility": "Needs matched event-country time AND archived issuance/revision timestamp <= prediction cutoff; best-track ISO_TIME alone is insufficient",
+  "region_basins": {
+    "Eastern Asia": [
+      "WP"
+    ],
+    "South-eastern Asia": [
+      "WP",
+      "NI",
+      "SI"
+    ],
+    "Southern Asia": [
+      "NI",
+      "WP"
+    ],
+    "Western Asia": [
+      "NI"
+    ],
+    "Sub-Saharan Africa": [
+      "SI",
+      "NI",
+      "NA"
+    ],
+    "Northern Africa": [
+      "NA",
+      "NI"
+    ],
+    "Latin America and the Caribbean": [
+      "NA",
+      "EP",
+      "SA"
+    ],
+    "Northern America": [
+      "NA",
+      "EP"
+    ],
+    "Australia and New Zealand": [
+      "SI",
+      "SP"
+    ],
+    "Melanesia": [
+      "SP",
+      "SI"
+    ],
+    "Micronesia": [
+      "WP",
+      "EP",
+      "SP"
+    ],
+    "Polynesia": [
+      "SP",
+      "EP"
+    ],
+    "Western Europe": [
+      "NA"
+    ],
+    "Northern Europe": [
+      "NA"
+    ],
+    "Southern Europe": [
+      "NA"
+    ]
+  },
+  "name_stopwords": [
+    "AKA",
+    "ALSO",
+    "AND",
+    "CALLED",
+    "CAT",
+    "CATEGORY",
+    "CYCLONE",
+    "CYCLONES",
+    "DEPRESSION",
+    "HURRICANE",
+    "HURRICANES",
+    "KNOWN",
+    "NAME",
+    "NAMED",
+    "NO",
+    "NOT",
+    "OF",
+    "SEVERE",
+    "STORM",
+    "STORMS",
+    "SUPER",
+    "TD",
+    "THE",
+    "TROPICAL",
+    "TS",
+    "TYPHOON",
+    "TYPHOONS",
+    "UNKNOWN",
+    "UNNAMED",
+    "WIND",
+    "WINDS",
+    "WITH"
+  ]
+}

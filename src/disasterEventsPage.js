@@ -18,7 +18,7 @@ import {
   updateDisasterEvent,
 } from './disasterEvents.js'
 import { showTerminalNotice } from './terminalNotice.js'
-import { getCurrentUser, refreshSessionUser } from './auth.js'
+import { getCurrentUser } from './auth.js'
 import { renderBackToMainMenu } from './terminalNav.js'
 
 let state = {
@@ -27,6 +27,8 @@ let state = {
   editingId: null,
   pendingDeleteId: null,
   loading: false,
+  submitting: false,
+  deleting: false,
   user: null,
   mode: 'console',
   activeRoute: 'dashboard',
@@ -157,7 +159,7 @@ function renderForm(form, title, error = '') {
         </label>
       </div>
       <div class="disaster-form-actions">
-        <button type="submit">[ SAVE ]</button>
+        <button type="submit" ${state.submitting ? 'disabled' : ''}>${state.submitting ? '[ SAVING... ]' : '[ SAVE ]'}</button>
         <button type="button" id="disaster-form-cancel">[ CANCEL ]</button>
       </div>
     </form>
@@ -388,6 +390,7 @@ function bindFormHandlers() {
 
 async function handleFormSubmit(e) {
   e.preventDefault()
+  if (state.submitting) return
   const formValues = readFormFromDom()
   const parsed = parseEventPayload(formValues)
   if (parsed.error) {
@@ -400,22 +403,17 @@ async function handleFormSubmit(e) {
   }
 
   const isEdit = Boolean(state.editingId && state.editingId !== 'new')
-  if (!isEdit) {
-    const refreshed = await refreshSessionUser()
-    if (refreshed.stale || !refreshed.user?.id) {
-      state.user = null
-      rerenderFormPanel(formValues, '[ NEW DISASTER EVENT ]', '登录用户不存在，请重新登录')
-      showTerminalNotice('登录用户不存在，请重新登录', 'error')
-      return
-    }
-    state.user = refreshed.user
-  }
-
   const currentUser = getCurrentUser() || state.user
+  state.submitting = true
+  rerenderFormPanel(
+    formValues,
+    isEdit ? '[ EDIT DISASTER EVENT ]' : '[ NEW DISASTER EVENT ]',
+  )
 
   const result = isEdit
     ? await updateDisasterEvent(state.editingId, parsed.payload)
     : await createDisasterEvent(parsed.payload, currentUser)
+  state.submitting = false
 
   if (result.error) {
     const msg = result.error.message || (isEdit ? '更新失败' : '创建失败')
@@ -448,8 +446,15 @@ function closeDeleteConfirm() {
 }
 
 async function confirmDelete() {
-  if (!state.pendingDeleteId) return
+  if (!state.pendingDeleteId || state.deleting) return
+  state.deleting = true
+  const confirmButton = document.getElementById('disaster-delete-confirm-yes')
+  if (confirmButton) {
+    confirmButton.disabled = true
+    confirmButton.textContent = '[ DELETING... ]'
+  }
   const { error } = await deleteDisasterEvent(state.pendingDeleteId)
+  state.deleting = false
   closeDeleteConfirm()
 
   if (error) {
@@ -509,6 +514,8 @@ export function resetDisasterDashboardState() {
     editingId: null,
     pendingDeleteId: null,
     loading: false,
+    submitting: false,
+    deleting: false,
     user: state.user,
     mode: state.mode,
     activeRoute: state.activeRoute,

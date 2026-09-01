@@ -1,0 +1,6 @@
+.venv/
+.mplconfig/
+__pycache__/
+*.pyc
+artifacts/models/*.joblib
+artifacts_quick/

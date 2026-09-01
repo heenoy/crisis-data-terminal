@@ -1,0 +1,63 @@
+disaster_type,disaster_subtype
+Air,Air
+Animal incident,Animal incident
+Chemical spill,Chemical spill
+Collapse (Industrial),Collapse (Industrial)
+Collapse (Miscellaneous),Collapse (Miscellaneous)
+Drought,Drought
+Earthquake,Ground movement
+Earthquake,Tsunami
+Epidemic,Bacterial disease
+Epidemic,Infectious disease (General)
+Epidemic,Parasitic disease
+Epidemic,Viral disease
+Explosion (Industrial),Explosion (Industrial)
+Explosion (Miscellaneous),Explosion (Miscellaneous)
+Extreme temperature,Cold wave
+Extreme temperature,Heat wave
+Extreme temperature,Severe winter conditions
+Fire (Industrial),Fire (Industrial)
+Fire (Miscellaneous),Fire (Miscellaneous)
+Flood,Coastal flood
+Flood,Flash flood
+Flood,Flood (General)
+Flood,Riverine flood
+Gas leak,Gas leak
+Glacial lake outburst flood,Glacial lake outburst flood
+Impact,Collision
+Industrial accident (General),Industrial accident (General)
+Infestation,Locust infestation
+Infestation,Worms infestation
+Mass movement (dry),Avalanche (dry)
+Mass movement (dry),Landslide (dry)
+Mass movement (dry),Rockfall (dry)
+Mass movement (wet),Avalanche (wet)
+Mass movement (wet),Landslide (wet)
+Mass movement (wet),Mudslide
+Mass movement (wet),Rockfall (wet)
+Mass movement (wet),Sudden Subsidence (wet)
+Miscellaneous accident (General),Miscellaneous accident (General)
+Oil spill,Oil spill
+Poisoning,Poisoning
+Radiation,Radiation
+Rail,Rail
+Road,Road
+Storm,Blizzard/Winter storm
+Storm,Derecho
+Storm,Extra-tropical storm
+Storm,Hail
+Storm,Lightning/Thunderstorms
+Storm,Sand/Dust storm
+Storm,Severe weather
+Storm,Storm (General)
+Storm,Storm surge
+Storm,Tornado
+Storm,Tropical cyclone
+Volcanic activity,Ash fall
+Volcanic activity,Lava flow
+Volcanic activity,Pyroclastic flow
+Volcanic activity,Volcanic activity (General)
+Water,Water
+Wildfire,Forest fire
+Wildfire,"Land fire (Brush, Bush, Pasture)"
+Wildfire,Wildfire (General)

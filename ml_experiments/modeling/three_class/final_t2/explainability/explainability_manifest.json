@@ -1,0 +1,31 @@
+{
+  "created_at_utc": "2026-08-04T10:07:11.818040+00:00",
+  "frozen_files_verified_unchanged": 180,
+  "model_refit": false,
+  "test_tuning": false,
+  "maturity_used": false,
+  "files": {
+    "artifacts/explainability_config.json": "82ffbe33e9b43aea3563c7a617702c4e3e85a9d78ddf9ae3f4825efef675e546",
+    "artifacts/shap_sample.csv": "5a2f7a3b3f1f003eb5cd56f102417e24999ae6a8101290e15ab6b6c937ce76f5",
+    "figures/impurity_importance_grouped.png": "f0d1dd0d4a13884f4517d37faa6b63220324415ccca6e37881a45002a5cd00e3",
+    "figures/permutation_importance_test.png": "a839b42f0963076e6db13c369a5978144f59bdec9d201079421317c676e06595",
+    "figures/shap_importance_by_class.png": "1648690d10cb52bb95c9f4d450f8f7ebcf8499dc6838a9cd31f63ccf762bcecd",
+    "figures/shap_importance_global.png": "ab136e5ad4066a68a610bc4caaa92847e136d793a660749e4f8cc010998cf0c5",
+    "reports/case_selection_rules.md": "b2392c07157e16e02a2c9f65f8eb769c238e2a225a645cd775122b489293264b",
+    "reports/explainability_report.md": "afcde1d56dec0ae9e12c40978bc36474981c8bf784202d051043304da0f7a666",
+    "scripts/run_explainability.py": "a07dcc5270c7aec211ac547242ffcd25e70b48abb5f95ee0e21894bb948f443c",
+    "tables/confidence_summary.csv": "a6e26b38a93d15cf63191b09f7809dcaf6dcf6941966a8a579df079414e603cb",
+    "tables/error_group_summary.csv": "52c35fddaa429ba053f1c20d232889788abd10fdb0f30bc97b64b825e4686b15",
+    "tables/impurity_importance_grouped.csv": "c342d67667071b5375a8534a60e4462d3aad5507a829be057d39f9f66e107ecf",
+    "tables/impurity_importance_transformed.csv": "07fa91c91a7ea72d595e0f93c918e1d255113c6b38f528e114bb6f7b6c6b84de",
+    "tables/permutation_importance_test.csv": "cc362b5712426dcb359efd4cecdee7cd43454d461848f1245715eab136ece8a6",
+    "tables/selected_case_local_shap.csv": "16a29e1557ee98cd7f246a2d040904cb75437d323a4da89b2c4c6dc21fc3bfe2",
+    "tables/selected_cases.csv": "ae337f10d90ce1764ad73794be92e3a06bbf565c9075dc5ce48853818a4e5877",
+    "tables/shap_importance_grouped.csv": "e25a81d595cea2d4cf75e1a403da83d3f2f48ff270f7994ee3833efe604ac7f0",
+    "tables/shap_importance_transformed.csv": "2926cff943e0ae158726eedc330071644a70a39293566b49f2525cd1fa22364e"
+  },
+  "thesis_document": {
+    "path": "docs/thesis/模型解释与典型案例分析.md",
+    "sha256": "3ac9bca5326b86e3908e593706950271278b44deac40939ec13f8d4321aeb3d5"
+  }
+}

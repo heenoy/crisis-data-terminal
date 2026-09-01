@@ -1,0 +1,32 @@
+disaster_type,total_records,magnitude_nonmissing,magnitude_missing,magnitude_nonmissing_rate
+Air,453,0,453,0.0
+Animal incident,1,0,1,0.0
+Chemical spill,23,2,21,0.08695652173913043
+Collapse (Industrial),163,1,162,0.006134969325153374
+Collapse (Miscellaneous),170,0,170,0.0
+Drought,424,23,401,0.054245283018867926
+Earthquake,698,696,2,0.997134670487106
+Epidemic,894,20,874,0.02237136465324385
+Explosion (Industrial),477,0,477,0.0
+Explosion (Miscellaneous),170,0,170,0.0
+Extreme temperature,568,298,270,0.5246478873239436
+Fire (Industrial),115,0,115,0.0
+Fire (Miscellaneous),461,0,461,0.0
+Flood,4273,1398,2875,0.32717060613152354
+Gas leak,36,0,36,0.0
+Glacial lake outburst flood,8,0,8,0.0
+Impact,1,0,1,0.0
+Industrial accident (General),102,0,102,0.0
+Infestation,29,0,29,0.0
+Mass movement (dry),14,0,14,0.0
+Mass movement (wet),500,0,500,0.0
+Miscellaneous accident (General),199,0,199,0.0
+Oil spill,6,0,6,0.0
+Poisoning,21,0,21,0.0
+Radiation,2,0,2,0.0
+Rail,255,0,255,0.0
+Road,2254,0,2254,0.0
+Storm,2877,866,2011,0.3010079944386514
+Volcanic activity,133,0,133,0.0
+Water,1187,0,1187,0.0
+Wildfire,344,88,256,0.2558139534883721

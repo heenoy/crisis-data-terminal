@@ -1,0 +1,384 @@
+﻿analysis_type,group,sample_count,error_count,error_rate,balanced_accuracy,macro_f1,details
+year_summary,2022,471,169,0.35881104033970274,0.5915176890486421,0.5168825298994791,
+year_summary,2023,477,164,0.3438155136268344,0.5893088111075916,0.5317717767221167,
+disaster_type_summary,Air,11,6,0.5454545454545454,0.25,0.15625,
+disaster_type_summary,Collapse (Industrial),11,0,0.0,1.0,0.25,
+disaster_type_summary,Collapse (Miscellaneous),8,3,0.375,0.2777777777777778,0.19230769230769232,
+disaster_type_summary,Drought,4,3,0.75,0.3333333333333333,0.25,
+disaster_type_summary,Earthquake,43,19,0.4418604651162791,0.2222222222222222,0.19047619047619047,
+disaster_type_summary,Epidemic,31,20,0.6451612903225806,0.33333333333333337,0.1970588235294118,
+disaster_type_summary,Explosion (Industrial),17,4,0.23529411764705882,0.40625,0.21666666666666667,
+disaster_type_summary,Explosion (Miscellaneous),7,1,0.14285714285714285,0.8571428571428571,0.23076923076923078,
+disaster_type_summary,Extreme temperature,79,49,0.620253164556962,0.43472222222222223,0.37753623188405794,
+disaster_type_summary,Fire (Industrial),5,1,0.2,0.8,0.2222222222222222,
+disaster_type_summary,Fire (Miscellaneous),33,8,0.24242424242424243,0.26881720430107525,0.21551724137931033,
+disaster_type_summary,Flood,242,123,0.5082644628099173,0.48417207792207795,0.37381011652856316,
+disaster_type_summary,Gas leak,2,0,0.0,1.0,0.25,
+disaster_type_summary,Glacial lake outburst flood,2,2,1.0,0.0,0.0,
+disaster_type_summary,Industrial accident (General),4,1,0.25,0.8333333333333333,0.45,
+disaster_type_summary,Mass movement (wet),39,17,0.4358974358974359,0.3361111111111111,0.30092592592592593,
+disaster_type_summary,Miscellaneous accident (General),18,7,0.3888888888888889,0.34375,0.19642857142857142,
+disaster_type_summary,Rail,4,2,0.5,0.3333333333333333,0.16666666666666666,
+disaster_type_summary,Road,103,0,0.0,1.0,0.25,
+disaster_type_summary,Storm,188,52,0.2765957446808511,0.31707393483709273,0.2913766257556329,
+disaster_type_summary,Volcanic activity,3,2,0.6666666666666666,0.5,0.125,
+disaster_type_summary,Water,75,3,0.04,0.3333333333333333,0.24489795918367346,
+disaster_type_summary,Wildfire,19,10,0.5263157894736842,0.3,0.16071428571428573,
+region_summary,Australia and New Zealand,10,3,0.3,0.7,0.3351648351648352,
+region_summary,Central Asia,4,3,0.75,0.25,0.1,
+region_summary,Eastern Asia,63,17,0.2698412698412698,0.5358293075684379,0.39652590595986825,
+region_summary,Eastern Europe,39,14,0.358974358974359,0.6428571428571428,0.5099431818181819,
+region_summary,Latin America and the Caribbean,153,43,0.28104575163398693,0.6402110420199736,0.505126915338183,
+region_summary,Melanesia,3,0,0.0,1.0,0.25,
+region_summary,Micronesia,1,0,0.0,1.0,0.25,
+region_summary,Northern Africa,39,5,0.1282051282051282,0.4852941176470588,0.35353535353535354,
+region_summary,Northern America,55,16,0.2909090909090909,0.43137254901960786,0.3184556407447974,
+region_summary,Northern Europe,23,14,0.6086956521739131,0.3611111111111111,0.34523809523809523,
+region_summary,Polynesia,1,1,1.0,0.0,0.0,
+region_summary,South-eastern Asia,106,28,0.2641509433962264,0.5731837606837608,0.4291866028708134,
+region_summary,Southern Asia,120,51,0.425,0.5705492424242424,0.4958664021164021,
+region_summary,Southern Europe,54,19,0.35185185185185186,0.6383928571428571,0.5563245173394662,
+region_summary,Sub-Saharan Africa,199,100,0.5025125628140703,0.47866541353383457,0.38003733151145636,
+region_summary,Western Asia,43,12,0.27906976744186046,0.44,0.40465949820788527,
+region_summary,Western Europe,35,7,0.2,0.6743421052631579,0.6928046467520153,
+hdi_missing_summary,missing,10,2,0.2,0.75,0.38095238095238093,
+hdi_missing_summary,present,938,331,0.35287846481876334,0.5886252186406797,0.5238935929519579,
+unknown_category_summary,known_categories,947,332,0.3505807814149947,0.5897537166405749,0.525001318316557,
+unknown_category_summary,unknown_category,1,1,1.0,0.0,0.0,
+critical_direction,High_to_Low_or_Moderate,,30,,,,
+critical_direction,Extreme_to_Low,,5,,,,
+critical_direction,Extreme_to_Moderate,,0,,,,
+critical_direction,Extreme_to_High,,10,,,,
+misclassified_sample,2022-0652-UGA,,1,,,,year=2022; true=Moderate; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0009-ZAF,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0032-MDG,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0049-CMR,,1,,,,year=2022; true=Moderate; predicted=High; type=Fire (Miscellaneous); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0239-MDG,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0255-COD,,1,,,,year=2022; true=Low; predicted=Extreme; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0257-NGA,,1,,,,year=2022; true=Low; predicted=Moderate; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0282-LBR,,1,,,,year=2022; true=Moderate; predicted=Extreme; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0319-TZA,,1,,,,year=2022; true=Low; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0330-NPL,,1,,,,year=2022; true=Moderate; predicted=High; type=Air; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0388-COL,,1,,,,year=2022; true=Low; predicted=Moderate; type=Collapse (Miscellaneous); region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0423-JPN,,1,,,,year=2022; true=Moderate; predicted=High; type=Extreme temperature; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0428-CHN,,1,,,,year=2022; true=Moderate; predicted=High; type=Flood; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-CYP,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0449-CAF,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=missing; categories=known_categories
+misclassified_sample,2022-0465-DEU,,1,,,,year=2022; true=Extreme; predicted=High; type=Extreme temperature; region=Western Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-EST,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-GBR,,1,,,,year=2022; true=Extreme; predicted=High; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-HRV,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-MLT,,1,,,,year=2022; true=Moderate; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-MNE,,1,,,,year=2022; true=Moderate; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-POL,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-SVK,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-SWE,,1,,,,year=2022; true=Moderate; predicted=High; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0476-IRN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0520-DZA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Wildfire; region=Northern Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0567-CHN,,1,,,,year=2022; true=High; predicted=Low; type=Earthquake; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0569-ZWE,,1,,,,year=2022; true=High; predicted=Extreme; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0590-NPL,,1,,,,year=2022; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0603-PRI,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Latin America and the Caribbean; hdi=missing; categories=known_categories
+misclassified_sample,2022-0613-PHL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0619-IDN,,1,,,,year=2022; true=High; predicted=Moderate; type=Miscellaneous accident (General); region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0835-KHM,,1,,,,year=2022; true=Moderate; predicted=High; type=Fire (Miscellaneous); region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0642-IDN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0648-VEN,,1,,,,year=2022; true=High; predicted=Moderate; type=Mass movement (wet); region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0783-BRA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0696-BEN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0701-UGA,,1,,,,year=2022; true=Moderate; predicted=High; type=Fire (Miscellaneous); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0711-COD,,1,,,,year=2022; true=Moderate; predicted=High; type=Miscellaneous accident (General); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0725-TZA,,1,,,,year=2022; true=Moderate; predicted=High; type=Air; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0770-COD,,1,,,,year=2022; true=Moderate; predicted=High; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0818-USA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2022-9209-USA,,1,,,,year=2022; true=High; predicted=Low; type=Drought; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0032-USA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0156-PAK,,1,,,,year=2023; true=Moderate; predicted=Low; type=Earthquake; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0052-USA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Extreme temperature; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0078-MOZ,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0113-GRC,,1,,,,year=2023; true=Moderate; predicted=Low; type=Rail; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0094-PHL,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0122-USA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0140-SSD,,1,,,,year=2023; true=Low; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0187-ETH,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0530-MMR,,1,,,,year=2023; true=Moderate; predicted=High; type=Mass movement (wet); region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0234-IND,,1,,,,year=2023; true=Moderate; predicted=High; type=Extreme temperature; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0290-SLE,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0291-AFG,,1,,,,year=2023; true=Low; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0295-SOM,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0306-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Mass movement (wet); region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0325-BRA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0620-UZB,,1,,,,year=2023; true=Low; predicted=Moderate; type=Explosion (Industrial); region=Central Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0331-PAK,,1,,,,year=2023; true=Low; predicted=High; type=Storm; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0339-HTI,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0341-CHN,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0626-NGA,,1,,,,year=2023; true=Moderate; predicted=High; type=Explosion (Industrial); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0364-USA,,1,,,,year=2023; true=Moderate; predicted=High; type=Extreme temperature; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0384-YEM,,1,,,,year=2023; true=High; predicted=Low; type=Flood; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0434-BRA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-ALB,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-GBR,,1,,,,year=2023; true=Extreme; predicted=High; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-HRV,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-MNE,,1,,,,year=2023; true=Moderate; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0486-IND,,1,,,,year=2023; true=Moderate; predicted=Extreme; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-POL,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-SRB,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0467-CMR,,1,,,,year=2023; true=Moderate; predicted=High; type=Collapse (Miscellaneous); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0518-VNM,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0542-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0610-LBY,,1,,,,year=2023; true=Extreme; predicted=Low; type=Storm; region=Northern Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0647-MEX,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0721-KEN,,1,,,,year=2023; true=High; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0728-ETH,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0762-PHL,,1,,,,year=2023; true=Moderate; predicted=Low; type=Earthquake; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0807-TZA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0855-ZAF,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0856-AUS,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Australia and New Zealand; hdi=present; categories=known_categories
+misclassified_sample,2023-0837-GIN,,1,,,,year=2023; true=Moderate; predicted=High; type=Explosion (Industrial); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0868-COG,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0876-SOM,,1,,,,year=2023; true=Moderate; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0882-MLI,,1,,,,year=2023; true=Moderate; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0137-PER,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0489-ZAF,,1,,,,year=2023; true=Low; predicted=Moderate; type=Fire (Miscellaneous); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0487-RUS,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0468-DZA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Wildfire; region=Northern Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0464-PHL,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0462-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-IRL,,1,,,,year=2023; true=Moderate; predicted=High; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-HUN,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0406-IND,,1,,,,year=2023; true=High; predicted=Moderate; type=Rail; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0359-IND,,1,,,,year=2023; true=Moderate; predicted=Extreme; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0326-NPL,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0294-MMR,,1,,,,year=2023; true=High; predicted=Low; type=Storm; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0293-ITA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0289-RUS,,1,,,,year=2023; true=Moderate; predicted=Low; type=Wildfire; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0266-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0227-IDN,,1,,,,year=2023; true=Low; predicted=Moderate; type=Mass movement (wet); region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0222-BDI,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0221-PER,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0201-SOM,,1,,,,year=2023; true=Moderate; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0187-KEN,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0176-USA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0173-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0156-AFG,,1,,,,year=2023; true=Low; predicted=Extreme; type=Earthquake; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0881-BFA,,1,,,,year=2023; true=Moderate; predicted=Extreme; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0805-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Fire (Miscellaneous); region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0792-IND,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0769-COD,,1,,,,year=2023; true=Low; predicted=High; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0763-DOM,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0761-TUR,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0741-SOM,,1,,,,year=2023; true=High; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0722-NPL,,1,,,,year=2023; true=High; predicted=Low; type=Earthquake; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0660-AFG,,1,,,,year=2023; true=Low; predicted=High; type=Earthquake; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0644-BEN,,1,,,,year=2023; true=Moderate; predicted=High; type=Fire (Miscellaneous); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0634-CMR,,1,,,,year=2023; true=Moderate; predicted=High; type=Mass movement (wet); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0622-IND,,1,,,,year=2023; true=High; predicted=Moderate; type=Glacial lake outburst flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0619-ZAF,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0564-COG,,1,,,,year=2023; true=Moderate; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-LIE,,1,,,,year=2023; true=Low; predicted=High; type=Extreme temperature; region=Western Europe; hdi=present; categories=unknown_category
+misclassified_sample,2023-0438-LUX,,1,,,,year=2023; true=Moderate; predicted=High; type=Extreme temperature; region=Western Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0654-MLI,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0843-MWI,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-LVA,,1,,,,year=2023; true=Moderate; predicted=Extreme; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0442-AFG,,1,,,,year=2022; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0323-PAK,,1,,,,year=2022; true=Low; predicted=High; type=Wildfire; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0020-BRA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0080-USA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2022-0026-TON,,1,,,,year=2022; true=Low; predicted=Moderate; type=Volcanic activity; region=Polynesia; hdi=present; categories=known_categories
+misclassified_sample,2022-0027-AFG,,1,,,,year=2022; true=Moderate; predicted=Extreme; type=Earthquake; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0052-MOZ,,1,,,,year=2022; true=Moderate; predicted=High; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0205-ZAF,,1,,,,year=2022; true=High; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0117-COM,,1,,,,year=2022; true=Moderate; predicted=High; type=Air; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0158-CHN,,1,,,,year=2022; true=High; predicted=Moderate; type=Air; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0263-COD,,1,,,,year=2022; true=Low; predicted=Extreme; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0666-KHM,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0235-POL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Industrial accident (General); region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0275-RUS,,1,,,,year=2022; true=Moderate; predicted=Low; type=Wildfire; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0283-CMR,,1,,,,year=2022; true=Moderate; predicted=High; type=Air; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0314-PHL,,1,,,,year=2022; true=Low; predicted=Moderate; type=Water; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0317-GTM,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0347-CIV,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0372-BGD,,1,,,,year=2022; true=Moderate; predicted=High; type=Fire (Industrial); region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0397-CHN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0405-PAK,,1,,,,year=2022; true=Extreme; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0594-LBN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Epidemic; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0423-KOR,,1,,,,year=2022; true=Low; predicted=High; type=Extreme temperature; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0445-SDN,,1,,,,year=2022; true=High; predicted=Low; type=Flood; region=Northern Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-HUN,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-IRL,,1,,,,year=2022; true=Moderate; predicted=High; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-LVA,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0480-USA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2022-0481-UGA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0553-MWI,,1,,,,year=2022; true=Extreme; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0676-VNM,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0682-VEN,,1,,,,year=2022; true=Low; predicted=Moderate; type=Mass movement (wet); region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0746-COD,,1,,,,year=2022; true=Low; predicted=High; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0775-ITA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Mass movement (wet); region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0832-PHL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0863-USA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0002-PHL,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0018-UGA,,1,,,,year=2023; true=Moderate; predicted=High; type=Miscellaneous accident (General); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0054-SYR,,1,,,,year=2023; true=Extreme; predicted=High; type=Earthquake; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0054-TUR,,1,,,,year=2023; true=Extreme; predicted=Low; type=Earthquake; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0095-MWI,,1,,,,year=2023; true=Extreme; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0141-TUR,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0147-ITA,,1,,,,year=2023; true=High; predicted=Moderate; type=Water; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0281-COD,,1,,,,year=2023; true=Extreme; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0354-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0267-RWA,,1,,,,year=2023; true=High; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0357-CHN,,1,,,,year=2023; true=Low; predicted=Moderate; type=Mass movement (wet); region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0365-GTM,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0391-VEN,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0524-USA,,1,,,,year=2023; true=High; predicted=Low; type=Wildfire; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-EST,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0462-AFG,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0535-GRC,,1,,,,year=2023; true=Moderate; predicted=Low; type=Wildfire; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0570-TJK,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Central Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0571-PAK,,1,,,,year=2023; true=Low; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0600-MAR,,1,,,,year=2023; true=Extreme; predicted=Low; type=Earthquake; region=Northern Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0878-CPV,,1,,,,year=2023; true=Low; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-9868-USA,,1,,,,year=2023; true=High; predicted=Low; type=Drought; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0039-NPL,,1,,,,year=2023; true=Moderate; predicted=High; type=Air; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0079-NZL,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Australia and New Zealand; hdi=present; categories=known_categories
+misclassified_sample,2023-0190-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Miscellaneous accident (General); region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0087-GNQ,,1,,,,year=2023; true=Moderate; predicted=Extreme; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0636-AFG,,1,,,,year=2023; true=Extreme; predicted=High; type=Earthquake; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0649-IRQ,,1,,,,year=2023; true=High; predicted=Moderate; type=Fire (Miscellaneous); region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0500-KOR,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0052-MDG,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0014-PAK,,1,,,,year=2022; true=Moderate; predicted=High; type=Storm; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0055-RWA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0060-AFG,,1,,,,year=2022; true=Moderate; predicted=High; type=Mass movement (wet); region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0065-BRA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0068-ECU,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0101-MDG,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0103-AUS,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Australia and New Zealand; hdi=present; categories=known_categories
+misclassified_sample,2022-0115-IDN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Earthquake; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0401-ITA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Glacial lake outburst flood; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0137-MOZ,,1,,,,year=2022; true=Moderate; predicted=High; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0201-TLS,,1,,,,year=2022; true=Moderate; predicted=High; type=Epidemic; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0190-BRA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0192-COL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0232-RWA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0671-COD,,1,,,,year=2023; true=Moderate; predicted=High; type=Mass movement (wet); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0310-SEN,,1,,,,year=2022; true=Moderate; predicted=High; type=Fire (Miscellaneous); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0333-MEX,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0342-AFG,,1,,,,year=2022; true=Extreme; predicted=High; type=Earthquake; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0353-NPL,,1,,,,year=2022; true=Moderate; predicted=High; type=Storm; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0446-NER,,1,,,,year=2022; true=High; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0456-YEM,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-CZE,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-LUX,,1,,,,year=2022; true=Moderate; predicted=High; type=Extreme temperature; region=Western Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0609-ITA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0501-YEM,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0647-SLV,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0685-PHL,,1,,,,year=2022; true=Low; predicted=Moderate; type=Mass movement (wet); region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0707-PHL,,1,,,,year=2022; true=High; predicted=Low; type=Storm; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0710-KOR,,1,,,,year=2022; true=High; predicted=Low; type=Miscellaneous accident (General); region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0755-IDN,,1,,,,year=2022; true=High; predicted=Low; type=Earthquake; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0788-ZAF,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0819-JPN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0857-UGA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0861-MOZ,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0020-MDG,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0126-ECU,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0329-NGA,,1,,,,year=2022; true=Moderate; predicted=High; type=Miscellaneous accident (General); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0613-KHM,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0675-MEX,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0120-IDN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0011-IDN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0026-PER,,1,,,,year=2022; true=Low; predicted=Moderate; type=Volcanic activity; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0052-MWI,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0057-HTI,,1,,,,year=2022; true=Low; predicted=Extreme; type=Earthquake; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0061-MDG,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0089-BRA,,1,,,,year=2022; true=High; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0099-MDG,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0099-MOZ,,1,,,,year=2022; true=Moderate; predicted=High; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0102-BOL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0200-COL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0204-PHL,,1,,,,year=2022; true=High; predicted=Low; type=Storm; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0224-POL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Explosion (Industrial); region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0233-COL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0248-IND,,1,,,,year=2022; true=Moderate; predicted=High; type=Extreme temperature; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0258-TZA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0262-ECU,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0264-AFG,,1,,,,year=2022; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0316-CHN,,1,,,,year=2022; true=Moderate; predicted=High; type=Flood; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0318-BRA,,1,,,,year=2022; true=High; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0320-VNM,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0325-CAN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2022-0342-PAK,,1,,,,year=2022; true=Moderate; predicted=Low; type=Earthquake; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0409-BRA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0448-PHL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Earthquake; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0453-AFG,,1,,,,year=2022; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0461-NGA,,1,,,,year=2022; true=Moderate; predicted=High; type=Explosion (Miscellaneous); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-ALB,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-AUT,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Western Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-LTU,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-NOR,,1,,,,year=2022; true=Moderate; predicted=High; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0465-SRB,,1,,,,year=2022; true=High; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2022-0488-NPL,,1,,,,year=2022; true=Moderate; predicted=High; type=Mass movement (wet); region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0509-TCD,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0515-VNM,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=South-eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0523-AFG,,1,,,,year=2022; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0533-CMR,,1,,,,year=2022; true=Low; predicted=High; type=Mass movement (wet); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0539-IND,,1,,,,year=2022; true=Moderate; predicted=Extreme; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0546-MRT,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0560-SLE,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0577-KOR,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0582-UGA,,1,,,,year=2022; true=Moderate; predicted=High; type=Mass movement (wet); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0594-SYR,,1,,,,year=2022; true=Moderate; predicted=High; type=Epidemic; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0614-USA,,1,,,,year=2022; true=High; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2022-0615-VEN,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0641-NGA,,1,,,,year=2022; true=High; predicted=Extreme; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2022-0695-BGD,,1,,,,year=2022; true=Moderate; predicted=Low; type=Storm; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0699-COL,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-0709-IND,,1,,,,year=2022; true=High; predicted=Moderate; type=Collapse (Miscellaneous); region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2022-0793-BRA,,1,,,,year=2022; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2022-9436-UGA,,1,,,,year=2022; true=Extreme; predicted=High; type=Drought; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0050-CHL,,1,,,,year=2023; true=Moderate; predicted=Low; type=Wildfire; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0068-ZMB,,1,,,,year=2023; true=Low; predicted=High; type=Epidemic; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0080-ZAF,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0092-BRA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0095-MDG,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0155-ECU,,1,,,,year=2023; true=Moderate; predicted=Low; type=Earthquake; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0159-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0172-SOM,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0192-USA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0208-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0226-TZA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0328-PAK,,1,,,,year=2023; true=Moderate; predicted=High; type=Extreme temperature; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0457-NER,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0247-AGO,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0254-BGD,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0262-UGA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0334-KAZ,,1,,,,year=2023; true=Moderate; predicted=Low; type=Wildfire; region=Central Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0404-NGA,,1,,,,year=2023; true=High; predicted=Moderate; type=Water; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0440-KOR,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0417-CHN,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0426-USA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Northern America; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-AUT,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Western Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-CYP,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Western Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-CZE,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-DEU,,1,,,,year=2023; true=Extreme; predicted=High; type=Extreme temperature; region=Western Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-LTU,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-MLT,,1,,,,year=2023; true=Moderate; predicted=Extreme; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-NOR,,1,,,,year=2023; true=Moderate; predicted=High; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-SVK,,1,,,,year=2023; true=High; predicted=Extreme; type=Extreme temperature; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-SVN,,1,,,,year=2023; true=Moderate; predicted=High; type=Extreme temperature; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0438-SWE,,1,,,,year=2023; true=Moderate; predicted=High; type=Extreme temperature; region=Northern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0464-CHN,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0512-BGD,,1,,,,year=2023; true=Low; predicted=High; type=Flood; region=Southern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0563-MDG,,1,,,,year=2023; true=Moderate; predicted=High; type=Miscellaneous accident (General); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0582-GRC,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Southern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0603-BRA,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0760-BOL,,1,,,,year=2023; true=Moderate; predicted=Low; type=Wildfire; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0783-BOL,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0797-TZA,,1,,,,year=2023; true=Moderate; predicted=High; type=Mass movement (wet); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0804-UKR,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Eastern Europe; hdi=present; categories=known_categories
+misclassified_sample,2023-0827-COD,,1,,,,year=2023; true=Moderate; predicted=High; type=Mass movement (wet); region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0831-ARG,,1,,,,year=2023; true=Moderate; predicted=Low; type=Storm; region=Latin America and the Caribbean; hdi=present; categories=known_categories
+misclassified_sample,2023-0838-CHN,,1,,,,year=2023; true=High; predicted=Low; type=Earthquake; region=Eastern Asia; hdi=present; categories=known_categories
+misclassified_sample,2023-0844-AGO,,1,,,,year=2023; true=Moderate; predicted=Low; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0857-COD,,1,,,,year=2023; true=Moderate; predicted=High; type=Flood; region=Sub-Saharan Africa; hdi=present; categories=known_categories
+misclassified_sample,2023-0858-COD,,1,,,,year=2023; true=Moderate; predicted=High; type=Mass movement (wet); region=Sub-Saharan Africa; hdi=present; categories=known_categories

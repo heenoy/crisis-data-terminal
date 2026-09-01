@@ -1,0 +1,13 @@
+actual_total_deaths,predicted_total_deaths,interval_90_lower,interval_90_upper,Disaster Group,Disaster Subgroup,Disaster Type,Disaster Subtype,ISO,Country,Subregion,Region,Magnitude Scale,Start Year,Start Month,Start Day,Magnitude,Latitude,Longitude
+32.0,28,5,152,Natural,Meteorological,Storm,Lightning/Thunderstorms,IND,India,Southern Asia,Asia,Kph,2015,9.0,6.0,,,
+4.0,240,218,365,Natural,Biological,Epidemic,Bacterial disease,NGA,Nigeria,Sub-Saharan Africa,Africa,,2019,8.0,,,,
+24.0,34,12,158,Natural,Biological,Epidemic,Bacterial disease,IRQ,Iraq,Western Asia,Asia,,2007,8.0,14.0,,,
+30.0,19,0,144,Technological,Transport,Road,Road,PER,Peru,Latin America and the Caribbean,Americas,,2004,8.0,1.0,,,
+16.0,20,0,145,Technological,Transport,Road,Road,NGA,Nigeria,Sub-Saharan Africa,Africa,,2001,5.0,28.0,,,
+20.0,11,0,135,Natural,Meteorological,Storm,Severe weather,CHN,China,Eastern Asia,Asia,Kph,2020,5.0,1.0,,,
+70.0,20,0,145,Technological,Transport,Rail,Rail,CHN,China,Eastern Asia,Asia,,2008,4.0,28.0,,,
+1.0,2,0,126,Natural,Meteorological,Storm,Tropical cyclone,WSM,Samoa,Polynesia,Oceania,Kph,2004,1.0,5.0,310.0,,
+68.0,25,3,150,Technological,Transport,Water,Water,CHN,China,Eastern Asia,Asia,,2004,9.0,27.0,,,
+22.0,74,52,199,Natural,Meteorological,Extreme temperature,Heat wave,USA,United States of America,Northern America,Americas,°C,2011,7.0,19.0,50.0,,
+1.0,10,0,135,Natural,Hydrological,Flood,Riverine flood,GIN,Guinea,Sub-Saharan Africa,Africa,Km2,2010,9.0,15.0,,,
+11.0,27,5,151,Technological,Transport,Water,Water,UGA,Uganda,Sub-Saharan Africa,Africa,,2010,7.0,21.0,,,

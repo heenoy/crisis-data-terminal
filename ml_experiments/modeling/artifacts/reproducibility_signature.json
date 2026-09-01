@@ -1,0 +1,41 @@
+{
+  "artifact_sha256": {
+    "predictions\\test_predictions.csv": "c712baf91646c3f01feb6d5b1b290e79347a52b662b71b4738df9d3ef2a6d2de",
+    "predictions\\validation_predictions.csv": "6802b002d046a7061b41322b4e8f17f7f02b3953a9e8f4de1d722229c9beb353",
+    "reports\\confusion_matrix_test.csv": "7cb1f119cbb48f7ea5887a363e99fe63e00e8b9896a3e60d18e465753d13f8ac",
+    "reports\\confusion_matrix_validation.csv": "634a64766e7e0e81950774c8ab5f7b402b6b5aed05d33408ae424c089a6d88fd",
+    "reports\\model_comparison.csv": "3ed020c1cbc5855ed0dcad30d489155d1c8f970281a9212e33effb708025b30a",
+    "reports\\per_class_metrics.csv": "e081095785d82355db7efd3435b86c6ca3edc8feff6637edae5a705e314232d7",
+    "reports\\test_metrics.csv": "618800ada7e411b77015b3a8763a10853921956c09a6819c615019712b766b35",
+    "reports\\validation_metrics.csv": "e018a1184cb7aa6e2b908d4090c339453190f4d3d610eb649f3e3e494a485ce7"
+  },
+  "expanded_feature_order_sha256": "7446817485818c2c4c53c98beeac3b605e3a7f7b5b2bada95c60995441663a29",
+  "raw_feature_order": [
+    "country_code",
+    "region",
+    "disaster_type",
+    "disaster_subtype",
+    "date_granularity",
+    "year",
+    "date_imputed",
+    "historical_frequency",
+    "hdi",
+    "hdi_missing",
+    "event_month",
+    "month_missing"
+  ],
+  "selected_model_id": "RF-V2_C09",
+  "selected_params": {
+    "class_weight": "balanced_subsample",
+    "max_depth": 10,
+    "max_features": 0.5,
+    "min_samples_leaf": 5,
+    "n_estimators": 500
+  },
+  "split_counts": {
+    "maturity_holdout": 1044,
+    "test": 948,
+    "train": 10786,
+    "validation": 804
+  }
+}

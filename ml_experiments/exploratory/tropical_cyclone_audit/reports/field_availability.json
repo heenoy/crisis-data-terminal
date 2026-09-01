@@ -1,0 +1,150 @@
+{
+  "flags": [
+    "EXPLORATORY",
+    "NOT FOR MODEL SELECTION",
+    "NOT DEPLOYED"
+  ],
+  "empirical_coverage_measured": false,
+  "field_timing_definitions": {
+    "A": "before or at landfall if proven available at cutoff",
+    "B": "during event",
+    "C": "post-event",
+    "D": "availability timing unresolved"
+  },
+  "timing_audit": [
+    {
+      "field": "NAME / SID",
+      "category": "D",
+      "note": "Identification, not intensity; archival SID/name availability at event cutoff not proven"
+    },
+    {
+      "field": "ISO_TIME",
+      "category": "A/B",
+      "note": "UTC observation/valid time, NOT issuance timestamp; before/at/after depends on event-country cutoff"
+    },
+    {
+      "field": "BASIN / SUBBASIN",
+      "category": "A/B",
+      "note": "Ocean basin, not affected-country identification"
+    },
+    {
+      "field": "LAT / LON",
+      "category": "A/B+D",
+      "note": "Observed track position may be later revised/interpolated; as-of availability unproven"
+    },
+    {
+      "field": "DIST2LAND",
+      "category": "A/B+D",
+      "note": "Distance to a global land mask, not event-country coastline"
+    },
+    {
+      "field": "LANDFALL",
+      "category": "B/C",
+      "note": "Minimum distance until next timestep, usually 3h; uses future position relative to current row; POST-EVENT / NOT ELIGIBLE as an as-of flag"
+    },
+    {
+      "field": "USA_RECORD=L",
+      "category": "D",
+      "note": "Coastline crossing record, not a country mapping or a proven contemporaneous bulletin"
+    },
+    {
+      "field": "event-country landfall time",
+      "category": "D",
+      "note": "Not directly established by the inspected schema; multiple landfalls/countries require separate linkage"
+    },
+    {
+      "field": "landfall sustained wind / pressure / category",
+      "category": "D",
+      "note": "Needs verified event-country landfall time and issuance provenance, not lifetime max/min"
+    },
+    {
+      "field": "first country-nearby intensity",
+      "category": "D",
+      "note": "Needs authoritative geometry, preregistered proximity rule and as-of record; none created"
+    },
+    {
+      "field": "WMO_WIND / WMO_PRES / WMO_AGENCY",
+      "category": "A/B+D",
+      "note": "Per-observation official agency values; averaging periods differ; no averaging adjustment in WMO_WIND; retrospective release time unproven"
+    },
+    {
+      "field": "agency WIND / PRES",
+      "category": "A/B+D",
+      "note": "Keep agency, averaging period, unit and interpolation flags separate; no silent fallback"
+    },
+    {
+      "field": "lifetime maximum wind",
+      "category": "C",
+      "note": "POST-EVENT / NOT ELIGIBLE"
+    },
+    {
+      "field": "lifetime minimum pressure",
+      "category": "C",
+      "note": "POST-EVENT / NOT ELIGIBLE"
+    },
+    {
+      "field": "final duration / complete track",
+      "category": "C",
+      "note": "POST-EVENT / NOT ELIGIBLE"
+    },
+    {
+      "field": "TRACK_TYPE MAIN / IFLAG",
+      "category": "C/D",
+      "note": "MAIN has reanalysis; P/I flags indicate interpolation using other timestamps; not point-in-time publication evidence"
+    }
+  ],
+  "agency_averaging_minutes": {
+    "USA": 1,
+    "TOKYO": 10,
+    "NEWDELHI": 3,
+    "REUNION": 10,
+    "BOM": 10,
+    "NADI": 10,
+    "WELLINGTON": 10,
+    "CMA": 2,
+    "HKO": 10,
+    "KMA": 10
+  },
+  "wind_unit": "knots",
+  "pressure_unit": "mb (numerically equal to hPa)",
+  "possible_unit_conversion": "knots * 1852 / 3600 = m/s; no averaging-period conversion authorized",
+  "conversion_applied": false,
+  "agency_priority": "No unified field produced. WMO values retain WMO_AGENCY; native agency columns separate, missing remains missing.",
+  "missing_quality": "CSV blanks are missing; IFLAG O original, P interpolated position+intensity, I intensity interpolated, V other variables interpolated. MAIN is reanalyzed; PROVISIONAL is not final.",
+  "timezone": "UTC",
+  "temporal_granularity": "Common reporting 6h, some 3h or special observations; merged positions generally 3h/interpolated",
+  "multiple_landfalls": "No automatic strongest/first-global-landfall selection; must associate event-country and define cutoff before any future feature work",
+  "qualified_landfall_wind": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "qualified_landfall_pressure": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "qualified_landfall_category": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "timing_clear_coverage": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "sources": {
+    "column_documentation.pdf": "https://www.ncei.noaa.gov/sites/default/files/2025-09/IBTrACS_v04r01_column_documentation.pdf",
+    "technical_details.pdf": "https://www.ncei.noaa.gov/sites/default/files/2025-04/IBTrACS_version4r01_Technical_Details.pdf",
+    "official_metadata.html": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C01552"
+  }
+}

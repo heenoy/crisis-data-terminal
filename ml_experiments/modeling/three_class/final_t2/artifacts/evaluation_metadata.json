@@ -1,0 +1,12 @@
+{
+  "test_first_evaluated_at_utc": "2026-08-04T09:07:43.024310+00:00",
+  "configuration_locked_before_test": true,
+  "latest_reproducibility_run_at_utc": "2026-08-04T09:12:44.974742+00:00",
+  "test_evaluation_count_for_model_selection": 1,
+  "test_used_for_tuning": false,
+  "maturity_rows_read_into_feature_frame": 0,
+  "maturity_predictions": 0,
+  "maturity_probability_rows": 0,
+  "maturity_metrics": 0,
+  "test_probability_sum_max_abs_error": 1.7763568394002505e-15
+}

@@ -1,0 +1,27 @@
+﻿field,pandas_dtype,missing_count,missing_rate,unique_count,leakage_risk,recommended_as_feature,recommended_encoding_or_missing_handling
+event_id,str,0,0.0,13582,identifier_and_time_proxy,no,Keep only for row tracing; exclude from X because DisNo. embeds year/country information.
+country,str,0,0.0,214,duplicate_location_identifier,no,"Use country_code or region, not both country name and code."
+country_code,str,0,0.0,214,distribution_shift_risk,conditional,Categorical encoder fit on training only; handle unseen ISO3 as unknown.
+region,str,0,0.0,17,low_risk_context,yes,One-hot encode on training only with unknown-category handling.
+disaster_type,str,0,0.0,29,low_risk_event_context,yes,One-hot encode on training only; preserve unknown category.
+disaster_subtype,str,0,0.0,59,sparse_high_cardinality,conditional,"Group rare levels using training frequencies, then one-hot encode."
+year,int64,0,0.0,27,temporal_proxy_not_target_leakage,yes,Use numeric trend only after strict temporal split; never random split.
+total_deaths,float64,0,0.0,598,direct_target_leakage,no,Direct source used to generate impact_level; exclude from every model input.
+total_affected,float64,3689,0.27160948313944927,3635,post_event_outcome_leakage,no,Usually finalized after the event; exclude for onset-time prediction.
+total_damage,float64,10906,0.8029745251067589,931,post_event_outcome_leakage,no,Economic-loss estimate is post-event and revision-prone; exclude.
+event_date,str,0,0.0,6774,start_time_available_with_partial_precision,conditional,Derive calendar features while retaining date_granularity/date_imputed; fit transforms on training only.
+event_date_upper,str,0,0.0,6822,artificial_precision_boundary,no,Audit field only; use date_granularity rather than the constructed upper boundary.
+end_date,str,0,0.0,6753,post_event_leakage,no,Known only after the event and may be revised; exclude.
+date_granularity,str,0,0.0,3,data_quality_context,yes,One-hot encode; preserves day/month/year precision without pretending exactness.
+date_imputed,bool,0,0.0,2,data_quality_context,yes,Boolean precision indicator; retain alongside date_granularity.
+date_anomaly,str,13581,0.9999263731409218,1,end_date_derived_post_event,no,"Retain for QA, but exclude from onset-time prediction because it uses end-date information."
+duration,float64,1,7.362685907819172e-05,275,post_event_leakage,no,Derived from event end; exclude from onset-time prediction.
+impact_level,str,0,0.0,4,target,target_only,Prediction target; generated only from total_deaths boundaries.
+time_batch,str,0,0.0,7003,high_cardinality_duplicate_time,no,Audit key only; redundant with start time and precision.
+historical_frequency,int64,0,0.0,1255,causal_historical_feature,yes,Use unchanged; already computed only from clearly prior time intervals.
+hdi_country_name,str,1363,0.10035340892357532,184,duplicate_merge_metadata,no,Exclude; duplicate label for country_code.
+hdi,float64,1363,0.10035340892357532,636,contemporaneous_context_with_missingness,yes,RF: training-only median plus hdi_missing. Native-NaN model: keep NaN plus hdi_missing.
+hdi_source,str,1363,0.10035340892357532,1,missingness_proxy_and_constant,no,Exclude; source availability duplicates HDI missingness.
+hdi_source_year,float64,1363,0.10035340892357532,24,year_and_missingness_proxy,no,Exclude; duplicates event year when HDI exists and encodes missingness otherwise.
+hdi_imputed,bool,0,0.0,1,constant_metadata,no,Currently always false; retain for audit but exclude from X.
+hdi_match_status,str,0,0.0,4,year_region_missingness_proxy,no_primary,Do not use as socioeconomic feature; derive only hdi_missing unless a separately audited missingness experiment is run.

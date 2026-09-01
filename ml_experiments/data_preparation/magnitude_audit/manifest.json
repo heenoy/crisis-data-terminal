@@ -1,0 +1,105 @@
+{
+  "created_at_utc": "2026-08-04T07:39:26.655328+00:00",
+  "input": {
+    "path": "data/emdat_raw.xlsx",
+    "sha256": "f7c4993adcc8eeecf8806fb68cd0426649ea320482a7ac6636fbfd01fa9afe45",
+    "sheet": "EM-DAT Data",
+    "rows": 16858
+  },
+  "current_time_reference": {
+    "path": "data/processed_hdro/disaster_hdi_merged.csv",
+    "sha256": "075738f8debb621dca42c8fc1d9f940a7078ed54377f00fe78f7fd09fe9c4caa",
+    "field_mapping": "DisNo. -> event_id; Start Year -> year",
+    "year_mismatches": 0
+  },
+  "time_split": {
+    "train": "2000-2019",
+    "validation": "2020-2021",
+    "test": "2022-2023",
+    "maturity_holdout": "2024-2026"
+  },
+  "audit_counts": {
+    "total": 16858,
+    "magnitude_nonmissing": 3392,
+    "magnitude_missing": 13466,
+    "nonnumeric_nonblank": 0,
+    "scale_blank_or_missing": 6268,
+    "scale_present_magnitude_missing": 7198,
+    "recommended_group_count": 8,
+    "potentially_standardizable": 3369
+  },
+  "recommended_rule": {
+    "primary": "disaster_type + magnitude_scale",
+    "temperature_exception": "disaster_subtype + magnitude_scale for °C",
+    "excluded_scales": [
+      "Vaccinated",
+      "m3",
+      "<MISSING_SCALE>"
+    ],
+    "minimum_training_nonmissing": 20,
+    "require_positive_training_iqr": true,
+    "clip_range": [
+      -5,
+      5
+    ],
+    "fit_scope": "training only (2000-2019)",
+    "raw_magnitude_model_input": false,
+    "indicators": [
+      "magnitude_missing",
+      "magnitude_group_unknown"
+    ]
+  },
+  "files": [
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/audit_magnitude.py",
+      "sha256": "50b38cece717a3322753ec99392928f75c1e0293cca594824c0771fac9afbbf8",
+      "bytes": 22914
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/magnitude_anomaly_records.csv",
+      "sha256": "d44b2603369de88df32cb9879571004f894943de603c3b1a3e3a9eeda1c232d4",
+      "bytes": 13791
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/magnitude_audit_report.md",
+      "sha256": "2f187766ad8dd277fcafee1f0f0613fe3ba207d5924531a18128683eb8c3c3a4",
+      "bytes": 3463
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/magnitude_by_disaster_subtype.csv",
+      "sha256": "d1076d0850ad6c2864c99d14808de68fc02e7cb91099e951cd7da5ec0485c4af",
+      "bytes": 3214
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/magnitude_by_disaster_type.csv",
+      "sha256": "989ec2483d4677bfd4a75e19e80ef1a65b8d62b8970dd2bb66ab4a52690451c6",
+      "bytes": 1150
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/magnitude_group_audit.csv",
+      "sha256": "30e8750c6dc4d3d42666d408057d2ac02bf01b0f060c6ec80335ef2de67ebca6",
+      "bytes": 31181
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/magnitude_scale_audit.csv",
+      "sha256": "710260ffea3c0a7c2b7f9c5a8d2afe841679f9dd472aa02b09dfb74348ffb9de",
+      "bytes": 2052
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/magnitude_standardizable_coverage.csv",
+      "sha256": "4de0e417506b0da0b458d9f17c5530fa6fd8ae0c73a01cfd4e544acb139209d2",
+      "bytes": 396
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/magnitude_unsupported_groups.csv",
+      "sha256": "2992a0a3b7f78fd612013bfa6dca03199f13278f7487e2d4eb5ffe5018fd3fc0",
+      "bytes": 25184
+    },
+    {
+      "path": "ml_experiments/data_preparation/magnitude_audit/README.md",
+      "sha256": "3d8a18f865ae6eb96d065d5e4ff106b734142bc5677f8e7d029a6139b001048f",
+      "bytes": 713
+    }
+  ],
+  "protected_files_checked": 105
+}

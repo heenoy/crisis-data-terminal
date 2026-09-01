@@ -1,0 +1,153 @@
+{
+  "run_started_utc": "2026-08-04T07:29:24.393248+00:00",
+  "api": "World Bank Indicators API v2",
+  "year_range": [
+    1999,
+    2023
+  ],
+  "requests": [
+    {
+      "request_url": "https://api.worldbank.org/v2/country?format=json&per_page=400",
+      "downloaded_at_utc": "2026-08-04T07:25:38.513612+00:00",
+      "http_status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "attempts": 1,
+      "endpoint": "Countries",
+      "file": "ml_experiments/data_preparation/world_bank/raw/world_bank_countries_response.json",
+      "sha256": "e0e0d3326356844073eb468da2ade1bd3fc14a76fdc4b82df933cfd35956ce65"
+    },
+    {
+      "request_url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=1999:2023&format=json&per_page=20000",
+      "downloaded_at_utc": "2026-08-04T07:26:16.256915+00:00",
+      "http_status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "attempts": 1,
+      "endpoint": "Indicators",
+      "indicator_code": "SP.POP.TOTL",
+      "indicator_name": "Population, total",
+      "file": "ml_experiments/data_preparation/world_bank/raw/population_response.json",
+      "sha256": "a620758a7dfb1a816e4574491602cd74b34bfe52a0a1c7ab68d07abd67501a21"
+    },
+    {
+      "request_url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.PP.KD?date=1999:2023&format=json&per_page=20000",
+      "downloaded_at_utc": "2026-08-04T07:26:19.865373+00:00",
+      "http_status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "attempts": 1,
+      "endpoint": "Indicators",
+      "indicator_code": "NY.GDP.PCAP.PP.KD",
+      "indicator_name": "GDP per capita, PPP (constant international $)",
+      "file": "ml_experiments/data_preparation/world_bank/raw/gdp_per_capita_ppp_response.json",
+      "sha256": "e51c401055b7ced800406cca465019ee3c930add29bbbbe55526a7a9f5330486"
+    }
+  ],
+  "indicators": [
+    {
+      "code": "SP.POP.TOTL",
+      "name": "Population, total"
+    },
+    {
+      "code": "NY.GDP.PCAP.PP.KD",
+      "name": "GDP per capita, PPP (constant international $)"
+    }
+  ],
+  "input": {
+    "path": "data/processed_hdro/disaster_hdi_merged.csv",
+    "sha256": "075738f8debb621dca42c8fc1d9f940a7078ed54377f00fe78f7fd09fe9c4caa"
+  },
+  "run_completed_utc": "2026-08-04T07:29:25.265424+00:00",
+  "files": [
+    {
+      "path": "ml_experiments/data_preparation/world_bank/event_indicator_matches.csv",
+      "sha256": "c9efafbb21ad4b9566d60cf07f1e240eff04215ba5effefd2b86b4ae5de7c1de",
+      "bytes": 5289328
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/fetch_and_audit_world_bank.py",
+      "sha256": "27a203c498cf69562bc260a983985a2f7c6edbeedb5732bf26b8f35a7eff3fed",
+      "bytes": 22978
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/raw/gdp_per_capita_ppp_response.json",
+      "sha256": "e51c401055b7ced800406cca465019ee3c930add29bbbbe55526a7a9f5330486",
+      "bytes": 2599748
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/raw/population_response.json",
+      "sha256": "a620758a7dfb1a816e4574491602cd74b34bfe52a0a1c7ab68d07abd67501a21",
+      "bytes": 2285515
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/raw/world_bank_countries_response.json",
+      "sha256": "e0e0d3326356844073eb468da2ade1bd3fc14a76fdc4b82df933cfd35956ce65",
+      "bytes": 192106
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/README.md",
+      "sha256": "b1024837d1f376862f06c783f67a1f9d79fd540637915e482f3162d6bc752d12",
+      "bytes": 818
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/reports/backtrack_summary.csv",
+      "sha256": "fac18c93a63b1fb7a99efcdeec8af8c72a4670977a6cc8d53f5de966ecac0f1d",
+      "bytes": 259
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/reports/country_code_audit.csv",
+      "sha256": "4ed7b2fca2255c677e58a17552b0049c107f4c1bdb35afe4913b5d646e3b1798",
+      "bytes": 13917
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/reports/event_matching_summary.csv",
+      "sha256": "a93f428a2e1cb5312a310253332143c3f0b66828c2984f51a3bd868219a48b4b",
+      "bytes": 1139
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/reports/event_year_matching_summary.csv",
+      "sha256": "be7e649acb98ebfdc94da1d773b16c132b54cbc6571ad074f91162ed80a5ccba",
+      "bytes": 13935
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/reports/indicator_yearly_coverage.csv",
+      "sha256": "2af6f188aa39d57756768fa1ab8d7669a4bd7cecc220d10b936aba57e1ad0d6a",
+      "bytes": 3991
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/reports/unmatched_countries.csv",
+      "sha256": "e16fedef81e542b67d66c53dc5d9a0f6222c518bef9f9c784557e0fc3387573a",
+      "bytes": 2078
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/reports/unmatched_event_countries.csv",
+      "sha256": "62dd0700226337bae074a6ba95536f315f530bf31d3578f919c740dde43ce74e",
+      "bytes": 3435
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/world_bank_country_metadata.csv",
+      "sha256": "382fa6cb2a4ea5628de7872989a53002bb1a5c3c67beb468f7bdcdbeab271bc0",
+      "bytes": 25413
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/world_bank_indicators_annual.csv",
+      "sha256": "e11f60c289e9eee00f4740eb90ee904ce761385d8b20673dd0a5eff5ba4c48c3",
+      "bytes": 1183253
+    },
+    {
+      "path": "ml_experiments/data_preparation/world_bank/reports/world_bank_audit_report.md",
+      "sha256": "38bed7273de45742a84bed2f3fc9fdf5f27b089de848513909ca429f3f0d1502",
+      "bytes": 1973
+    }
+  ],
+  "quality_checks": {
+    "emdat_events": 16858,
+    "emdat_unique_iso3": 223,
+    "world_bank_metadata_entities": 295,
+    "world_bank_real_economies": 217,
+    "aggregate_entities_excluded": 78,
+    "clean_indicator_rows": 10850,
+    "event_indicator_rows": 33716,
+    "duplicate_annual_keys": 0,
+    "duplicate_event_indicator_keys": 0,
+    "future_year_matches": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "prior_successful_run_available": true,
+  "development_predictions_identical": true,
+  "test_predictions_identical": true,
+  "development_probability_max_abs_diff": 4.440892098500626e-16,
+  "test_probability_max_abs_diff": 3.3306690738754696e-16,
+  "development_metrics_within_1e_15": true,
+  "test_metrics_within_1e_15": true,
+  "category_vocabularies_identical": true,
+  "magnitude_statistics_identical": true,
+  "feature_order_identical": true
+}

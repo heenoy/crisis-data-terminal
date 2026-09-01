@@ -1,0 +1,6 @@
+{
+  "predicted_classes_identical": true,
+  "max_probability_absolute_difference": 0.0,
+  "metrics_identical": true,
+  "tolerance": 1e-12
+}

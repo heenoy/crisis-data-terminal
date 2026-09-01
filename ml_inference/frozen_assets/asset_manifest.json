@@ -1,0 +1,77 @@
+{
+  "created_at_utc": "2026-08-05T03:20:56.657866+00:00",
+  "feature_builder_version": "frozen-t2-v1",
+  "model_source": "ml_experiments/modeling/three_class/final_t2/artifacts/final_t2_pipeline.joblib",
+  "model_source_sha256": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+  "model_copy_sha256": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+  "model_copy_byte_identical": true,
+  "classes": [
+    "Low",
+    "Moderate",
+    "Severe"
+  ],
+  "features": [
+    "country_code",
+    "region",
+    "disaster_type",
+    "disaster_subtype",
+    "date_granularity",
+    "year",
+    "date_imputed",
+    "historical_frequency",
+    "hdi",
+    "hdi_missing",
+    "event_month",
+    "month_missing",
+    "magnitude_robust_z",
+    "magnitude_missing",
+    "magnitude_group_unknown"
+  ],
+  "hdi_range": [
+    1990,
+    2023
+  ],
+  "historical_source_cutoff": "2023-12-31",
+  "historical_source_scope": "all frozen EM-DAT event intervals through 2023; no labels or outcome fields",
+  "development_mapping_range": [
+    2000,
+    2021
+  ],
+  "source_hashes": {
+    "ml_experiments/modeling/three_class/final_t2/artifacts/final_t2_pipeline.joblib": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+    "ml_experiments/modeling/three_class/final_t2/manifest.json": "b921c74c176ee27eb119e77d67dcf18319bdbcd1f19f99372218c8c060240987",
+    "data/processed_hdro/disaster_hdi_merged.csv": "075738f8debb621dca42c8fc1d9f940a7078ed54377f00fe78f7fd09fe9c4caa",
+    "data/raw/hdro_hdi_annual.csv": "b469454c65441caaf97f09885f66d230f5629c3dce601fb1be3368064e2e6df8",
+    "ml_experiments/modeling/three_class/final_t2/artifacts/development_magnitude_groups.csv": "0eb28f65f30999eeee62157e404d3347134b9685133b1339eb1b802b28a51115"
+  },
+  "assets": {
+    "category_vocabularies.json": {
+      "sha256": "06c9e08e27f4b62f8a345fcd3b034295ac4fc3fa24f76c906875f47c1190b31b",
+      "bytes": 5237
+    },
+    "country_region.csv": {
+      "sha256": "9c06a88509bed99c5eb92dc72290dfbea23093dadd8a80c6d482280140194aa1",
+      "bytes": 8095
+    },
+    "disaster_type_subtype.csv": {
+      "sha256": "7b1e0b287cabd475a9ae7502fd34a0b04d7f8d09f49c541ec69359e4a1e4f563",
+      "bytes": 1913
+    },
+    "final_t2_pipeline.joblib": {
+      "sha256": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+      "bytes": 19105075
+    },
+    "hdi_annual.csv": {
+      "sha256": "070f65ee9d98925db8d0f65d9e513c40671720fc6dc15136e290375c20779a4d",
+      "bytes": 207275
+    },
+    "historical_frequency_intervals.csv": {
+      "sha256": "8ec92f17b7122c22fbd5d18a7ed6af78b3fce6655b8ab0de66c9c57d9cd7196b",
+      "bytes": 601022
+    },
+    "magnitude_groups.csv": {
+      "sha256": "0eb28f65f30999eeee62157e404d3347134b9685133b1339eb1b802b28a51115",
+      "bytes": 829
+    }
+  }
+}

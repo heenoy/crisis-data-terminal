@@ -1,0 +1,11 @@
+feature,development_median
+year,2009.0
+date_imputed,0.0
+historical_frequency,71.0
+hdi,0.662
+hdi_missing,0.0
+event_month,7.0
+month_missing,0.0
+magnitude_robust_z,0.0
+magnitude_missing,1.0
+magnitude_group_unknown,1.0

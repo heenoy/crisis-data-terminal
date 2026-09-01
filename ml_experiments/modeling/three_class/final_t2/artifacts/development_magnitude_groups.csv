@@ -1,0 +1,9 @@
+grouping_strategy,group_key,training_nonmissing,training_q1,training_median,training_q3,training_iqr,eligible,minimum_required
+disaster_subtype+magnitude_scale,Cold wave | °C,95,-30.0,-20.0,0.0,30.0,True,20
+disaster_subtype+magnitude_scale,Heat wave | °C,90,39.625,43.0,47.0,7.375,True,20
+disaster_subtype+magnitude_scale,Severe winter conditions | °C,25,-30.0,-21.0,-15.0,15.0,True,20
+disaster_type+magnitude_scale,Drought | Km2,1,900.0,900.0,900.0,0.0,False,20
+disaster_type+magnitude_scale,Earthquake | Moment Magnitude,387,5.8,6.4,7.0,1.2000000000000002,True,20
+disaster_type+magnitude_scale,Flood | Km2,1144,6777.5,29885.0,101802.755,95025.255,True,20
+disaster_type+magnitude_scale,Storm | Kph,588,120.0,150.0,200.0,80.0,True,20
+disaster_type+magnitude_scale,Wildfire | Km2,30,254.5,1055.0,2950.0,2695.5,True,20

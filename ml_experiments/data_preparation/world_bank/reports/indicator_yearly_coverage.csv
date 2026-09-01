@@ -1,0 +1,51 @@
+indicator_code,indicator_name,year,world_bank_economies,countries_with_value,countries_missing_value,coverage_rate
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",1999,217,190,27,0.8755760368663594
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2000,217,192,25,0.8847926267281107
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2001,217,192,25,0.8847926267281107
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2002,217,193,24,0.8894009216589862
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2003,217,193,24,0.8894009216589862
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2004,217,193,24,0.8894009216589862
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2005,217,193,24,0.8894009216589862
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2006,217,194,23,0.8940092165898618
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2007,217,195,22,0.8986175115207373
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2008,217,197,20,0.9078341013824884
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2009,217,198,19,0.9124423963133641
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2010,217,198,19,0.9124423963133641
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2011,217,198,19,0.9124423963133641
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2012,217,198,19,0.9124423963133641
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2013,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2014,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2015,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2016,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2017,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2018,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2019,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2020,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2021,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2022,217,199,18,0.9170506912442397
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2023,217,197,20,0.9078341013824884
+SP.POP.TOTL,"Population, total",1999,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2000,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2001,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2002,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2003,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2004,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2005,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2006,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2007,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2008,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2009,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2010,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2011,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2012,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2013,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2014,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2015,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2016,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2017,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2018,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2019,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2020,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2021,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2022,217,217,0,1.0
+SP.POP.TOTL,"Population, total",2023,217,217,0,1.0

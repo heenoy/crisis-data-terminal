@@ -1,0 +1,960 @@
+{
+  "flags": [
+    "EXPLORATORY",
+    "NOT FOR MODEL SELECTION",
+    "NOT DEPLOYED"
+  ],
+  "feasibility": "LIMITED_FEASIBILITY",
+  "assessment_status": "INCOMPLETE_NETWORK_BLOCKED",
+  "grade_scope": "This execution is limited to scope/documentation audit; NOT a conclusion that the dataset is unmatchable",
+  "emdat_tropical_cyclone_events": 1181,
+  "confidence_counts": {
+    "HIGH_CONFIDENCE": null,
+    "MEDIUM_CONFIDENCE": null,
+    "AMBIGUOUS": null,
+    "UNMATCHED": null,
+    "OUT_OF_SCOPE": null
+  },
+  "unique_reliable_match_rate": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "high_plus_medium": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "qualified_intensity_coverage": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "manual_intervention": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "multi_candidate_conflicts": {
+    "numerator": null,
+    "denominator": 1181,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "multi_country_events": null,
+  "future_development_cv_eligible_events": null,
+  "by_year": {
+    "2000": {
+      "numerator": null,
+      "denominator": 39,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2001": {
+      "numerator": null,
+      "denominator": 41,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2002": {
+      "numerator": null,
+      "denominator": 42,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2003": {
+      "numerator": null,
+      "denominator": 43,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2004": {
+      "numerator": null,
+      "denominator": 74,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2005": {
+      "numerator": null,
+      "denominator": 64,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2006": {
+      "numerator": null,
+      "denominator": 40,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2007": {
+      "numerator": null,
+      "denominator": 62,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2008": {
+      "numerator": null,
+      "denominator": 75,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2009": {
+      "numerator": null,
+      "denominator": 45,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2010": {
+      "numerator": null,
+      "denominator": 54,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2011": {
+      "numerator": null,
+      "denominator": 48,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2012": {
+      "numerator": null,
+      "denominator": 55,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2013": {
+      "numerator": null,
+      "denominator": 44,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2014": {
+      "numerator": null,
+      "denominator": 40,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2015": {
+      "numerator": null,
+      "denominator": 55,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2016": {
+      "numerator": null,
+      "denominator": 48,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2017": {
+      "numerator": null,
+      "denominator": 74,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2018": {
+      "numerator": null,
+      "denominator": 56,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2019": {
+      "numerator": null,
+      "denominator": 45,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2020": {
+      "numerator": null,
+      "denominator": 79,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "2021": {
+      "numerator": null,
+      "denominator": 58,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    }
+  },
+  "by_country": {
+    "AIA": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "ASM": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "ATG": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "AUS": {
+      "numerator": null,
+      "denominator": 17,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "BGD": {
+      "numerator": null,
+      "denominator": 29,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "BHS": {
+      "numerator": null,
+      "denominator": 14,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "BLM": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "BLZ": {
+      "numerator": null,
+      "denominator": 9,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "BMU": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "BRA": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "BRB": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "BTN": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "CAN": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "CHN": {
+      "numerator": null,
+      "denominator": 103,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "COD": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "COK": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "COL": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "COM": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "CPV": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "CRI": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "CUB": {
+      "numerator": null,
+      "denominator": 23,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "CYM": {
+      "numerator": null,
+      "denominator": 7,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "DJI": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "DMA": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "DOM": {
+      "numerator": null,
+      "denominator": 26,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "FJI": {
+      "numerator": null,
+      "denominator": 18,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "FSM": {
+      "numerator": null,
+      "denominator": 6,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "GLP": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "GRD": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "GTM": {
+      "numerator": null,
+      "denominator": 15,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "GUM": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "HKG": {
+      "numerator": null,
+      "denominator": 12,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "HND": {
+      "numerator": null,
+      "denominator": 14,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "HTI": {
+      "numerator": null,
+      "denominator": 29,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "IDN": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "IND": {
+      "numerator": null,
+      "denominator": 37,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "IRN": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "JAM": {
+      "numerator": null,
+      "denominator": 15,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "JPN": {
+      "numerator": null,
+      "denominator": 60,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "KHM": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "KIR": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "KNA": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "KOR": {
+      "numerator": null,
+      "denominator": 23,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "LAO": {
+      "numerator": null,
+      "denominator": 7,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "LCA": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "LKA": {
+      "numerator": null,
+      "denominator": 7,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MAC": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MAF": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MAR": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MDG": {
+      "numerator": null,
+      "denominator": 37,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MDV": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MEX": {
+      "numerator": null,
+      "denominator": 67,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MHL": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MMR": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MNP": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MOZ": {
+      "numerator": null,
+      "denominator": 13,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MTQ": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MUS": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "MWI": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "NCL": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "NIC": {
+      "numerator": null,
+      "denominator": 14,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "NIU": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "NZL": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "OMN": {
+      "numerator": null,
+      "denominator": 6,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PAK": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PAN": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PHL": {
+      "numerator": null,
+      "denominator": 161,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PLW": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PNG": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PRI": {
+      "numerator": null,
+      "denominator": 11,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PRK": {
+      "numerator": null,
+      "denominator": 8,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PRT": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "PYF": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "REU": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "RUS": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "SLB": {
+      "numerator": null,
+      "denominator": 9,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "SLV": {
+      "numerator": null,
+      "denominator": 13,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "SOM": {
+      "numerator": null,
+      "denominator": 6,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "SPI": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "SWZ": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "SXM": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "SYC": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "TCA": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "THA": {
+      "numerator": null,
+      "denominator": 13,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "TKL": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "TLS": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "TON": {
+      "numerator": null,
+      "denominator": 9,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "TTO": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "TUV": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "TWN": {
+      "numerator": null,
+      "denominator": 46,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "TZA": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "USA": {
+      "numerator": null,
+      "denominator": 58,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "VCT": {
+      "numerator": null,
+      "denominator": 6,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "VEN": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "VGB": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "VIR": {
+      "numerator": null,
+      "denominator": 3,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "VNM": {
+      "numerator": null,
+      "denominator": 65,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "VUT": {
+      "numerator": null,
+      "denominator": 9,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "WLF": {
+      "numerator": null,
+      "denominator": 1,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "WSM": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "YEM": {
+      "numerator": null,
+      "denominator": 4,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "ZAF": {
+      "numerator": null,
+      "denominator": 2,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    },
+    "ZWE": {
+      "numerator": null,
+      "denominator": 5,
+      "proportion": null,
+      "measured": false,
+      "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+    }
+  },
+  "development_all_severe": 932,
+  "tropical_cyclone_severe": 70,
+  "scope_severe_coverage": {
+    "numerator": 70,
+    "denominator": 932,
+    "proportion": 0.07510729613733906
+  },
+  "eligible_severe_coverage": {
+    "numerator": null,
+    "denominator": 932,
+    "proportion": null,
+    "measured": false,
+    "reason": "INCOMPLETE_OFFICIAL_DOWNLOAD"
+  },
+  "stop_reasons": [
+    "NETWORK_TRANSFER_FAILED"
+  ],
+  "numeric_stop_thresholds_evaluable": false,
+  "formal_feature_experiment_recommended": false,
+  "match_executed": false,
+  "test_used": false,
+  "maturity_extracted": false,
+  "models_trained": 0,
+  "model_metrics_computed": false,
+  "frozen_sha256": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+  "rules_sha256": "35abfedf65cde4324ee08b739c8d115f0038bc40c1207d880f7d60ff888f0f36"
+}

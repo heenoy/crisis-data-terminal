@@ -1,0 +1,195 @@
+{
+  "generated_at_utc": "2026-08-05T03:38:26.832139+00:00",
+  "stage": "frozen-rf-t2-inference-integration",
+  "model_source_sha256": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+  "model_copy_sha256": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+  "model_copy_byte_identical": true,
+  "test_consistency": {
+    "events": 948,
+    "class_match_rate": 1.0,
+    "probability_tolerance": 1e-12
+  },
+  "api_tests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "production_deployed": false,
+  "files": {
+    ".gitignore": {
+      "sha256": "ccdf58c544ec1dfb554c0c6bc1c31aa0fae09874d4bd9cae40d71d6146dcc398",
+      "bytes": 462
+    },
+    ".vercelignore": {
+      "sha256": "9cb7e53b67bf85c35feff599ca6108871ba51c5c965196ad79001c115b079bc5",
+      "bytes": 118
+    },
+    "api/ai-chat.js": {
+      "sha256": "34f3ffffaae5c856f8adad1f697e7448a69db1925d9f985c78b4f8a14af83ecb",
+      "bytes": 6595
+    },
+    "api/health.py": {
+      "sha256": "b57b0267bcf6592e3f15b75112e112bafcb1ab90b86c6f6c342a19ce895bb7cf",
+      "bytes": 858
+    },
+    "api/impact-options.py": {
+      "sha256": "beb1d7e0d37210f28c3bc7017f5f8167a768b792622c36bd4379b08373809dcf",
+      "bytes": 872
+    },
+    "api/predict-impact.py": {
+      "sha256": "528ade1d9ae8aa26b8758ed7add0eeda9340737211c64830116b05efbec5d188",
+      "bytes": 1860
+    },
+    "docs/api/frozen_inference_assets.md": {
+      "sha256": "45b64d4c5735149b724ddf03b59682ae457e7dc679de925ac8c67425a5a42d88",
+      "bytes": 1732
+    },
+    "docs/api/impact_analysis_frontend.md": {
+      "sha256": "94c767c18e3603b0e25c8e8c39d36431189ad5af9b2f2e621a012f12fbc53a96",
+      "bytes": 944
+    },
+    "docs/api/impact_feature_mapping.md": {
+      "sha256": "addf1341e2cefc4731f17f91a6e1890b109e35fb511454632550c40a3a3ff47f",
+      "bytes": 1875
+    },
+    "docs/api/impact_prediction_api.md": {
+      "sha256": "8e0b31f3033ba4f371f3269f4ae37076ed691cb481ba28918f90c00c6bc6abfb",
+      "bytes": 1986
+    },
+    "docs/stages/第三阶段_冻结模型推理接口与系统接入.md": {
+      "sha256": "70293ac7b61a3dc523286585789077fc916f0d7088bd8e8a97fecf623c8cca2b",
+      "bytes": 3663
+    },
+    "docs/stages/第三阶段_实施前审计.md": {
+      "sha256": "28654af3ee02806c2eddafb75540a9e6abb682a16236f33e6c92fcb87b501fff",
+      "bytes": 5867
+    },
+    "docs/thesis/模型推理接口与系统接入.md": {
+      "sha256": "df93148af95b4fca426fd9a3af39b60e5dfcdf82794b6989358ca35a5decbbf7",
+      "bytes": 10061
+    },
+    "ml_inference/README.md": {
+      "sha256": "0f58b5aa8fc0a393ef52ed512a78e0365737448b4dd373e25027373b2eb30df4",
+      "bytes": 757
+    },
+    "ml_inference/__init__.py": {
+      "sha256": "8ad6b9f85cef7c4b8c4640e6e12cb06535aed1fad04853de839d21216456531c",
+      "bytes": 35
+    },
+    "ml_inference/errors.py": {
+      "sha256": "169d866349a7f7738b77e2d6a7b354d7c41b74ab190d1dc0cb5344d03fa0e45b",
+      "bytes": 294
+    },
+    "ml_inference/feature_builder.py": {
+      "sha256": "0b4c6af950bb15ca8cb623b3b076d3a0246674053482af97fbc43078445ab207",
+      "bytes": 11413
+    },
+    "ml_inference/frozen_assets/asset_manifest.json": {
+      "sha256": "42834e8dbb0c93b59d9943e9aa5d40ef6297eaf1a3ad64611be6c3381cfa3410",
+      "bytes": 2879
+    },
+    "ml_inference/frozen_assets/category_vocabularies.json": {
+      "sha256": "06c9e08e27f4b62f8a345fcd3b034295ac4fc3fa24f76c906875f47c1190b31b",
+      "bytes": 5237
+    },
+    "ml_inference/frozen_assets/country_region.csv": {
+      "sha256": "9c06a88509bed99c5eb92dc72290dfbea23093dadd8a80c6d482280140194aa1",
+      "bytes": 8095
+    },
+    "ml_inference/frozen_assets/disaster_type_subtype.csv": {
+      "sha256": "7b1e0b287cabd475a9ae7502fd34a0b04d7f8d09f49c541ec69359e4a1e4f563",
+      "bytes": 1913
+    },
+    "ml_inference/frozen_assets/final_t2_pipeline.joblib": {
+      "sha256": "c4960347d423b1b46065c8e2fc57e1e1656fae11e1198af2fe5c6a734392a9d4",
+      "bytes": 19105075
+    },
+    "ml_inference/frozen_assets/hdi_annual.csv": {
+      "sha256": "070f65ee9d98925db8d0f65d9e513c40671720fc6dc15136e290375c20779a4d",
+      "bytes": 207275
+    },
+    "ml_inference/frozen_assets/historical_frequency_intervals.csv": {
+      "sha256": "8ec92f17b7122c22fbd5d18a7ed6af78b3fce6655b8ab0de66c9c57d9cd7196b",
+      "bytes": 601022
+    },
+    "ml_inference/frozen_assets/magnitude_groups.csv": {
+      "sha256": "0eb28f65f30999eeee62157e404d3347134b9685133b1339eb1b802b28a51115",
+      "bytes": 829
+    },
+    "ml_inference/loader.py": {
+      "sha256": "7d618ec44a5020b59861665f8b34eb929b37a73067953cbb06d5957a5e6be8b9",
+      "bytes": 994
+    },
+    "ml_inference/reports/inference_consistency_report.md": {
+      "sha256": "75653d7198aa4d603f05b5cc3ce9b1d13d8f8389d544e6e2275185ba35bdc814",
+      "bytes": 1552
+    },
+    "ml_inference/reports/test_consistency_results.json": {
+      "sha256": "4272c49a5253b65b69cf8abc3dc518e2c85e5dc2e0fdaacafeaf4ad6ed023821",
+      "bytes": 996
+    },
+    "ml_inference/reports/vercel_compatibility_report.md": {
+      "sha256": "1cbf42abbb77aa911b4f117efaaa4bc4960a6e155a32e18c379d439786f5c957",
+      "bytes": 2326
+    },
+    "ml_inference/response_builder.py": {
+      "sha256": "a80ee042d580c6b770f597455cbbe9f768cea2923d914a63f3a26a05a787ff15",
+      "bytes": 2459
+    },
+    "ml_inference/scripts/build_frozen_assets.py": {
+      "sha256": "68adff92d79d5746caf4a2e3d50a91fc5b429e25703df9e3aa1ded98f158ef5a",
+      "bytes": 6213
+    },
+    "ml_inference/scripts/build_stage_manifest.py": {
+      "sha256": "e519c4e30fe1443271c62363f2850f1e9d5b1cf7d9dda9dea5345bdd120d76ac",
+      "bytes": 2429
+    },
+    "ml_inference/service.py": {
+      "sha256": "3ca797fb49fc36475d146530321d9646107f3fa42323c9d1237e5216f12eb137",
+      "bytes": 879
+    },
+    "ml_inference/tests/diagnose_feature_diff.py": {
+      "sha256": "2ab6ee5ab90f66c4984c569f7ff1c4f85512a1aca94a36b7fb182a55d06aa5a5",
+      "bytes": 2448
+    },
+    "ml_inference/tests/measure_runtime.py": {
+      "sha256": "9fbdf03d7614a98b82f4069e1875ff3ebdb87daf8976af3b322997e34e061039",
+      "bytes": 2531
+    },
+    "ml_inference/tests/test_api_contract.py": {
+      "sha256": "5197926cbe151d3c558bd4fa32b1f489d9541dff8d3194b8ef0639fc56091656",
+      "bytes": 4714
+    },
+    "ml_inference/tests/test_http_api.py": {
+      "sha256": "7058c6ea15edc233244017e10bb29da1bba878fcf938b297bf698b0669065fe0",
+      "bytes": 2962
+    },
+    "ml_inference/tests/verify_test_consistency.py": {
+      "sha256": "ac722b8d7f435a787e01ddae2c0c7b14bb9940e9e5ae717f733be37af3f3dace",
+      "bytes": 4756
+    },
+    "requirements.txt": {
+      "sha256": "6b68b41174e7a40948a1672ce0d7e361c6a88d7e335f2dbb668627120cd0981e",
+      "bytes": 75
+    },
+    "src/impactAnalysis.css": {
+      "sha256": "17469b5610f861dc48916f9de8e439e208406061cd85be60af379b0767e9c8ca",
+      "bytes": 2910
+    },
+    "src/main.js": {
+      "sha256": "1cbb12a70b74e0c58918eefbebdfc0638abe4b75109496cdf83c279b9730a3c5",
+      "bytes": 15731
+    },
+    "src/pages/user/impactAnalysis.js": {
+      "sha256": "bd4c45db8c85d7a811a955a9d6efa73db8822c86f8d5d7e23000af668f5e70b0",
+      "bytes": 7369
+    },
+    "src/router/routes.js": {
+      "sha256": "742efa61fb37e81d8af0ca9a12045b3946edcf8dea0a88900cd8934afeef441b",
+      "bytes": 3396
+    },
+    "src/systemConsole.js": {
+      "sha256": "dc0f72bd7f5142148462e7214c75529766239210947f9d99714b8fbb2fa46ed9",
+      "bytes": 10257
+    }
+  }
+}

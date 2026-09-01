@@ -9,6 +9,7 @@ import './dashboardPage.css'
 import './disasterKnowledgePage.css'
 import './aiFace.css'
 import './adminPortal.css'
+import './impactAnalysis.css'
 import { runLaunchSequence } from './launchScreen.js'
 import { ensureAudioContext, playGeigerClick } from './audio.js'
 import {
@@ -18,8 +19,9 @@ import {
   initAiFaceEarly,
   notifyTypewriterEnd,
   notifyTypewriterStart,
+  placeAiMascotAtTopRight,
 } from './aiFace.js'
-import { getCurrentUser, initAuth, isLoggedIn, refreshSessionUser, signOut, subscribeAuth } from './auth.js'
+import { getCurrentUser, initAuth, isLoggedIn, signOut, subscribeAuth } from './auth.js'
 import { renderSystemPage } from './systemConsole.js'
 import { showTerminalNotice } from './terminalNotice.js'
 import {
@@ -88,25 +90,31 @@ const SCREEN_BAR_LABELS = {
     br: '[DB: CONNECTED]',
   },
   'user/overview': {
-    tl: '[USER PORTAL / OVERVIEW]',
+    tl: '[DATA SERVICES / GLOBAL OVERVIEW]',
     tr: '[DISASTER EVENT DB]',
-    bl: '[MONITOR: ACTIVE]',
+    bl: '[ARCHIVE: ACTIVE]',
     br: '[DB: CONNECTED]',
   },
   'user/search': {
-    tl: '[USER PORTAL / SEARCH]',
+    tl: '[DATA SERVICES / SEARCH]',
     tr: '[RECORD SEARCH]',
     bl: '[MODULE: ACTIVE]',
     br: '[ACCESS: READ]',
   },
   'user/analysis': {
-    tl: '[USER PORTAL / ANALYSIS]',
+    tl: '[DATA SERVICES / ANALYSIS]',
     tr: '[DATA VISUALIZATION]',
     bl: '[MODULE: ACTIVE]',
     br: '[FEED: SYNCED]',
   },
+  'user/impact-analysis': {
+    tl: '[DATA SERVICES / IMPACT PREDICTION]',
+    tr: '[FROZEN RF T2]',
+    bl: '[MODE: ASSISTIVE]',
+    br: '[MODEL: READ ONLY]',
+  },
   'user/ai-inquiry': {
-    tl: '[USER PORTAL / AI INQUIRY]',
+    tl: '[DATA SERVICES / AI INQUIRY]',
     tr: '[VAULT-0]',
     bl: '[MODULE: ACTIVE]',
     br: '[DB: CONNECTED]',
@@ -154,6 +162,7 @@ const MENU_ACTION_ROUTES = {
   dashboard: ROUTES.USER_OVERVIEW,
   query: ROUTES.USER_SEARCH,
   analytics: ROUTES.USER_ANALYSIS,
+  'impact-analysis': ROUTES.USER_IMPACT_ANALYSIS,
   knowledge: ROUTES.USER_AI_INQUIRY,
   'admin-dashboard': ROUTES.ADMIN_DASHBOARD,
   exit: null,
@@ -162,7 +171,7 @@ const MENU_ACTION_ROUTES = {
 
 let consoleAiFaceSpeakTimer = null
 let hasCompletedBoot = false
-let lastKnownUserId = null
+let lastKnownAuthState = null
 
 function goFromStart() {
   if (!isLoggedIn()) {
@@ -369,13 +378,25 @@ const AI_FACE_ROUTES = new Set([
   ROUTES.USER_OVERVIEW,
   ROUTES.USER_SEARCH,
   ROUTES.USER_ANALYSIS,
+  ROUTES.USER_IMPACT_ANALYSIS,
   ROUTES.USER_AI_INQUIRY,
+  ROUTES.ADMIN_DASHBOARD,
+  ROUTES.ADMIN_DISASTERS,
+  ROUTES.ADMIN_USERS,
+  ROUTES.ADMIN_SYSTEM,
+  ROUTES.ADMIN_MODELS,
 ])
 const AI_ROUTE_MESSAGES = {
   [ROUTES.USER_OVERVIEW]: 'VAULT-0：\n全球灾害数据库已连接。',
   [ROUTES.USER_SEARCH]: 'VAULT-0：\n请输入查询条件。',
   [ROUTES.USER_ANALYSIS]: 'VAULT-0：\n正在分析全球灾害数据。',
+  [ROUTES.USER_IMPACT_ANALYSIS]: 'VAULT-0：\n影响等级辅助分析模块已连接。',
   [ROUTES.USER_AI_INQUIRY]: 'VAULT-0：\n请直接向我提问。',
+  [ROUTES.ADMIN_DASHBOARD]: 'VAULT-0：\n管理控制台已连接。',
+  [ROUTES.ADMIN_DISASTERS]: 'VAULT-0：\n灾害档案管理模块已连接。',
+  [ROUTES.ADMIN_USERS]: 'VAULT-0：\n用户管理模块已连接。',
+  [ROUTES.ADMIN_SYSTEM]: 'VAULT-0：\n系统监控模块已连接。',
+  [ROUTES.ADMIN_MODELS]: 'VAULT-0：\n冻结模型档案为只读状态。',
   start: '欢迎接入 Crisis Data Terminal。',
   dashboard: 'VAULT-0：\n全球灾害数据库已连接。',
   analytics: 'VAULT-0：\n正在分析全球灾害数据。',
@@ -444,6 +465,16 @@ function ensureGlobalAiFace(route) {
     return
   }
 
+  if (route === ROUTES.USER_IMPACT_ANALYSIS) {
+    requestAnimationFrame(() => {
+      if (routeToken !== aiFaceRouteToken) return
+      ensureFloatingAiMascot({ state: 'detected' })
+      placeAiMascotAtTopRight()
+      ensureAiMascotBubble('正在读取可用的灾害档案索引，请稍候。')
+    })
+    return
+  }
+
   requestAnimationFrame(() => {
     if (routeToken !== aiFaceRouteToken) return
     ensureFloatingAiMascot({ state: 'detected' })
@@ -464,13 +495,18 @@ function bindStartKeyboard() {
   document.addEventListener('keydown', (e) => {
     if (!hasCompletedBoot) return
     if (resolveRoute(window.location.hash) !== 'start') return
+    if (e.target.closest?.('[data-menu-action]')) return
     if (e.key !== 'Enter') return
     goFromStart()
   })
 }
 
-function handleLogout() {
-  signOut()
+async function handleLogout() {
+  const { error } = await signOut()
+  if (error) {
+    showTerminalNotice('退出登录失败，请稍后重试', 'error')
+    return
+  }
   showTerminalNotice('已退出登录', 'success')
   setRouteHash(ROUTES.START)
   renderRoute(ROUTES.START, { bypassGuard: true })
@@ -518,9 +554,9 @@ function onHashChange() {
 function onAuthStateChanged(user) {
   if (!hasCompletedBoot) return
 
-  const nextUserId = user?.id ?? null
-  if (nextUserId === lastKnownUserId) return
-  lastKnownUserId = nextUserId
+  const nextAuthState = user ? `${user.id}:${user.role}` : null
+  if (nextAuthState === lastKnownAuthState) return
+  lastKnownAuthState = nextAuthState
 
   const expected = resolveRoute(window.location.hash)
   if (normalizeRoute(window.location.hash) !== expected) {
@@ -539,15 +575,15 @@ async function initTerminal() {
     initAiFaceEarly()
     stopCornerLog()
 
-    initAuth()
-    await refreshSessionUser()
+    await initAuth()
 
     hasCompletedBoot = true
 
     const initialRoute = resolveRoute(window.location.hash)
     renderRoute(initialRoute)
     setRouteHash(initialRoute, true)
-    lastKnownUserId = getCurrentUser()?.id ?? null
+    const currentUser = getCurrentUser()
+    lastKnownAuthState = currentUser ? `${currentUser.id}:${currentUser.role}` : null
     bindStartKeyboard()
     subscribeAuth(onAuthStateChanged)
     window.addEventListener('hashchange', onHashChange)

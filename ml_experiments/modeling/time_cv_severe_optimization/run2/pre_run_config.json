@@ -1,0 +1,127 @@
+{
+  "config": {
+    "random_state": 20260803,
+    "folds": [
+      {
+        "fold": 1,
+        "train_start": 2000,
+        "train_end": 2013,
+        "validation_start": 2014,
+        "validation_end": 2015
+      },
+      {
+        "fold": 2,
+        "train_start": 2000,
+        "train_end": 2015,
+        "validation_start": 2016,
+        "validation_end": 2017
+      },
+      {
+        "fold": 3,
+        "train_start": 2000,
+        "train_end": 2017,
+        "validation_start": 2018,
+        "validation_end": 2019
+      },
+      {
+        "fold": 4,
+        "train_start": 2000,
+        "train_end": 2019,
+        "validation_start": 2020,
+        "validation_end": 2021
+      }
+    ],
+    "minimum_severe_per_fold": 20,
+    "severe_weight_multipliers": [
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "weight_method": "fold-training balanced class_weight dictionary times Severe multiplier; 1.0 is a control, not balanced_subsample",
+    "threshold_start": 0.2,
+    "threshold_end": 0.6,
+    "threshold_step": 0.01,
+    "precision_floor": 0.45,
+    "weight_retention_requires": "Severe F1 strictly improves over RF_T2 and Severe Precision >= 0.45; otherwise retain no optimized weight",
+    "selection_order": [
+      "severe_recall desc",
+      "severe_f1 desc",
+      "macro_f1 desc",
+      "severe_to_low_rate asc",
+      "default_prediction_disagreement asc",
+      "candidate_id asc"
+    ],
+    "threshold_scope": [
+      "RF_T2",
+      "LGBM_T2"
+    ],
+    "combination_rule": "apply RF_T2-selected threshold unchanged to the one selected RF weight; never search a weight-threshold grid",
+    "no_feasible_rule": "do not relax precision floor; retain baseline and mark optimization candidate infeasible",
+    "lightgbm_iteration_rule": "291 fixed in every fold; no early stopping or fold-specific hyperparameter selection",
+    "reproducibility": {
+      "full_cv_runs": 2,
+      "probability_atol": 1e-12,
+      "metrics_atol": 1e-15
+    },
+    "interpretation": "OOF-selected thresholds and weights are development selection estimates, not independent performance estimates; historical LGBM hyperparameters already saw 2020-2021"
+  },
+  "config_sha256": "80df528b9ef7e79a5f6c5ae61de1ee23f80d802f525e696381e1fd860fc356f9",
+  "script_sha256": "59d6cd8606bd46b4b280330c4c7c63d13bb1a6b815bc68eb2aac5f94a2a7ec11",
+  "started_at_utc": "2026-08-31T07:17:51.254722+00:00",
+  "features": [
+    "country_code",
+    "region",
+    "disaster_type",
+    "disaster_subtype",
+    "date_granularity",
+    "year",
+    "date_imputed",
+    "historical_frequency",
+    "hdi",
+    "hdi_missing",
+    "event_month",
+    "month_missing",
+    "magnitude_robust_z",
+    "magnitude_missing",
+    "magnitude_group_unknown"
+  ],
+  "rf_parameters": {
+    "n_estimators": 500,
+    "max_depth": 10,
+    "min_samples_leaf": 5,
+    "max_features": 0.5,
+    "class_weight": "balanced_subsample",
+    "random_state": 20260803,
+    "n_jobs": -1
+  },
+  "lightgbm_parameters": {
+    "learning_rate": 0.03,
+    "n_estimators": 291,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "subsample": 0.8,
+    "colsample_bytree": 0.7,
+    "reg_alpha": 0.1,
+    "reg_lambda": 5,
+    "objective": "multiclass",
+    "num_class": 3,
+    "random_state": 20260803,
+    "n_jobs": -1,
+    "verbosity": -1,
+    "deterministic": true,
+    "force_col_wise": true,
+    "subsample_freq": 1
+  },
+  "versions": {
+    "python": "3.14.2",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.6.0",
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "joblib": "1.5.3"
+  },
+  "input_development_sha256": "db41e02073554e8dbb570b7d0ce30c48fa1afbe4c72851d97b6cb242c6d37d48"
+}

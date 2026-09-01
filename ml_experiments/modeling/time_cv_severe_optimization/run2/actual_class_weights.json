@@ -1,0 +1,238 @@
+[
+  {
+    "model_id": "RF_T2",
+    "fold": 1,
+    "class_weights": "balanced_subsample"
+  },
+  {
+    "model_id": "RF_weight_1",
+    "fold": 1,
+    "class_weights": {
+      "Low": 1.5377626348665532,
+      "Moderate": 0.47701250660560157,
+      "Severe": 3.947521865889213
+    }
+  },
+  {
+    "model_id": "RF_weight_1.25",
+    "fold": 1,
+    "class_weights": {
+      "Low": 1.5377626348665532,
+      "Moderate": 0.47701250660560157,
+      "Severe": 4.9344023323615165
+    }
+  },
+  {
+    "model_id": "RF_weight_1.5",
+    "fold": 1,
+    "class_weights": {
+      "Low": 1.5377626348665532,
+      "Moderate": 0.47701250660560157,
+      "Severe": 5.921282798833819
+    }
+  },
+  {
+    "model_id": "RF_weight_2",
+    "fold": 1,
+    "class_weights": {
+      "Low": 1.5377626348665532,
+      "Moderate": 0.47701250660560157,
+      "Severe": 7.895043731778426
+    }
+  },
+  {
+    "model_id": "RF_weight_2.5",
+    "fold": 1,
+    "class_weights": {
+      "Low": 1.5377626348665532,
+      "Moderate": 0.47701250660560157,
+      "Severe": 9.868804664723033
+    }
+  },
+  {
+    "model_id": "LGBM_T2",
+    "fold": 1,
+    "class_weights": {
+      "Low": 1.5377626348665532,
+      "Moderate": 0.47701250660560157,
+      "Severe": 3.947521865889213
+    }
+  },
+  {
+    "model_id": "RF_T2",
+    "fold": 2,
+    "class_weights": "balanced_subsample"
+  },
+  {
+    "model_id": "RF_weight_1",
+    "fold": 2,
+    "class_weights": {
+      "Low": 1.5060802931867399,
+      "Moderate": 0.4797304467791574,
+      "Severe": 3.9758135444151277
+    }
+  },
+  {
+    "model_id": "RF_weight_1.25",
+    "fold": 2,
+    "class_weights": {
+      "Low": 1.5060802931867399,
+      "Moderate": 0.4797304467791574,
+      "Severe": 4.96976693051891
+    }
+  },
+  {
+    "model_id": "RF_weight_1.5",
+    "fold": 2,
+    "class_weights": {
+      "Low": 1.5060802931867399,
+      "Moderate": 0.4797304467791574,
+      "Severe": 5.963720316622691
+    }
+  },
+  {
+    "model_id": "RF_weight_2",
+    "fold": 2,
+    "class_weights": {
+      "Low": 1.5060802931867399,
+      "Moderate": 0.4797304467791574,
+      "Severe": 7.951627088830255
+    }
+  },
+  {
+    "model_id": "RF_weight_2.5",
+    "fold": 2,
+    "class_weights": {
+      "Low": 1.5060802931867399,
+      "Moderate": 0.4797304467791574,
+      "Severe": 9.93953386103782
+    }
+  },
+  {
+    "model_id": "LGBM_T2",
+    "fold": 2,
+    "class_weights": {
+      "Low": 1.5060802931867399,
+      "Moderate": 0.4797304467791574,
+      "Severe": 3.9758135444151277
+    }
+  },
+  {
+    "model_id": "RF_T2",
+    "fold": 3,
+    "class_weights": "balanced_subsample"
+  },
+  {
+    "model_id": "RF_weight_1",
+    "fold": 3,
+    "class_weights": {
+      "Low": 1.4791573285522188,
+      "Moderate": 0.48175182481751827,
+      "Severe": 4.029304029304029
+    }
+  },
+  {
+    "model_id": "RF_weight_1.25",
+    "fold": 3,
+    "class_weights": {
+      "Low": 1.4791573285522188,
+      "Moderate": 0.48175182481751827,
+      "Severe": 5.0366300366300365
+    }
+  },
+  {
+    "model_id": "RF_weight_1.5",
+    "fold": 3,
+    "class_weights": {
+      "Low": 1.4791573285522188,
+      "Moderate": 0.48175182481751827,
+      "Severe": 6.043956043956044
+    }
+  },
+  {
+    "model_id": "RF_weight_2",
+    "fold": 3,
+    "class_weights": {
+      "Low": 1.4791573285522188,
+      "Moderate": 0.48175182481751827,
+      "Severe": 8.058608058608058
+    }
+  },
+  {
+    "model_id": "RF_weight_2.5",
+    "fold": 3,
+    "class_weights": {
+      "Low": 1.4791573285522188,
+      "Moderate": 0.48175182481751827,
+      "Severe": 10.073260073260073
+    }
+  },
+  {
+    "model_id": "LGBM_T2",
+    "fold": 3,
+    "class_weights": {
+      "Low": 1.4791573285522188,
+      "Moderate": 0.48175182481751827,
+      "Severe": 4.029304029304029
+    }
+  },
+  {
+    "model_id": "RF_T2",
+    "fold": 4,
+    "class_weights": "balanced_subsample"
+  },
+  {
+    "model_id": "RF_weight_1",
+    "fold": 4,
+    "class_weights": {
+      "Low": 1.4591450216450217,
+      "Moderate": 0.48330868844378727,
+      "Severe": 4.071725179312948
+    }
+  },
+  {
+    "model_id": "RF_weight_1.25",
+    "fold": 4,
+    "class_weights": {
+      "Low": 1.4591450216450217,
+      "Moderate": 0.48330868844378727,
+      "Severe": 5.089656474141186
+    }
+  },
+  {
+    "model_id": "RF_weight_1.5",
+    "fold": 4,
+    "class_weights": {
+      "Low": 1.4591450216450217,
+      "Moderate": 0.48330868844378727,
+      "Severe": 6.107587768969422
+    }
+  },
+  {
+    "model_id": "RF_weight_2",
+    "fold": 4,
+    "class_weights": {
+      "Low": 1.4591450216450217,
+      "Moderate": 0.48330868844378727,
+      "Severe": 8.143450358625897
+    }
+  },
+  {
+    "model_id": "RF_weight_2.5",
+    "fold": 4,
+    "class_weights": {
+      "Low": 1.4591450216450217,
+      "Moderate": 0.48330868844378727,
+      "Severe": 10.179312948282371
+    }
+  },
+  {
+    "model_id": "LGBM_T2",
+    "fold": 4,
+    "class_weights": {
+      "Low": 1.4591450216450217,
+      "Moderate": 0.48330868844378727,
+      "Severe": 4.071725179312948
+    }
+  }
+]

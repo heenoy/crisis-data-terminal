@@ -100,10 +100,6 @@ body {
   animation: screen-flicker 0.1s steps(1) infinite;
 }
 
-body.screen-micro-flicker {
-  animation: none;
-}
-
 body::after {
   content: '';
   position: fixed;
@@ -138,15 +134,6 @@ body::after {
     transparent
   );
   animation: scan-vertical 8s linear infinite;
-}
-
-.screen-noise-pixel {
-  position: fixed;
-  width: 2px;
-  height: 2px;
-  background: rgba(0, 255, 65, 0.6);
-  pointer-events: none;
-  z-index: 10000;
 }
 
 #screen {

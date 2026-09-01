@@ -4,9 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node scripts/dev.mjs",
+    "dev:frontend": "vite --host 127.0.0.1 --strictPort",
+    "dev:api": "python scripts/run_inference_api.py",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "node scripts/dev.mjs --preview",
+    "preview:frontend": "vite preview --host 127.0.0.1 --strictPort",
+    "test:auth-prep": "node scripts/verify-auth-migration-prep.mjs",
+    "test:auth-retirement": "node scripts/verify-auth-retirement.mjs",
     "clean:emdat": "node scripts/clean-emdat.js"
   },
   "devDependencies": {

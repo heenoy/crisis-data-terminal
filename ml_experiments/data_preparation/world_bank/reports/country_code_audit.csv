@@ -1,0 +1,224 @@
+country_code,emdat_country_name,world_bank_country_name,supported_by_world_bank,issue_type,notes
+AFG,Afghanistan,Afghanistan,True,matched,ISO3 exact match
+AGO,Angola,Angola,True,matched,ISO3 exact match
+AIA,Anguilla,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+ALB,Albania,Albania,True,matched,ISO3 exact match
+ANT,Netherlands Antilles,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+ARE,United Arab Emirates,United Arab Emirates,True,matched,ISO3 exact match
+ARG,Argentina,Argentina,True,matched,ISO3 exact match
+ARM,Armenia,Armenia,True,matched,ISO3 exact match
+ASM,American Samoa,American Samoa,True,matched,ISO3 exact match
+ATG,Antigua and Barbuda,Antigua and Barbuda,True,matched,ISO3 exact match
+AUS,Australia,Australia,True,matched,ISO3 exact match
+AUT,Austria,Austria,True,matched,ISO3 exact match
+AZE,Azerbaijan,Azerbaijan,True,matched,ISO3 exact match
+AZO,Azores Islands,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+BDI,Burundi,Burundi,True,matched,ISO3 exact match
+BEL,Belgium,Belgium,True,matched,ISO3 exact match
+BEN,Benin,Benin,True,matched,ISO3 exact match
+BFA,Burkina Faso,Burkina Faso,True,matched,ISO3 exact match
+BGD,Bangladesh,Bangladesh,True,matched,ISO3 exact match
+BGR,Bulgaria,Bulgaria,True,matched,ISO3 exact match
+BHR,Bahrain,Bahrain,True,matched,ISO3 exact match
+BHS,Bahamas,"Bahamas, The",True,matched,ISO3 exact match
+BIH,Bosnia and Herzegovina,Bosnia and Herzegovina,True,matched,ISO3 exact match
+BLM,Saint Barthélemy,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+BLR,Belarus,Belarus,True,matched,ISO3 exact match
+BLZ,Belize,Belize,True,matched,ISO3 exact match
+BMU,Bermuda,Bermuda,True,matched,ISO3 exact match
+BOL,Bolivia (Plurinational State of),Bolivia,True,matched,ISO3 exact match
+BRA,Brazil,Brazil,True,matched,ISO3 exact match
+BRB,Barbados,Barbados,True,matched,ISO3 exact match
+BTN,Bhutan,Bhutan,True,matched,ISO3 exact match
+BWA,Botswana,Botswana,True,matched,ISO3 exact match
+CAF,Central African Republic,Central African Republic,True,matched,ISO3 exact match
+CAN,Canada,Canada,True,matched,ISO3 exact match
+CHE,Switzerland,Switzerland,True,matched,ISO3 exact match
+CHL,Chile,Chile,True,matched,ISO3 exact match
+CHN,China,China,True,matched,ISO3 exact match
+CIV,Côte d’Ivoire,Cote d'Ivoire,True,matched,ISO3 exact match
+CMR,Cameroon,Cameroon,True,matched,ISO3 exact match
+COD,Democratic Republic of the Congo,"Congo, Dem. Rep.",True,matched,ISO3 exact match
+COG,Congo,"Congo, Rep.",True,matched,ISO3 exact match
+COK,Cook Islands,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+COL,Colombia,Colombia,True,matched,ISO3 exact match
+COM,Comoros,Comoros,True,matched,ISO3 exact match
+CPV,Cabo Verde,Cabo Verde,True,matched,ISO3 exact match
+CRI,Costa Rica,Costa Rica,True,matched,ISO3 exact match
+CUB,Cuba,Cuba,True,matched,ISO3 exact match
+CUW,Curaçao,Curacao,True,matched,ISO3 exact match
+CYM,Cayman Islands,Cayman Islands,True,matched,ISO3 exact match
+CYP,Cyprus,Cyprus,True,matched,ISO3 exact match
+CZE,Czechia,Czechia,True,matched,ISO3 exact match
+DEU,Germany,Germany,True,matched,ISO3 exact match
+DJI,Djibouti,Djibouti,True,matched,ISO3 exact match
+DMA,Dominica,Dominica,True,matched,ISO3 exact match
+DNK,Denmark,Denmark,True,matched,ISO3 exact match
+DOM,Dominican Republic,Dominican Republic,True,matched,ISO3 exact match
+DZA,Algeria,Algeria,True,matched,ISO3 exact match
+ECU,Ecuador,Ecuador,True,matched,ISO3 exact match
+EGY,Egypt,"Egypt, Arab Rep.",True,matched,ISO3 exact match
+ERI,Eritrea,Eritrea,True,matched,ISO3 exact match
+ESP,Spain,Spain,True,matched,ISO3 exact match
+EST,Estonia,Estonia,True,matched,ISO3 exact match
+ETH,Ethiopia,Ethiopia,True,matched,ISO3 exact match
+FIN,Finland,Finland,True,matched,ISO3 exact match
+FJI,Fiji,Fiji,True,matched,ISO3 exact match
+FRA,France,France,True,matched,ISO3 exact match
+FSM,Micronesia (Federated States of),"Micronesia, Fed. Sts.",True,matched,ISO3 exact match
+GAB,Gabon,Gabon,True,matched,ISO3 exact match
+GBR,United Kingdom of Great Britain and Northern Ireland,United Kingdom,True,matched,ISO3 exact match
+GEO,Georgia,Georgia,True,matched,ISO3 exact match
+GHA,Ghana,Ghana,True,matched,ISO3 exact match
+GIN,Guinea,Guinea,True,matched,ISO3 exact match
+GLP,Guadeloupe,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+GMB,Gambia,"Gambia, The",True,matched,ISO3 exact match
+GNB,Guinea-Bissau,Guinea-Bissau,True,matched,ISO3 exact match
+GNQ,Equatorial Guinea,Equatorial Guinea,True,matched,ISO3 exact match
+GRC,Greece,Greece,True,matched,ISO3 exact match
+GRD,Grenada,Grenada,True,matched,ISO3 exact match
+GTM,Guatemala,Guatemala,True,matched,ISO3 exact match
+GUF,French Guiana,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+GUM,Guam,Guam,True,matched,ISO3 exact match
+GUY,Guyana,Guyana,True,matched,ISO3 exact match
+HKG,"China, Hong Kong Special Administrative Region","Hong Kong SAR, China",True,matched,ISO3 exact match
+HND,Honduras,Honduras,True,matched,ISO3 exact match
+HRV,Croatia,Croatia,True,matched,ISO3 exact match
+HTI,Haiti,Haiti,True,matched,ISO3 exact match
+HUN,Hungary,Hungary,True,matched,ISO3 exact match
+IDN,Indonesia,Indonesia,True,matched,ISO3 exact match
+IND,India,India,True,matched,ISO3 exact match
+IRL,Ireland,Ireland,True,matched,ISO3 exact match
+IRN,Iran (Islamic Republic of),"Iran, Islamic Rep.",True,matched,ISO3 exact match
+IRQ,Iraq,Iraq,True,matched,ISO3 exact match
+ISL,Iceland,Iceland,True,matched,ISO3 exact match
+ISR,Israel,Israel,True,matched,ISO3 exact match
+ITA,Italy,Italy,True,matched,ISO3 exact match
+JAM,Jamaica,Jamaica,True,matched,ISO3 exact match
+JOR,Jordan,Jordan,True,matched,ISO3 exact match
+JPN,Japan,Japan,True,matched,ISO3 exact match
+KAZ,Kazakhstan,Kazakhstan,True,matched,ISO3 exact match
+KEN,Kenya,Kenya,True,matched,ISO3 exact match
+KGZ,Kyrgyzstan,Kyrgyz Republic,True,matched,ISO3 exact match
+KHM,Cambodia,Cambodia,True,matched,ISO3 exact match
+KIR,Kiribati,Kiribati,True,matched,ISO3 exact match
+KNA,Saint Kitts and Nevis,St. Kitts and Nevis,True,matched,ISO3 exact match
+KOR,Republic of Korea,"Korea, Rep.",True,matched,ISO3 exact match
+KWT,Kuwait,Kuwait,True,matched,ISO3 exact match
+LAO,Lao People's Democratic Republic,Lao PDR,True,matched,ISO3 exact match
+LBN,Lebanon,Lebanon,True,matched,ISO3 exact match
+LBR,Liberia,Liberia,True,matched,ISO3 exact match
+LBY,Libya,Libya,True,matched,ISO3 exact match
+LCA,Saint Lucia,St. Lucia,True,matched,ISO3 exact match
+LIE,Liechtenstein,Liechtenstein,True,matched,ISO3 exact match
+LKA,Sri Lanka,Sri Lanka,True,matched,ISO3 exact match
+LSO,Lesotho,Lesotho,True,matched,ISO3 exact match
+LTU,Lithuania,Lithuania,True,matched,ISO3 exact match
+LUX,Luxembourg,Luxembourg,True,matched,ISO3 exact match
+LVA,Latvia,Latvia,True,matched,ISO3 exact match
+MAC,"China, Macao Special Administrative Region","Macao SAR, China",True,matched,ISO3 exact match
+MAF,Saint Martin (French Part),St. Martin (French part),True,matched,ISO3 exact match
+MAR,Morocco,Morocco,True,matched,ISO3 exact match
+MDA,Republic of Moldova,Moldova,True,matched,ISO3 exact match
+MDG,Madagascar,Madagascar,True,matched,ISO3 exact match
+MDV,Maldives,Maldives,True,matched,ISO3 exact match
+MEX,Mexico,Mexico,True,matched,ISO3 exact match
+MHL,Marshall Islands,Marshall Islands,True,matched,ISO3 exact match
+MKD,North Macedonia,North Macedonia,True,matched,ISO3 exact match
+MLI,Mali,Mali,True,matched,ISO3 exact match
+MLT,Malta,Malta,True,matched,ISO3 exact match
+MMR,Myanmar,Myanmar,True,matched,ISO3 exact match
+MNE,Montenegro,Montenegro,True,matched,ISO3 exact match
+MNG,Mongolia,Mongolia,True,matched,ISO3 exact match
+MNP,Northern Mariana Islands,Northern Mariana Islands,True,matched,ISO3 exact match
+MOZ,Mozambique,Mozambique,True,matched,ISO3 exact match
+MRT,Mauritania,Mauritania,True,matched,ISO3 exact match
+MSR,Montserrat,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+MTQ,Martinique,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+MUS,Mauritius,Mauritius,True,matched,ISO3 exact match
+MWI,Malawi,Malawi,True,matched,ISO3 exact match
+MYS,Malaysia,Malaysia,True,matched,ISO3 exact match
+MYT,Mayotte,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+NAM,Namibia,Namibia,True,matched,ISO3 exact match
+NCL,New Caledonia,New Caledonia,True,matched,ISO3 exact match
+NER,Niger,Niger,True,matched,ISO3 exact match
+NGA,Nigeria,Nigeria,True,matched,ISO3 exact match
+NIC,Nicaragua,Nicaragua,True,matched,ISO3 exact match
+NIU,Niue,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+NLD,Netherlands (Kingdom of the),Netherlands,True,matched,ISO3 exact match
+NOR,Norway,Norway,True,matched,ISO3 exact match
+NPL,Nepal,Nepal,True,matched,ISO3 exact match
+NZL,New Zealand,New Zealand,True,matched,ISO3 exact match
+OMN,Oman,Oman,True,matched,ISO3 exact match
+PAK,Pakistan,Pakistan,True,matched,ISO3 exact match
+PAN,Panama,Panama,True,matched,ISO3 exact match
+PER,Peru,Peru,True,matched,ISO3 exact match
+PHL,Philippines,Philippines,True,matched,ISO3 exact match
+PLW,Palau,Palau,True,matched,ISO3 exact match
+PNG,Papua New Guinea,Papua New Guinea,True,matched,ISO3 exact match
+POL,Poland,Poland,True,matched,ISO3 exact match
+PRI,Puerto Rico,Puerto Rico (US),True,matched,ISO3 exact match
+PRK,Democratic People's Republic of Korea,"Korea, Dem. People's Rep.",True,matched,ISO3 exact match
+PRT,Portugal,Portugal,True,matched,ISO3 exact match
+PRY,Paraguay,Paraguay,True,matched,ISO3 exact match
+PSE,State of Palestine,West Bank and Gaza,True,matched,ISO3 exact match
+PYF,French Polynesia,French Polynesia,True,matched,ISO3 exact match
+QAT,Qatar,Qatar,True,matched,ISO3 exact match
+REU,Réunion,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+ROU,Romania,Romania,True,matched,ISO3 exact match
+RUS,Russian Federation,Russian Federation,True,matched,ISO3 exact match
+RWA,Rwanda,Rwanda,True,matched,ISO3 exact match
+SAU,Saudi Arabia,Saudi Arabia,True,matched,ISO3 exact match
+SCG,Serbia Montenegro,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+SDN,Sudan,Sudan,True,matched,ISO3 exact match
+SEN,Senegal,Senegal,True,matched,ISO3 exact match
+SGP,Singapore,Singapore,True,matched,ISO3 exact match
+SHN,Saint Helena,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+SLB,Solomon Islands,Solomon Islands,True,matched,ISO3 exact match
+SLE,Sierra Leone,Sierra Leone,True,matched,ISO3 exact match
+SLV,El Salvador,El Salvador,True,matched,ISO3 exact match
+SOM,Somalia,"Somalia, Fed. Rep.",True,matched,ISO3 exact match
+SPI,Canary Islands,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+SRB,Serbia,Serbia,True,matched,ISO3 exact match
+SSD,South Sudan,South Sudan,True,matched,ISO3 exact match
+STP,Sao Tome and Principe,Sao Tome and Principe,True,matched,ISO3 exact match
+SUR,Suriname,Suriname,True,matched,ISO3 exact match
+SVK,Slovakia,Slovak Republic,True,matched,ISO3 exact match
+SVN,Slovenia,Slovenia,True,matched,ISO3 exact match
+SWE,Sweden,Sweden,True,matched,ISO3 exact match
+SWZ,Eswatini,Eswatini,True,matched,ISO3 exact match
+SXM,Sint Maarten (Dutch part),Sint Maarten (Dutch part),True,matched,ISO3 exact match
+SYC,Seychelles,Seychelles,True,matched,ISO3 exact match
+SYR,Syrian Arab Republic,Syrian Arab Republic,True,matched,ISO3 exact match
+TCA,Turks and Caicos Islands,Turks and Caicos Islands,True,matched,ISO3 exact match
+TCD,Chad,Chad,True,matched,ISO3 exact match
+TGO,Togo,Togo,True,matched,ISO3 exact match
+THA,Thailand,Thailand,True,matched,ISO3 exact match
+TJK,Tajikistan,Tajikistan,True,matched,ISO3 exact match
+TKL,Tokelau,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+TKM,Turkmenistan,Turkmenistan,True,matched,ISO3 exact match
+TLS,Timor-Leste,Timor-Leste,True,matched,ISO3 exact match
+TON,Tonga,Tonga,True,matched,ISO3 exact match
+TTO,Trinidad and Tobago,Trinidad and Tobago,True,matched,ISO3 exact match
+TUN,Tunisia,Tunisia,True,matched,ISO3 exact match
+TUR,Türkiye,Turkiye,True,matched,ISO3 exact match
+TUV,Tuvalu,Tuvalu,True,matched,ISO3 exact match
+TWN,Taiwan (Province of China),,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+TZA,United Republic of Tanzania,Tanzania,True,matched,ISO3 exact match
+UGA,Uganda,Uganda,True,matched,ISO3 exact match
+UKR,Ukraine,Ukraine,True,matched,ISO3 exact match
+URY,Uruguay,Uruguay,True,matched,ISO3 exact match
+USA,United States of America,United States,True,matched,ISO3 exact match
+UZB,Uzbekistan,Uzbekistan,True,matched,ISO3 exact match
+VCT,Saint Vincent and the Grenadines,St. Vincent and the Grenadines,True,matched,ISO3 exact match
+VEN,Venezuela (Bolivarian Republic of),"Venezuela, RB",True,matched,ISO3 exact match
+VGB,British Virgin Islands,British Virgin Islands,True,matched,ISO3 exact match
+VIR,United States Virgin Islands,Virgin Islands (U.S.),True,matched,ISO3 exact match
+VNM,Viet Nam,Viet Nam,True,matched,ISO3 exact match
+VUT,Vanuatu,Vanuatu,True,matched,ISO3 exact match
+WLF,Wallis and Futuna Islands,,False,not_in_world_bank_economies,No exact ISO3 match; no name-based substitution applied
+WSM,Samoa,Samoa,True,matched,ISO3 exact match
+YEM,Yemen,"Yemen, Rep.",True,matched,ISO3 exact match
+ZAF,South Africa,South Africa,True,matched,ISO3 exact match
+ZMB,Zambia,Zambia,True,matched,ISO3 exact match
+ZWE,Zimbabwe,Zimbabwe,True,matched,ISO3 exact match

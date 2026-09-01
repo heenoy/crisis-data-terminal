@@ -1,0 +1,253 @@
+{
+  "baseUrl": "http://localhost:4173",
+  "userMenu": [
+    {
+      "action": "dashboard",
+      "text": "> 进入用户端 USER PORTAL / DISASTER OVERVIEW",
+      "locked": false
+    },
+    {
+      "action": "admin-dashboard",
+      "text": "> 进入管理端 ADMIN PORTAL / ADMIN ONLY LOCKED",
+      "locked": true
+    },
+    {
+      "action": "query",
+      "text": "> 灾害事件查询 DISASTER QUERY",
+      "locked": false
+    },
+    {
+      "action": "analytics",
+      "text": "> 数据分析中心 DATA ANALYTICS",
+      "locked": false
+    },
+    {
+      "action": "impact-analysis",
+      "text": "> 影响等级辅助分析 ARCHIVE-BASED ANALYSIS",
+      "locked": false
+    },
+    {
+      "action": "knowledge",
+      "text": "> AI 灾害问询 AI CRISIS INQUIRY",
+      "locked": false
+    },
+    {
+      "action": "logout",
+      "text": "> 退出登录 SIGN OUT",
+      "locked": false
+    }
+  ],
+  "adminMenu": [
+    {
+      "action": "dashboard",
+      "text": "> 进入用户端 USER PORTAL / DISASTER OVERVIEW",
+      "locked": false
+    },
+    {
+      "action": "admin-dashboard",
+      "text": "> 进入管理端 ADMIN PORTAL",
+      "locked": false
+    },
+    {
+      "action": "query",
+      "text": "> 灾害事件查询 DISASTER QUERY",
+      "locked": false
+    },
+    {
+      "action": "analytics",
+      "text": "> 数据分析中心 DATA ANALYTICS",
+      "locked": false
+    },
+    {
+      "action": "impact-analysis",
+      "text": "> 影响等级辅助分析 ARCHIVE-BASED ANALYSIS",
+      "locked": false
+    },
+    {
+      "action": "knowledge",
+      "text": "> AI 灾害问询 AI CRISIS INQUIRY",
+      "locked": false
+    },
+    {
+      "action": "logout",
+      "text": "> 退出登录 SIGN OUT",
+      "locked": false
+    }
+  ],
+  "impactOptions": {
+    "countries": 223,
+    "disasterTypes": 32,
+    "dockedFace": true,
+    "messageCount": 2
+  },
+  "prediction": {
+    "probabilityRows": 3,
+    "labels": [
+      "低影响",
+      "中等影响",
+      "严重影响"
+    ],
+    "level": "低影响",
+    "messageCount": 4,
+    "resultVisible": true
+  },
+  "modelPage": {
+    "reachable": true,
+    "title": "模型管理",
+    "placeholder": true
+  },
+  "mainNavigationWorks": true,
+  "retryFailureState": {
+    "retryVisible": true,
+    "countryText": "国家或地区选项载入失败",
+    "lastMessage": "输入选项没有成功载入。你可以重新尝试；在数据恢复前，我不会提交不完整的分析。"
+  },
+  "retryRecovered": true,
+  "retryAttempts": 2,
+  "routeStates": [
+    {
+      "route": "user/overview",
+      "viewport": "1440x900",
+      "hash": "#/user/overview",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "user/search",
+      "viewport": "1440x900",
+      "hash": "#/user/search",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "user/analysis",
+      "viewport": "1440x900",
+      "hash": "#/user/analysis",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "user/ai-inquiry",
+      "viewport": "1440x900",
+      "hash": "#/user/ai-inquiry",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "user/impact-analysis",
+      "viewport": "1440x900",
+      "hash": "#/user/impact-analysis",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "admin/dashboard",
+      "viewport": "1440x900",
+      "hash": "#/admin/dashboard",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "admin/disasters",
+      "viewport": "1440x900",
+      "hash": "#/admin/disasters",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "admin/users",
+      "viewport": "1440x900",
+      "hash": "#/admin/users",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "admin/system",
+      "viewport": "1440x900",
+      "hash": "#/admin/system",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    },
+    {
+      "route": "admin/models",
+      "viewport": "1440x900",
+      "hash": "#/admin/models",
+      "aiCount": 1,
+      "aiVisible": true,
+      "homeButtonCount": 1,
+      "homeButtonRoutes": [
+        "start"
+      ],
+      "intermediateNavigationVisible": false,
+      "bodyHasUnexpectedScroll": false
+    }
+  ],
+  "network": [
+    {
+      "url": "http://127.0.0.1:4173/api/impact-options",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "url": "http://127.0.0.1:4173/api/predict-impact",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8"
+    }
+  ],
+  "consoleErrors": [],
+  "failures": []
+}

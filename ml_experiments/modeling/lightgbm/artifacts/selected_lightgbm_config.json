@@ -1,0 +1,30 @@
+{
+  "locked_at_utc": "2026-08-03T11:06:07.842658+00:00",
+  "selection_used_test": false,
+  "selection_rule": "max validation macro-F1; within 0.01 prefer Extreme recall, then High recall, balanced accuracy, lower complexity",
+  "candidate_id": "LGBM-V2_P3_low_rate_balanced",
+  "feature_version": "LGBM-V2",
+  "profile": "P3_low_rate",
+  "weight_strategy": "balanced",
+  "validation_metrics": {
+    "accuracy": 0.7164179104477612,
+    "balanced_accuracy": 0.5005707926307384,
+    "macro_precision": 0.48889071708177395,
+    "macro_recall": 0.5005707926307384,
+    "macro_f1": 0.48981661757466394,
+    "weighted_f1": 0.7156886156071469
+  },
+  "best_iteration": 291,
+  "final_n_estimators_rule": "selected validation best_iteration",
+  "base_parameters": {
+    "learning_rate": 0.03,
+    "n_estimators": 800,
+    "num_leaves": 63,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "subsample": 0.8,
+    "colsample_bytree": 0.7,
+    "reg_alpha": 0.1,
+    "reg_lambda": 5
+  }
+}

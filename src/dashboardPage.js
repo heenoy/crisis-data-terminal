@@ -1,6 +1,5 @@
 import { fetchDashboardOverview, formatDashboardNumber, clearDashboardCache } from './dashboardData.js'
 import { dashboardCache } from './disasterStatsApi.js'
-import { SESSION_KEY } from './auth.js'
 import { destroyDashboardGlobe, initDashboardGlobe } from './dashboardGlobe.js'
 
 let state = {
@@ -54,6 +53,9 @@ function renderTerminalMenu() {
       </button>
       <button type="button" class="situation-home-menu__item" data-route="analytics">
         <span>&gt;</span> 数据分析中心
+      </button>
+      <button type="button" class="situation-home-menu__item" data-route="impact-analysis">
+        <span>&gt;</span> 灾害影响等级预测
       </button>
       <button type="button" class="situation-home-menu__item" data-route="knowledge">
         <span>&gt;</span> AI 灾害问询
@@ -158,7 +160,6 @@ export function renderSituationDashboard() {
 
 function bindDashboardActions() {
   document.getElementById('dashboard-logout-btn')?.addEventListener('click', () => {
-    sessionStorage.removeItem(SESSION_KEY)
     state.onLogout?.()
   })
 

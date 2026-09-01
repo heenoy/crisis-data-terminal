@@ -4,6 +4,7 @@ export const ROUTES = Object.freeze({
   USER_OVERVIEW: 'user/overview',
   USER_SEARCH: 'user/search',
   USER_ANALYSIS: 'user/analysis',
+  USER_IMPACT_ANALYSIS: 'user/impact-analysis',
   USER_AI_INQUIRY: 'user/ai-inquiry',
   ADMIN_DASHBOARD: 'admin/dashboard',
   ADMIN_DISASTERS: 'admin/disasters',
@@ -32,6 +33,8 @@ const ROUTE_ALIASES = Object.freeze({
   'user/overview': ROUTES.USER_OVERVIEW,
   'user/search': ROUTES.USER_SEARCH,
   'user/analysis': ROUTES.USER_ANALYSIS,
+  'impact-analysis': ROUTES.USER_IMPACT_ANALYSIS,
+  'user/impact-analysis': ROUTES.USER_IMPACT_ANALYSIS,
   'user/ai-inquiry': ROUTES.USER_AI_INQUIRY,
   'admin/dashboard': ROUTES.ADMIN_DASHBOARD,
   'admin/disasters': ROUTES.ADMIN_DISASTERS,
@@ -45,6 +48,7 @@ export const USER_ROUTES = new Set([
   ROUTES.USER_OVERVIEW,
   ROUTES.USER_SEARCH,
   ROUTES.USER_ANALYSIS,
+  ROUTES.USER_IMPACT_ANALYSIS,
   ROUTES.USER_AI_INQUIRY,
 ])
 export const ADMIN_ROUTES = new Set([

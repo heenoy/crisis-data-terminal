@@ -1,0 +1,9 @@
+{
+  "experimental_unit_tests": {"command": ".venv/Scripts/python.exe -m unittest discover -s ml_experiments/modeling/time_cv_severe_optimization -p test_time_cv.py", "passed": 7},
+  "existing_model_api_tests": {"command": ".venv/Scripts/python.exe -m unittest discover -s ml_inference/tests -p test_*.py", "passed": 32, "warnings": "Two ResourceWarning messages for automatic HTTPError cleanup on Python 3.14; no failed tests"},
+  "visual_inspection": {"png_opened": 7, "axes_start_at_zero": true, "oof_scope_labeled": true, "selected_matrix_is_baseline_due_to_no_feasible_optimization": true},
+  "production_deployed": false,
+  "test_evaluated_for_new_candidates": false,
+  "maturity_feature_or_label_frame_loaded": false,
+  "project_status_modified": false
+}

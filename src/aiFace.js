@@ -391,7 +391,7 @@ export function hideAiMascotBubble({ clear = false } = {}) {
 function onMascotPointerDown(event) {
   if (event.button != null && event.button !== 0) return
   const face = getFaceEl()
-  if (!face || face.hidden || faceDestroyed) return
+  if (!face || face.hidden || faceDestroyed || face.classList.contains('ai-mascot--docked')) return
 
   const rect = face.getBoundingClientRect()
   mascotDragging = true
@@ -656,6 +656,8 @@ function restartFaceBehaviors() {
   stopAnomalyDrift()
   resetEyePositions()
 
+  if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return
+
   if (currentFaceState === 'idle') {
     startIdleSweep()
     return
@@ -699,7 +701,7 @@ export function setFace(state, { glitch = false, alert = false } = {}) {
 
   applyStateStyles(state)
 
-  if (isSpeaking) {
+  if (isSpeaking && !window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
     startMouthAnimation()
   } else {
     stopMouthAnimation()
@@ -719,7 +721,7 @@ export function ensureFloatingAiMascot({ state = currentFaceState } = {}) {
   if (!el || !screenContent) return
 
   if (el.parentElement !== screenContent) screenContent.appendChild(el)
-  el.classList.remove('vault-core-ai-face')
+  el.classList.remove('vault-core-ai-face', 'ai-mascot--docked')
   el.classList.add('ai-mascot')
   el.style.removeProperty('display')
   el.style.removeProperty('opacity')
@@ -728,6 +730,17 @@ export function ensureFloatingAiMascot({ state = currentFaceState } = {}) {
   ensureMascotDrag()
   ensureMascotPosition()
   setFace(state)
+  syncAiMascotBubble()
+}
+
+export function placeAiMascotAtTopRight() {
+  const face = getFaceEl()
+  const screenContent = getScreenContentEl()
+  if (!face || !screenContent) return
+  applyMascotPosition({
+    x: screenContent.clientWidth - face.offsetWidth - MASCOT_MARGIN,
+    y: MASCOT_MARGIN,
+  })
   syncAiMascotBubble()
 }
 

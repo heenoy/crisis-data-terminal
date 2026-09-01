@@ -1,0 +1,3 @@
+split,records,population_missing,population_available,gdp_per_capita_missing,gdp_per_capita_available,magnitude_missing,magnitude_group_unknown,magnitude_robust_z_available
+train,10786,98,10688,313,10473,8522,6056,2247
+validation,804,6,798,20,784,691,292,112

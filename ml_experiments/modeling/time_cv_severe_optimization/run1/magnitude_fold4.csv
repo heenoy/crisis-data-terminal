@@ -1,0 +1,9 @@
+group_key,n,q1,median,q3,iqr,eligible
+Cold wave | °C,94,-30.0,-20.0,0.0,30.0,True
+Drought | Km2,1,900.0,900.0,900.0,0.0,False
+Earthquake | Moment Magnitude,361,5.8,6.4,7.1,1.2999999999999998,True
+Flood | Km2,1122,6507.5,29550.0,99641.0,93133.5,True
+Heat wave | °C,88,39.375,43.0,47.0,7.625,True
+Severe winter conditions | °C,25,-30.0,-21.0,-15.0,15.0,True
+Storm | Kph,527,120.0,150.0,204.5,84.5,True
+Wildfire | Km2,30,254.5,1055.0,2950.0,2695.5,True

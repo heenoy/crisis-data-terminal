@@ -1,0 +1,218 @@
+{
+  "baseUrl": "http://127.0.0.1:5173",
+  "checked": 10,
+  "returnNavigation": true,
+  "failures": [],
+  "results": [
+    {
+      "scenario": "desktop",
+      "route": "user/overview",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 621,
+      "activeVerticalScrollers": [],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "user/impact-analysis",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 621,
+      "activeVerticalScrollers": [
+        "terminal-page-scroll impact-analysis__scroll"
+      ],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": true,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "user/search",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 621,
+      "activeVerticalScrollers": [],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "user/analysis",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 621,
+      "activeVerticalScrollers": [],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "user/ai-inquiry",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 621,
+      "activeVerticalScrollers": [],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "admin/dashboard",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 1066,
+      "activeVerticalScrollers": [
+        "vault-console vault-console--subpage"
+      ],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "admin/disasters",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 621,
+      "activeVerticalScrollers": [],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "admin/users",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 663,
+      "activeVerticalScrollers": [
+        "vault-console vault-console--subpage"
+      ],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "admin/system",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 663,
+      "activeVerticalScrollers": [
+        "vault-console vault-console--subpage"
+      ],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    },
+    {
+      "scenario": "desktop",
+      "route": "admin/models",
+      "shellFound": true,
+      "shellOverflowY": "auto",
+      "shellClientHeight": 621,
+      "shellScrollHeight": 663,
+      "activeVerticalScrollers": [
+        "vault-console vault-console--subpage"
+      ],
+      "primaryAtBottom": true,
+      "footerVisible": true,
+      "submitVisibleAfterScroll": true,
+      "disclaimerVisibleAfterScroll": true,
+      "bodyHasUnexpectedScroll": false,
+      "breadcrumbLinks": [
+        "start"
+      ],
+      "breadcrumbCurrent": null,
+      "introIsNeutral": false,
+      "internalModelMentions": 0
+    }
+  ]
+}

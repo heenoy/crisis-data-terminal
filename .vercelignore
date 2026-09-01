@@ -1,0 +1,16 @@
+.git/
+.agents/
+.codex/
+.python-deps/
+.env
+.env.*
+!.env.example
+backups/
+data/
+docs/
+logs/
+ml_experiments/
+crisis-data-terminal/
+supabase/.temp/
+**/__pycache__/
+**/*.pyc

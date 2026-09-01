@@ -1,0 +1,5392 @@
+{
+  "OOF": {
+    "Air": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 9,
+          "magnitude_missing": {
+            "count": 9,
+            "denominator": 9,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 9,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 9,
+            "valid_n": 0,
+            "missing_n": 9,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 9,
+          "magnitude_missing": {
+            "count": 9,
+            "denominator": 9,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 9,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 9,
+            "valid_n": 0,
+            "missing_n": 9,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 94,
+          "magnitude_missing": {
+            "count": 94,
+            "denominator": 94,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 2,
+            "denominator": 94,
+            "rate": 0.02127659574468085
+          },
+          "magnitude_z": {
+            "n": 94,
+            "valid_n": 0,
+            "missing_n": 94,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 9,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 4,
+          "severe_to_low": 0
+        },
+        "2": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        },
+        "3": {
+          "true_severe": 4,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Collapse (Industrial)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 2,
+            "rate": 0.5
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 2,
+            "rate": 0.5
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 54,
+          "magnitude_missing": {
+            "count": 53,
+            "denominator": 54,
+            "rate": 0.9814814814814815
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 54,
+            "rate": 0.018518518518518517
+          },
+          "magnitude_z": {
+            "n": 54,
+            "valid_n": 0,
+            "missing_n": 54,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 2,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "2": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        },
+        "3": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Collapse (Miscellaneous)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 3,
+          "magnitude_missing": {
+            "count": 3,
+            "denominator": 3,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 3,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 3,
+            "valid_n": 0,
+            "missing_n": 3,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 36,
+          "magnitude_missing": {
+            "count": 36,
+            "denominator": 36,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 36,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 36,
+            "valid_n": 0,
+            "missing_n": 36,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 3,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 2,
+          "severe_to_low": 0
+        },
+        "2": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Earthquake": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 11,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 11,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 11,
+            "rate": 0.09090909090909091
+          },
+          "magnitude_z": {
+            "n": 11,
+            "valid_n": 11,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -0.153846153846154,
+            "q1": -0.07142857142857148,
+            "median": 0.3846153846153847,
+            "q3": 0.5714285714285708,
+            "max": 0.9999999999999993,
+            "mean": 0.31418581418581387,
+            "std_ddof1": 0.415595462083266
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 6,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 6,
+            "valid_n": 6,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": 0.6153846153846153,
+            "q1": 0.7307692307692305,
+            "median": 0.846153846153846,
+            "q3": 0.846153846153846,
+            "max": 1.0769230769230766,
+            "mean": 0.8205128205128203,
+            "std_ddof1": 0.15889162445979144
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Moderate_to_Low": {
+          "n": 26,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 26,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 26,
+            "rate": 0.038461538461538464
+          },
+          "magnitude_z": {
+            "n": 26,
+            "valid_n": 26,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -0.7857142857142859,
+            "q1": -0.307692307692308,
+            "median": 0.07417582417582391,
+            "q3": 0.28846153846153816,
+            "max": 1.4615384615384621,
+            "mean": 0.09108199492814857,
+            "std_ddof1": 0.5242902473239536
+          }
+        },
+        "all_Severe": {
+          "n": 17,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 17,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 17,
+            "rate": 0.058823529411764705
+          },
+          "magnitude_z": {
+            "n": 17,
+            "valid_n": 17,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -0.153846153846154,
+            "q1": 0.07142857142857116,
+            "median": 0.6153846153846153,
+            "q3": 0.846153846153846,
+            "max": 1.0769230769230766,
+            "mean": 0.4928894634776986,
+            "std_ddof1": 0.4219549697599388
+          }
+        },
+        "all_events": {
+          "n": 127,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 127,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 3,
+            "denominator": 127,
+            "rate": 0.023622047244094488
+          },
+          "magnitude_z": {
+            "n": 127,
+            "valid_n": 127,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -1.5,
+            "q1": -0.3846153846153847,
+            "median": 0.0,
+            "q3": 0.3846153846153847,
+            "max": 1.4615384615384621,
+            "mean": 0.0023708574889674686,
+            "std_ddof1": 0.6052846548567676
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "0": {
+          "count": 11,
+          "denominator": 17,
+          "rate": 0.6470588235294118
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 5,
+          "severe_to_low": 1
+        },
+        "2": {
+          "true_severe": 6,
+          "severe_to_low": 6
+        },
+        "3": {
+          "true_severe": 3,
+          "severe_to_low": 2
+        },
+        "4": {
+          "true_severe": 3,
+          "severe_to_low": 2
+        }
+      }
+    },
+    "Epidemic": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 34,
+          "magnitude_missing": {
+            "count": 32,
+            "denominator": 34,
+            "rate": 0.9411764705882353
+          },
+          "hdi_missing": {
+            "count": 2,
+            "denominator": 34,
+            "rate": 0.058823529411764705
+          },
+          "magnitude_z": {
+            "n": 34,
+            "valid_n": 0,
+            "missing_n": 34,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Moderate_to_Low": {
+          "n": 4,
+          "magnitude_missing": {
+            "count": 3,
+            "denominator": 4,
+            "rate": 0.75
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 4,
+            "valid_n": 0,
+            "missing_n": 4,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_Severe": {
+          "n": 36,
+          "magnitude_missing": {
+            "count": 34,
+            "denominator": 36,
+            "rate": 0.9444444444444444
+          },
+          "hdi_missing": {
+            "count": 2,
+            "denominator": 36,
+            "rate": 0.05555555555555555
+          },
+          "magnitude_z": {
+            "n": 36,
+            "valid_n": 0,
+            "missing_n": 36,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 122,
+          "magnitude_missing": {
+            "count": 118,
+            "denominator": 122,
+            "rate": 0.9672131147540983
+          },
+          "hdi_missing": {
+            "count": 2,
+            "denominator": 122,
+            "rate": 0.01639344262295082
+          },
+          "magnitude_z": {
+            "n": 122,
+            "valid_n": 0,
+            "missing_n": 122,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "0": {
+          "count": 0,
+          "denominator": 2,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2,
+          "denominator": 34,
+          "rate": 0.058823529411764705
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 10,
+          "severe_to_low": 2
+        },
+        "2": {
+          "true_severe": 9,
+          "severe_to_low": 0
+        },
+        "3": {
+          "true_severe": 14,
+          "severe_to_low": 0
+        },
+        "4": {
+          "true_severe": 3,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Explosion (Industrial)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 5,
+          "magnitude_missing": {
+            "count": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 5,
+            "valid_n": 0,
+            "missing_n": 5,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 6,
+          "magnitude_missing": {
+            "count": 6,
+            "denominator": 6,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 6,
+            "valid_n": 0,
+            "missing_n": 6,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 58,
+          "magnitude_missing": {
+            "count": 58,
+            "denominator": 58,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 58,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 58,
+            "valid_n": 0,
+            "missing_n": 58,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 6,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 4,
+          "severe_to_low": 0
+        },
+        "3": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        },
+        "4": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Explosion (Miscellaneous)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 4,
+          "magnitude_missing": {
+            "count": 4,
+            "denominator": 4,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 4,
+            "valid_n": 0,
+            "missing_n": 4,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 4,
+          "magnitude_missing": {
+            "count": 4,
+            "denominator": 4,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 4,
+            "valid_n": 0,
+            "missing_n": 4,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 29,
+          "magnitude_missing": {
+            "count": 29,
+            "denominator": 29,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 2,
+            "denominator": 29,
+            "rate": 0.06896551724137931
+          },
+          "magnitude_z": {
+            "n": 29,
+            "valid_n": 0,
+            "missing_n": 29,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 4,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 2,
+          "severe_to_low": 0
+        },
+        "2": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        },
+        "4": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Extreme temperature": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 28,
+          "magnitude_missing": {
+            "count": 8,
+            "denominator": 28,
+            "rate": 0.2857142857142857
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 28,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 28,
+            "valid_n": 20,
+            "missing_n": 8,
+            "missing_rate": 0.2857142857142857,
+            "min": -1.8714285714285717,
+            "q1": -0.4785714285714285,
+            "median": -0.042857142857142955,
+            "q3": 0.6071428571428571,
+            "max": 1.2857142857142858,
+            "mean": -0.06394613583138176,
+            "std_ddof1": 0.8772602584544454
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Moderate_to_Low": {
+          "n": 11,
+          "magnitude_missing": {
+            "count": 4,
+            "denominator": 11,
+            "rate": 0.36363636363636365
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 11,
+            "rate": 0.09090909090909091
+          },
+          "magnitude_z": {
+            "n": 11,
+            "valid_n": 7,
+            "missing_n": 4,
+            "missing_rate": 0.36363636363636365,
+            "min": -0.6470588235294118,
+            "q1": -0.30410224695938975,
+            "median": 0.08163265306122448,
+            "q3": 0.46143063285920427,
+            "max": 1.1595959595959597,
+            "mean": 0.12983236584677163,
+            "std_ddof1": 0.6621327183269718
+          }
+        },
+        "all_Severe": {
+          "n": 30,
+          "magnitude_missing": {
+            "count": 10,
+            "denominator": 30,
+            "rate": 0.3333333333333333
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 30,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 30,
+            "valid_n": 20,
+            "missing_n": 10,
+            "missing_rate": 0.3333333333333333,
+            "min": -1.8714285714285717,
+            "q1": -0.4785714285714285,
+            "median": -0.042857142857142955,
+            "q3": 0.6071428571428571,
+            "max": 1.2857142857142858,
+            "mean": -0.06394613583138176,
+            "std_ddof1": 0.8772602584544454
+          }
+        },
+        "all_events": {
+          "n": 82,
+          "magnitude_missing": {
+            "count": 36,
+            "denominator": 82,
+            "rate": 0.43902439024390244
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 82,
+            "rate": 0.012195121951219513
+          },
+          "magnitude_z": {
+            "n": 82,
+            "valid_n": 46,
+            "missing_n": 36,
+            "missing_rate": 0.43902439024390244,
+            "min": -1.8714285714285717,
+            "q1": -0.5357142857142857,
+            "median": 0.0832405689548547,
+            "q3": 0.7023809523809523,
+            "max": 1.2857142857142858,
+            "mean": 0.059868417765179316,
+            "std_ddof1": 0.7654135274787918
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "0": {
+          "count": 0,
+          "denominator": 20,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 2,
+          "denominator": 10,
+          "rate": 0.2
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 9,
+          "severe_to_low": 1
+        },
+        "2": {
+          "true_severe": 2,
+          "severe_to_low": 0
+        },
+        "3": {
+          "true_severe": 13,
+          "severe_to_low": 1
+        },
+        "4": {
+          "true_severe": 6,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Fire (Miscellaneous)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 3,
+          "magnitude_missing": {
+            "count": 3,
+            "denominator": 3,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 3,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 3,
+            "valid_n": 0,
+            "missing_n": 3,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 3,
+          "magnitude_missing": {
+            "count": 3,
+            "denominator": 3,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 3,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 3,
+            "valid_n": 0,
+            "missing_n": 3,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 100,
+          "magnitude_missing": {
+            "count": 100,
+            "denominator": 100,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 100,
+            "rate": 0.01
+          },
+          "magnitude_z": {
+            "n": 100,
+            "valid_n": 0,
+            "missing_n": 100,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 3,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        },
+        "2": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        },
+        "4": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Flood": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 28,
+          "magnitude_missing": {
+            "count": 20,
+            "denominator": 28,
+            "rate": 0.7142857142857143
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 28,
+            "rate": 0.03571428571428571
+          },
+          "magnitude_z": {
+            "n": 28,
+            "valid_n": 8,
+            "missing_n": 20,
+            "missing_rate": 0.7142857142857143,
+            "min": -0.22613957383755576,
+            "q1": 0.7411158832547589,
+            "median": 1.551026455512476,
+            "q3": 3.3125953515377153,
+            "max": 5.0,
+            "mean": 2.0786365135619365,
+            "std_ddof1": 2.032269771530793
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 22,
+          "magnitude_missing": {
+            "count": 15,
+            "denominator": 22,
+            "rate": 0.6818181818181818
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 22,
+            "rate": 0.045454545454545456
+          },
+          "magnitude_z": {
+            "n": 22,
+            "valid_n": 7,
+            "missing_n": 15,
+            "missing_rate": 0.6818181818181818,
+            "min": -0.024141477021057553,
+            "q1": 0.7134137936875454,
+            "median": 1.070458974185243,
+            "q3": 2.3116471305644013,
+            "max": 5.0,
+            "mean": 1.7280627636668682,
+            "std_ddof1": 1.7459061666520852
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 15,
+          "magnitude_missing": {
+            "count": 11,
+            "denominator": 15,
+            "rate": 0.7333333333333333
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 15,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 15,
+            "valid_n": 4,
+            "missing_n": 11,
+            "missing_rate": 0.7333333333333333,
+            "min": -0.19610129545222715,
+            "q1": 0.14221029759860046,
+            "median": 0.5268896961019309,
+            "q3": 1.849098922691239,
+            "max": 5.0,
+            "mean": 1.4644195241879088,
+            "std_ddof1": 2.391892689547987
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 324,
+          "magnitude_missing": {
+            "count": 265,
+            "denominator": 324,
+            "rate": 0.8179012345679012
+          },
+          "hdi_missing": {
+            "count": 5,
+            "denominator": 324,
+            "rate": 0.015432098765432098
+          },
+          "magnitude_z": {
+            "n": 324,
+            "valid_n": 59,
+            "missing_n": 265,
+            "missing_rate": 0.8179012345679012,
+            "min": -0.3282878243783454,
+            "q1": -0.08303158526194943,
+            "median": 0.19224145983990726,
+            "q3": 1.1121688104858145,
+            "max": 5.0,
+            "mean": 0.9560917677357719,
+            "std_ddof1": 1.6479466931130566
+          }
+        },
+        "all_Severe": {
+          "n": 65,
+          "magnitude_missing": {
+            "count": 46,
+            "denominator": 65,
+            "rate": 0.7076923076923077
+          },
+          "hdi_missing": {
+            "count": 2,
+            "denominator": 65,
+            "rate": 0.03076923076923077
+          },
+          "magnitude_z": {
+            "n": 65,
+            "valid_n": 19,
+            "missing_n": 46,
+            "missing_rate": 0.7076923076923077,
+            "min": -0.22613957383755576,
+            "q1": 0.37727489706639217,
+            "median": 1.070458974185243,
+            "q3": 2.9260561823676015,
+            "max": 5.0,
+            "mean": 1.8201689237323793,
+            "std_ddof1": 1.907055383678435
+          }
+        },
+        "all_events": {
+          "n": 983,
+          "magnitude_missing": {
+            "count": 781,
+            "denominator": 983,
+            "rate": 0.7945066124109867
+          },
+          "hdi_missing": {
+            "count": 13,
+            "denominator": 983,
+            "rate": 0.013224821973550356
+          },
+          "magnitude_z": {
+            "n": 983,
+            "valid_n": 202,
+            "missing_n": 781,
+            "missing_rate": 0.7945066124109867,
+            "min": -0.33416898163832237,
+            "q1": -0.03583778267271616,
+            "median": 0.5483618759650025,
+            "q3": 2.0117737944574263,
+            "max": 5.0,
+            "mean": 1.2457123096560279,
+            "std_ddof1": 1.6824657365249296
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "0": {
+          "count": 8,
+          "denominator": 19,
+          "rate": 0.42105263157894735
+        },
+        "1": {
+          "count": 20,
+          "denominator": 46,
+          "rate": 0.43478260869565216
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 13,
+          "severe_to_low": 5
+        },
+        "2": {
+          "true_severe": 20,
+          "severe_to_low": 7
+        },
+        "3": {
+          "true_severe": 13,
+          "severe_to_low": 8
+        },
+        "4": {
+          "true_severe": 19,
+          "severe_to_low": 8
+        }
+      }
+    },
+    "Glacial lake outburst flood": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "4": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Industrial accident (General)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 18,
+          "magnitude_missing": {
+            "count": 18,
+            "denominator": 18,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 18,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 18,
+            "valid_n": 0,
+            "missing_n": 18,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Mass movement (wet)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 10,
+          "magnitude_missing": {
+            "count": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 10,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 10,
+            "valid_n": 0,
+            "missing_n": 10,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 11,
+          "magnitude_missing": {
+            "count": 11,
+            "denominator": 11,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 11,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 11,
+            "valid_n": 0,
+            "missing_n": 11,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 139,
+          "magnitude_missing": {
+            "count": 139,
+            "denominator": 139,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 139,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 139,
+            "valid_n": 0,
+            "missing_n": 139,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 11,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 6,
+          "severe_to_low": 0
+        },
+        "2": {
+          "true_severe": 4,
+          "severe_to_low": 0
+        },
+        "4": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Miscellaneous accident (General)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 44,
+          "magnitude_missing": {
+            "count": 44,
+            "denominator": 44,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 44,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 44,
+            "valid_n": 0,
+            "missing_n": 44,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Rail": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 54,
+          "magnitude_missing": {
+            "count": 54,
+            "denominator": 54,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 2,
+            "denominator": 54,
+            "rate": 0.037037037037037035
+          },
+          "magnitude_z": {
+            "n": 54,
+            "valid_n": 0,
+            "missing_n": 54,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "2": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Road": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 440,
+          "magnitude_missing": {
+            "count": 440,
+            "denominator": 440,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 3,
+            "denominator": 440,
+            "rate": 0.006818181818181818
+          },
+          "magnitude_z": {
+            "n": 440,
+            "valid_n": 0,
+            "missing_n": 440,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 2,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "3": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        },
+        "4": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Storm": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 17,
+          "magnitude_missing": {
+            "count": 9,
+            "denominator": 17,
+            "rate": 0.5294117647058824
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 17,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 17,
+            "valid_n": 8,
+            "missing_n": 9,
+            "missing_rate": 0.5294117647058824,
+            "min": -0.7692307692307693,
+            "q1": -0.25,
+            "median": -0.058823529411764705,
+            "q3": 0.31065088757396453,
+            "max": 1.7411764705882353,
+            "mean": 0.18114340410720503,
+            "std_ddof1": 0.8154343887864238
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 5,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 5,
+            "rate": 0.4
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 5,
+            "valid_n": 3,
+            "missing_n": 2,
+            "missing_rate": 0.4,
+            "min": -0.23529411764705882,
+            "q1": -0.11764705882352941,
+            "median": 0.0,
+            "q3": 0.4260355029585799,
+            "max": 0.8520710059171598,
+            "mean": 0.20559229609003368,
+            "std_ddof1": 0.572094286061866
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 202,
+          "magnitude_missing": {
+            "count": 146,
+            "denominator": 202,
+            "rate": 0.7227722772277227
+          },
+          "hdi_missing": {
+            "count": 6,
+            "denominator": 202,
+            "rate": 0.0297029702970297
+          },
+          "magnitude_z": {
+            "n": 202,
+            "valid_n": 56,
+            "missing_n": 146,
+            "missing_rate": 0.7227722772277227,
+            "min": -1.0,
+            "q1": -0.31176470588235294,
+            "median": 0.23529411764705882,
+            "q3": 1.060389836407936,
+            "max": 1.952662721893491,
+            "mean": 0.36877298182586643,
+            "std_ddof1": 0.8168572152249907
+          }
+        },
+        "all_Severe": {
+          "n": 22,
+          "magnitude_missing": {
+            "count": 11,
+            "denominator": 22,
+            "rate": 0.5
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 22,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 22,
+            "valid_n": 11,
+            "missing_n": 11,
+            "missing_rate": 0.5,
+            "min": -0.7692307692307693,
+            "q1": -0.23529411764705882,
+            "median": 0.0,
+            "q3": 0.4556213017751479,
+            "max": 1.7411764705882353,
+            "mean": 0.1878112837388856,
+            "std_ddof1": 0.7287263285588527
+          }
+        },
+        "all_events": {
+          "n": 643,
+          "magnitude_missing": {
+            "count": 434,
+            "denominator": 643,
+            "rate": 0.6749611197511665
+          },
+          "hdi_missing": {
+            "count": 28,
+            "denominator": 643,
+            "rate": 0.04354587869362364
+          },
+          "magnitude_z": {
+            "n": 643,
+            "valid_n": 209,
+            "missing_n": 434,
+            "missing_rate": 0.6749611197511665,
+            "min": -1.1242603550295858,
+            "q1": -0.4470588235294118,
+            "median": 0.0,
+            "q3": 0.625,
+            "max": 2.125,
+            "mean": 0.12866924276009772,
+            "std_ddof1": 0.7328467457432835
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "0": {
+          "count": 8,
+          "denominator": 11,
+          "rate": 0.7272727272727273
+        },
+        "1": {
+          "count": 9,
+          "denominator": 11,
+          "rate": 0.8181818181818182
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 3,
+          "severe_to_low": 2
+        },
+        "2": {
+          "true_severe": 5,
+          "severe_to_low": 4
+        },
+        "3": {
+          "true_severe": 5,
+          "severe_to_low": 4
+        },
+        "4": {
+          "true_severe": 9,
+          "severe_to_low": 7
+        }
+      }
+    },
+    "Volcanic activity": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 10,
+          "magnitude_missing": {
+            "count": 10,
+            "denominator": 10,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 10,
+            "rate": 0.1
+          },
+          "magnitude_z": {
+            "n": 10,
+            "valid_n": 0,
+            "missing_n": 10,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 2,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "3": {
+          "true_severe": 2,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Water": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 12,
+          "magnitude_missing": {
+            "count": 12,
+            "denominator": 12,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 12,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 12,
+            "valid_n": 0,
+            "missing_n": 12,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 17,
+          "magnitude_missing": {
+            "count": 17,
+            "denominator": 17,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 17,
+            "rate": 0.058823529411764705
+          },
+          "magnitude_z": {
+            "n": 17,
+            "valid_n": 0,
+            "missing_n": 17,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 29,
+          "magnitude_missing": {
+            "count": 29,
+            "denominator": 29,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 29,
+            "rate": 0.034482758620689655
+          },
+          "magnitude_z": {
+            "n": 29,
+            "valid_n": 0,
+            "missing_n": 29,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 336,
+          "magnitude_missing": {
+            "count": 336,
+            "denominator": 336,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 3,
+            "denominator": 336,
+            "rate": 0.008928571428571428
+          },
+          "magnitude_z": {
+            "n": 336,
+            "valid_n": 0,
+            "missing_n": 336,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 29,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "1": {
+          "true_severe": 11,
+          "severe_to_low": 0
+        },
+        "2": {
+          "true_severe": 9,
+          "severe_to_low": 0
+        },
+        "3": {
+          "true_severe": 6,
+          "severe_to_low": 0
+        },
+        "4": {
+          "true_severe": 3,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Wildfire": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Moderate_to_Low": {
+          "n": 20,
+          "magnitude_missing": {
+            "count": 16,
+            "denominator": 20,
+            "rate": 0.8
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 20,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 20,
+            "valid_n": 4,
+            "missing_n": 16,
+            "missing_rate": 0.8,
+            "min": -0.30474531998258597,
+            "q1": 0.32868959512407486,
+            "median": 1.068785372224641,
+            "q3": 2.44830213321724,
+            "max": 5.0,
+            "mean": 1.708206356116674,
+            "std_ddof1": 2.32845987314702
+          }
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 51,
+          "magnitude_missing": {
+            "count": 46,
+            "denominator": 51,
+            "rate": 0.9019607843137255
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 51,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 51,
+            "valid_n": 5,
+            "missing_n": 46,
+            "missing_rate": 0.9019607843137255,
+            "min": -0.30474531998258597,
+            "q1": 0.044188071397474965,
+            "median": 0.5398345668262952,
+            "q3": 1.5977361776229866,
+            "max": 5.0,
+            "mean": 1.375402699172834,
+            "std_ddof1": 2.1494383931664207
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 1,
+          "denominator": 1,
+          "rate": 1.0
+        }
+      },
+      "fold_counts": {
+        "3": {
+          "true_severe": 1,
+          "severe_to_low": 1
+        }
+      }
+    }
+  },
+  "Test": {
+    "Air": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 11,
+          "magnitude_missing": {
+            "count": 11,
+            "denominator": 11,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 11,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 11,
+            "valid_n": 0,
+            "missing_n": 11,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Collapse (Miscellaneous)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 8,
+          "magnitude_missing": {
+            "count": 8,
+            "denominator": 8,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 8,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 8,
+            "valid_n": 0,
+            "missing_n": 8,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Drought": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 3,
+          "magnitude_missing": {
+            "count": 3,
+            "denominator": 3,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 3,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 3,
+            "valid_n": 0,
+            "missing_n": 3,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 3,
+          "magnitude_missing": {
+            "count": 3,
+            "denominator": 3,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 3,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 3,
+            "valid_n": 0,
+            "missing_n": 3,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 4,
+          "magnitude_missing": {
+            "count": 4,
+            "denominator": 4,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 4,
+            "valid_n": 0,
+            "missing_n": 4,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 3,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 3,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Earthquake": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 9,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 9,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 9,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 9,
+            "valid_n": 9,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -0.8333333333333333,
+            "q1": -0.5833333333333334,
+            "median": -0.41666666666666663,
+            "q3": 0.3333333333333328,
+            "max": 1.166666666666666,
+            "mean": -0.009259259259259547,
+            "std_ddof1": 0.7654025407474917
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Moderate_to_Low": {
+          "n": 6,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 6,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 6,
+            "valid_n": 6,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -0.916666666666667,
+            "q1": -0.3750000000000001,
+            "median": -0.08333333333333376,
+            "q3": 0.2083333333333331,
+            "max": 0.3333333333333328,
+            "mean": -0.15277777777777804,
+            "std_ddof1": 0.4726305424214876
+          }
+        },
+        "all_Severe": {
+          "n": 9,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 9,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 9,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 9,
+            "valid_n": 9,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -0.8333333333333333,
+            "q1": -0.5833333333333334,
+            "median": -0.41666666666666663,
+            "q3": 0.3333333333333328,
+            "max": 1.166666666666666,
+            "mean": -0.009259259259259547,
+            "std_ddof1": 0.7654025407474917
+          }
+        },
+        "all_events": {
+          "n": 43,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 43,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 43,
+            "rate": 0.023255813953488372
+          },
+          "magnitude_z": {
+            "n": 43,
+            "valid_n": 43,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -1.0833333333333337,
+            "q1": -0.5000000000000003,
+            "median": -0.1666666666666668,
+            "q3": 0.3333333333333328,
+            "max": 1.166666666666666,
+            "mean": -0.050387596899225166,
+            "std_ddof1": 0.6247061570847874
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "0": {
+          "count": 9,
+          "denominator": 9,
+          "rate": 1.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 9,
+          "severe_to_low": 9
+        }
+      }
+    },
+    "Epidemic": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 13,
+          "magnitude_missing": {
+            "count": 13,
+            "denominator": 13,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 13,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 13,
+            "valid_n": 0,
+            "missing_n": 13,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_Severe": {
+          "n": 14,
+          "magnitude_missing": {
+            "count": 14,
+            "denominator": 14,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 14,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 14,
+            "valid_n": 0,
+            "missing_n": 14,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 31,
+          "magnitude_missing": {
+            "count": 30,
+            "denominator": 31,
+            "rate": 0.967741935483871
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 31,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 31,
+            "valid_n": 0,
+            "missing_n": 31,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 14,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 14,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Extreme temperature": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 54,
+          "magnitude_missing": {
+            "count": 28,
+            "denominator": 54,
+            "rate": 0.5185185185185185
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 54,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 54,
+            "valid_n": 26,
+            "missing_n": 28,
+            "missing_rate": 0.5185185185185185,
+            "min": -1.423728813559322,
+            "q1": -0.49491525423728844,
+            "median": -0.3661016949152546,
+            "q3": -0.05084745762711888,
+            "max": 0.7864406779661013,
+            "mean": -0.29567579313342035,
+            "std_ddof1": 0.48082809558189776
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Moderate_to_Low": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 1,
+            "missing_n": 0,
+            "missing_rate": 0.0,
+            "min": -1.9333333333333333,
+            "q1": -1.9333333333333333,
+            "median": -1.9333333333333333,
+            "q3": -1.9333333333333333,
+            "max": -1.9333333333333333,
+            "mean": -1.9333333333333333,
+            "std_ddof1": null
+          }
+        },
+        "all_Severe": {
+          "n": 54,
+          "magnitude_missing": {
+            "count": 28,
+            "denominator": 54,
+            "rate": 0.5185185185185185
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 54,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 54,
+            "valid_n": 26,
+            "missing_n": 28,
+            "missing_rate": 0.5185185185185185,
+            "min": -1.423728813559322,
+            "q1": -0.49491525423728844,
+            "median": -0.3661016949152546,
+            "q3": -0.05084745762711888,
+            "max": 0.7864406779661013,
+            "mean": -0.29567579313342035,
+            "std_ddof1": 0.48082809558189776
+          }
+        },
+        "all_events": {
+          "n": 79,
+          "magnitude_missing": {
+            "count": 43,
+            "denominator": 79,
+            "rate": 0.5443037974683544
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 79,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 79,
+            "valid_n": 36,
+            "missing_n": 43,
+            "missing_rate": 0.5443037974683544,
+            "min": -1.9333333333333333,
+            "q1": -0.8135593220338984,
+            "median": -0.4067796610169492,
+            "q3": -0.013559322033898497,
+            "max": 1.8576271186440683,
+            "mean": -0.37405838041431266,
+            "std_ddof1": 0.7502824175029384
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "0": {
+          "count": 0,
+          "denominator": 26,
+          "rate": 0.0
+        },
+        "1": {
+          "count": 0,
+          "denominator": 28,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 54,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Fire (Miscellaneous)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 33,
+          "magnitude_missing": {
+            "count": 33,
+            "denominator": 33,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 33,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 33,
+            "valid_n": 0,
+            "missing_n": 33,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Flood": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 14,
+          "magnitude_missing": {
+            "count": 14,
+            "denominator": 14,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 14,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 14,
+            "valid_n": 0,
+            "missing_n": 14,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 5,
+          "magnitude_missing": {
+            "count": 5,
+            "denominator": 5,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 5,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 5,
+            "valid_n": 0,
+            "missing_n": 5,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 87,
+          "magnitude_missing": {
+            "count": 87,
+            "denominator": 87,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 87,
+            "rate": 0.011494252873563218
+          },
+          "magnitude_z": {
+            "n": 87,
+            "valid_n": 0,
+            "missing_n": 87,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_Severe": {
+          "n": 20,
+          "magnitude_missing": {
+            "count": 20,
+            "denominator": 20,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 20,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 20,
+            "valid_n": 0,
+            "missing_n": 20,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 242,
+          "magnitude_missing": {
+            "count": 242,
+            "denominator": 242,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 242,
+            "rate": 0.004132231404958678
+          },
+          "magnitude_z": {
+            "n": 242,
+            "valid_n": 0,
+            "missing_n": 242,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 14,
+          "denominator": 20,
+          "rate": 0.7
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 20,
+          "severe_to_low": 14
+        }
+      }
+    },
+    "Glacial lake outburst flood": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Industrial accident (General)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 4,
+          "magnitude_missing": {
+            "count": 4,
+            "denominator": 4,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 4,
+            "valid_n": 0,
+            "missing_n": 4,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Mass movement (wet)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 39,
+          "magnitude_missing": {
+            "count": 39,
+            "denominator": 39,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 39,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 39,
+            "valid_n": 0,
+            "missing_n": 39,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Miscellaneous accident (General)": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 18,
+          "magnitude_missing": {
+            "count": 18,
+            "denominator": 18,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 18,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 18,
+            "valid_n": 0,
+            "missing_n": 18,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 2,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 2,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Rail": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 4,
+          "magnitude_missing": {
+            "count": 4,
+            "denominator": 4,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 4,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 4,
+            "valid_n": 0,
+            "missing_n": 4,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 1,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 1,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Storm": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 7,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 7,
+            "rate": 0.2857142857142857
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 7,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 7,
+            "valid_n": 5,
+            "missing_n": 2,
+            "missing_rate": 0.2857142857142857,
+            "min": -0.875,
+            "q1": -0.6875,
+            "median": -0.25,
+            "q3": 1.125,
+            "max": 1.875,
+            "mean": 0.2375,
+            "std_ddof1": 1.2041594578792296
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Moderate_to_Low": {
+          "n": 44,
+          "magnitude_missing": {
+            "count": 22,
+            "denominator": 44,
+            "rate": 0.5
+          },
+          "hdi_missing": {
+            "count": 1,
+            "denominator": 44,
+            "rate": 0.022727272727272728
+          },
+          "magnitude_z": {
+            "n": 44,
+            "valid_n": 22,
+            "missing_n": 22,
+            "missing_rate": 0.5,
+            "min": -1.675,
+            "q1": -0.671875,
+            "median": -0.125,
+            "q3": 0.375,
+            "max": 1.5,
+            "mean": -0.16761363636363635,
+            "std_ddof1": 0.8051975790039152
+          }
+        },
+        "all_Severe": {
+          "n": 7,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 7,
+            "rate": 0.2857142857142857
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 7,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 7,
+            "valid_n": 5,
+            "missing_n": 2,
+            "missing_rate": 0.2857142857142857,
+            "min": -0.875,
+            "q1": -0.6875,
+            "median": -0.25,
+            "q3": 1.125,
+            "max": 1.875,
+            "mean": 0.2375,
+            "std_ddof1": 1.2041594578792296
+          }
+        },
+        "all_events": {
+          "n": 188,
+          "magnitude_missing": {
+            "count": 130,
+            "denominator": 188,
+            "rate": 0.6914893617021277
+          },
+          "hdi_missing": {
+            "count": 6,
+            "denominator": 188,
+            "rate": 0.031914893617021274
+          },
+          "magnitude_z": {
+            "n": 188,
+            "valid_n": 58,
+            "missing_n": 130,
+            "missing_rate": 0.6914893617021277,
+            "min": -1.675,
+            "q1": -0.625,
+            "median": -0.06875,
+            "q3": 0.5718749999999999,
+            "max": 1.875,
+            "mean": 0.020043103448275857,
+            "std_ddof1": 0.8248635574810995
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "0": {
+          "count": 5,
+          "denominator": 5,
+          "rate": 1.0
+        },
+        "1": {
+          "count": 2,
+          "denominator": 2,
+          "rate": 1.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 7,
+          "severe_to_low": 7
+        }
+      }
+    },
+    "Water": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Moderate_to_Low": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "all_Severe": {
+          "n": 2,
+          "magnitude_missing": {
+            "count": 2,
+            "denominator": 2,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 2,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 2,
+            "valid_n": 0,
+            "missing_n": 2,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 75,
+          "magnitude_missing": {
+            "count": 75,
+            "denominator": 75,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 2,
+            "denominator": 75,
+            "rate": 0.02666666666666667
+          },
+          "magnitude_z": {
+            "n": 75,
+            "valid_n": 0,
+            "missing_n": 75,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 0,
+          "denominator": 2,
+          "rate": 0.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 2,
+          "severe_to_low": 0
+        }
+      }
+    },
+    "Wildfire": {
+      "groups": {
+        "Severe_to_Low": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "Severe_to_Severe": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Severe_to_Moderate": {
+          "n": 0,
+          "magnitude_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 0,
+            "rate": null
+          },
+          "magnitude_z": null
+        },
+        "Moderate_to_Low": {
+          "n": 8,
+          "magnitude_missing": {
+            "count": 8,
+            "denominator": 8,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 8,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 8,
+            "valid_n": 0,
+            "missing_n": 8,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_Severe": {
+          "n": 1,
+          "magnitude_missing": {
+            "count": 1,
+            "denominator": 1,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 1,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 1,
+            "valid_n": 0,
+            "missing_n": 1,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        },
+        "all_events": {
+          "n": 19,
+          "magnitude_missing": {
+            "count": 19,
+            "denominator": 19,
+            "rate": 1.0
+          },
+          "hdi_missing": {
+            "count": 0,
+            "denominator": 19,
+            "rate": 0.0
+          },
+          "magnitude_z": {
+            "n": 19,
+            "valid_n": 0,
+            "missing_n": 19,
+            "missing_rate": 1.0,
+            "min": null,
+            "q1": null,
+            "median": null,
+            "q3": null,
+            "max": null,
+            "mean": null,
+            "std_ddof1": null
+          }
+        }
+      },
+      "missing_vs_observed_severe": {
+        "1": {
+          "count": 1,
+          "denominator": 1,
+          "rate": 1.0
+        }
+      },
+      "fold_counts": {
+        "0": {
+          "true_severe": 1,
+          "severe_to_low": 1
+        }
+      }
+    }
+  }
+}

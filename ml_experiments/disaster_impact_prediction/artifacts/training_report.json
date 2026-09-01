@@ -1,0 +1,208 @@
+{
+  "data_path": "D:\\crisis-data-terminal\\data\\emdat_raw.xlsx",
+  "total_rows": 16858,
+  "modeled_rows": 13582,
+  "train_rows": 10865,
+  "test_rows": 2717,
+  "target": "Total Deaths",
+  "future_target": "Total Damage ('000 US$)",
+  "features": {
+    "categorical": [
+      "Disaster Group",
+      "Disaster Subgroup",
+      "Disaster Type",
+      "Disaster Subtype",
+      "ISO",
+      "Country",
+      "Subregion",
+      "Region",
+      "Magnitude Scale"
+    ],
+    "numeric": [
+      "Start Year",
+      "Start Month",
+      "Start Day",
+      "Magnitude",
+      "Latitude",
+      "Longitude"
+    ]
+  },
+  "excluded_leakage_fields": {
+    "Total Deaths": "prediction target",
+    "No. Injured": "same-event impact outcome unavailable at prediction time",
+    "No. Affected": "same-event impact outcome unavailable at prediction time",
+    "No. Homeless": "same-event impact outcome unavailable at prediction time",
+    "Total Affected": "derived same-event impact outcome",
+    "Reconstruction Costs ('000 US$)": "post-event economic outcome",
+    "Reconstruction Costs, Adjusted ('000 US$)": "post-event economic outcome",
+    "Insured Damage ('000 US$)": "post-event economic outcome",
+    "Insured Damage, Adjusted ('000 US$)": "post-event economic outcome",
+    "Total Damage ('000 US$)": "post-event economic outcome and future target",
+    "Total Damage, Adjusted ('000 US$)": "post-event economic outcome",
+    "AID Contribution ('000 US$)": "response outcome that may follow impact assessment"
+  },
+  "split": {
+    "train": 0.8,
+    "test": 0.2,
+    "calibration_fraction_within_train": 0.2,
+    "random_state": 42
+  },
+  "target_summary": {
+    "count": 13582.0,
+    "mean": 138.58525990281254,
+    "std": 2994.8351064269564,
+    "min": 1.0,
+    "50%": 16.0,
+    "90%": 81.89999999999964,
+    "95%": 167.9499999999989,
+    "99%": 1037.380000000001,
+    "max": 222570.0
+  },
+  "models": [
+    {
+      "model": "random_forest",
+      "metrics": {
+        "mae": 207.54705271505406,
+        "rmse": 5364.714444426124,
+        "r2": 1.3043054521877373e-05,
+        "interval_coverage": 0.8984173721015827,
+        "mean_interval_width": 141.19893175125966
+      },
+      "prediction_interval": {
+        "lower_residual": -22.121995132468758,
+        "upper_residual": 124.66252646083198,
+        "coverage": 0.9
+      },
+      "top_features": [
+        {
+          "feature": "Disaster Subtype",
+          "importance_mean": 3.987169387902861,
+          "importance_std": 0.10174247142674141
+        },
+        {
+          "feature": "Start Year",
+          "importance_mean": 3.0022542850682727,
+          "importance_std": 0.3402260370816696
+        },
+        {
+          "feature": "Region",
+          "importance_mean": 2.6021907560769364,
+          "importance_std": 0.2410535643972276
+        },
+        {
+          "feature": "Subregion",
+          "importance_mean": 1.7311222232557781,
+          "importance_std": 0.1774545909285382
+        },
+        {
+          "feature": "Disaster Type",
+          "importance_mean": 1.5375777354266007,
+          "importance_std": 0.2761856564551071
+        },
+        {
+          "feature": "Country",
+          "importance_mean": 1.0704430485230376,
+          "importance_std": 0.08059198122676882
+        },
+        {
+          "feature": "ISO",
+          "importance_mean": 0.8879828664078729,
+          "importance_std": 0.05850747773234781
+        },
+        {
+          "feature": "Start Month",
+          "importance_mean": 0.604181664934049,
+          "importance_std": 0.14151201394426915
+        },
+        {
+          "feature": "Magnitude Scale",
+          "importance_mean": 0.5841208385927757,
+          "importance_std": 0.21054264829749822
+        },
+        {
+          "feature": "Start Day",
+          "importance_mean": 0.2560200916724568,
+          "importance_std": 0.19461240709628597
+        }
+      ],
+      "sample_file": "random_forest_prediction_samples.csv",
+      "importance_plot": "random_forest_feature_importance.png"
+    },
+    {
+      "model": "xgboost",
+      "metrics": {
+        "mae": 208.0782034970137,
+        "rmse": 5362.702889744908,
+        "r2": 0.0007628131843678831,
+        "interval_coverage": 0.895841001104159,
+        "mean_interval_width": 140.7223358154297
+      },
+      "prediction_interval": {
+        "lower_residual": -22.227157974243166,
+        "upper_residual": 124.24827537536622,
+        "coverage": 0.9
+      },
+      "top_features": [
+        {
+          "feature": "Disaster Subtype",
+          "importance_mean": 4.013957954646491,
+          "importance_std": 0.20013282011090622
+        },
+        {
+          "feature": "Start Year",
+          "importance_mean": 2.3445155854342827,
+          "importance_std": 0.1585822555197818
+        },
+        {
+          "feature": "Region",
+          "importance_mean": 1.8236354119030977,
+          "importance_std": 0.3403735556399704
+        },
+        {
+          "feature": "ISO",
+          "importance_mean": 1.7882654333596235,
+          "importance_std": 0.3169264320590305
+        },
+        {
+          "feature": "Disaster Type",
+          "importance_mean": 1.6476830021704132,
+          "importance_std": 0.22526456466646436
+        },
+        {
+          "feature": "Subregion",
+          "importance_mean": 1.4999586110787333,
+          "importance_std": 0.48300326762412116
+        },
+        {
+          "feature": "Disaster Subgroup",
+          "importance_mean": 0.4229101048702432,
+          "importance_std": 0.15560033315140512
+        },
+        {
+          "feature": "Start Day",
+          "importance_mean": 0.37913452956797755,
+          "importance_std": 0.25659461342392653
+        },
+        {
+          "feature": "Start Month",
+          "importance_mean": 0.2327984278633039,
+          "importance_std": 0.2757284996007634
+        },
+        {
+          "feature": "Country",
+          "importance_mean": 0.20351994045527136,
+          "importance_std": 0.035290756698387285
+        }
+      ],
+      "sample_file": "xgboost_prediction_samples.csv",
+      "importance_plot": "xgboost_feature_importance.png"
+    }
+  ],
+  "environment": {
+    "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pandas": "2.3.3",
+    "numpy": "2.5.1",
+    "scikit_learn": "1.9.0"
+  }
+}

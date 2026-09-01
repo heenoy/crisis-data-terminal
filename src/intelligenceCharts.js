@@ -370,6 +370,3 @@ export function renderMapLegend(container) {
     )
     .join('')
 }
-
-// Keep export for any legacy reference — palette is now tier-based
-export const DISASTER_TYPE_COLORS = MAP_TIER

@@ -1,0 +1,30 @@
+{
+  "flags": [
+    "EXPLORATORY",
+    "NOT FOR MODEL SELECTION",
+    "NOT DEPLOYED"
+  ],
+  "dataset": "International Best Track Archive for Climate Stewardship (IBTrACS)",
+  "publisher": "NOAA NCEI",
+  "version": "v04r01",
+  "download_url": "https://www.ncei.noaa.gov/data/international-best-track-archive-for-climate-stewardship-ibtracs/v04r01/access/csv/ibtracs.since1980.list.v04r01.csv",
+  "attempted_date": "2026-08-31",
+  "source_last_modified": "2026-08-30T08:59:48Z",
+  "source_content_length_from_head": 143681274,
+  "download_complete": false,
+  "error": "PermissionError: [Errno 13] Permission denied during HTTP response iteration; stopped without mirror or additional network retry",
+  "raw_file": "ml_experiments/exploratory/tropical_cyclone_audit/data/raw/ibtracs.v04r01.2000_2021.INCOMPLETE.csv",
+  "saved_bytes": 2942,
+  "sha256_partial_only": "1a9584b2c6e590d02b6ffaf497f43b92bb3f11ee9c38449f95348e1e75dc7465",
+  "retained_development_track_rows": 0,
+  "usable_for_analysis": false,
+  "intended_time_coverage": "2000-01-01 <= ISO_TIME < 2022-01-01",
+  "dataset_time_coverage_documented": "1840s to present; NOT downloaded in full",
+  "use_information": "Official NCEI metadata requires dataset/paper attribution and disclaims accuracy/completeness warranty",
+  "documentation_urls": {
+    "column_documentation.pdf": "https://www.ncei.noaa.gov/sites/default/files/2025-09/IBTrACS_v04r01_column_documentation.pdf",
+    "technical_details.pdf": "https://www.ncei.noaa.gov/sites/default/files/2025-04/IBTrACS_version4r01_Technical_Details.pdf",
+    "official_metadata.html": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C01552"
+  },
+  "note": "Official documentation was read through web tools. No offline PDF download was completed. SHA-256 is only for the incomplete local file, not the complete official dataset."
+}
