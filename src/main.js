@@ -144,10 +144,10 @@ const SCREEN_BAR_LABELS = {
     br: '[MODULE: RESERVED]',
   },
   'admin/models': {
-    tl: '[ADMIN PORTAL / MODELS]',
-    tr: '[MODEL CONTROL]',
+    tl: '[ADMIN PORTAL / MODEL ARCHIVE]',
+    tr: '[READ ONLY]',
     bl: '[ACCESS: ADMIN]',
-    br: '[MODULE: RESERVED]',
+    br: '[RF-T2: FROZEN]',
   },
   intro: {
     tl: '[CRISIS DATA]',

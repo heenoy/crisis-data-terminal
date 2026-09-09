@@ -12,6 +12,9 @@
     "preview:frontend": "vite preview --host 127.0.0.1 --strictPort",
     "test:auth-prep": "node scripts/verify-auth-migration-prep.mjs",
     "test:auth-retirement": "node scripts/verify-auth-retirement.mjs",
+    "generate:model-registry": "node scripts/generate-model-registry.mjs",
+    "test:model-registry": "node scripts/verify-model-registry.mjs",
+    "test:admin-model-page": "node scripts/verify-admin-model-page.mjs",
     "clean:emdat": "node scripts/clean-emdat.js"
   },
   "devDependencies": {

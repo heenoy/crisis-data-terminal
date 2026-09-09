@@ -207,6 +207,10 @@ try {
   const adminView = await adminSession.client.from('dashboard_stats').select('*').limit(1)
   results.admin_stats_view = safeResult(adminView.error, adminView.data)
   expect('admin statistics view must succeed', !adminView.error)
+
+  const finalCount = await service.from('disaster_events').select('id', { count: 'exact', head: true })
+  results.final_disaster_count = finalCount.count
+  expect('final disaster count must remain 16856', !finalCount.error && finalCount.count === 16856)
 } finally {
   await cleanup()
 }

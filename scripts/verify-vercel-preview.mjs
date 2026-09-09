@@ -62,7 +62,9 @@ const browser = await chromium.launch({ headless: true, executablePath: process.
 const context = await browser.newContext({ viewport: { width: 1280, height: 720 } })
 const page = await context.newPage()
 const consoleErrors = []
+const pageErrors = []
 page.on('console', (message) => { if (message.type() === 'error') consoleErrors.push(message.text()) })
+page.on('pageerror', (error) => pageErrors.push(error.message))
 await page.goto(shareUrl, { waitUntil: 'domcontentloaded', timeout: 120000 })
 await page.waitForURL(`${previewUrl}/**`, { timeout: 120000 })
 
@@ -87,12 +89,13 @@ const remote = await page.evaluate(async (requestPayloads) => {
   return {
     health: await request('/api/health'),
     options: await request('/api/impact-options'),
+    ai: await request('/api/ai-chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ question: '请简要说明洪水灾害的档案分析要点。', history: [] }) }),
     predictions,
     repeatedPrediction: await request('/api/predict-impact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(requestPayloads[0]) }),
   }
 }, payloads)
 
-for (const [key, response] of [['health', remote.health], ['options', remote.options], ...remote.predictions.map((item, index) => [`prediction${index + 1}`, item]), ['repeatedPrediction', remote.repeatedPrediction]])
+for (const [key, response] of [['health', remote.health], ['options', remote.options], ['ai', remote.ai], ...remote.predictions.map((item, index) => [`prediction${index + 1}`, item]), ['repeatedPrediction', remote.repeatedPrediction]])
   if (response.status !== 200 || !response.contentType.includes('application/json')) throw new Error(`${key} contract failed`)
 if (remote.options.body.countries.length < 200 || remote.options.body.disaster_types.length < 2) throw new Error('Preview options are incomplete')
 if (JSON.stringify(remote.health.body.classes) !== JSON.stringify(['Low', 'Moderate', 'Severe'])) throw new Error('Preview class order changed')
@@ -111,13 +114,27 @@ const storageKey = `sb-${projectRef}-auth-token`
 async function installSession(session) {
   await page.evaluate(({ key, value }) => localStorage.setItem(key, JSON.stringify(value)), { key: storageKey, value: session })
 }
+const routeChecks = []
+async function verifyRoute(route) {
+  await page.goto(`${previewUrl}/?route-check=${encodeURIComponent(route)}#/${route}`, { waitUntil: 'domcontentloaded', timeout: 120000 })
+  await completeBoot()
+  await page.waitForFunction((expected) => location.hash === `#/${expected}`, route, { timeout: 30000 })
+  if (!(await page.locator('#app').innerText()).trim()) throw new Error(`Empty Preview route: ${route}`)
+  routeChecks.push(route)
+}
 const userAuth = await sessionFor(USER_ID)
+await page.evaluate((key) => { localStorage.removeItem(key); sessionStorage.removeItem('crisis_user') }, storageKey)
+await page.goto(`${previewUrl}/?verify=unauth#/admin/models`, { waitUntil: 'domcontentloaded', timeout: 120000 })
+await completeBoot()
+await page.waitForFunction(() => location.hash === '#/auth', null, { timeout: 30000 })
+const unauthRoute = await page.evaluate(() => location.hash)
 await installSession(userAuth.session)
 await page.goto(`${previewUrl}/?verify=ordinary#/admin/dashboard`, { waitUntil: 'domcontentloaded', timeout: 120000 })
 await completeBoot()
 await page.waitForFunction(() => location.hash !== '#/admin/dashboard', null, { timeout: 30000 })
 const ordinaryRoute = await page.evaluate(() => location.hash)
 if (ordinaryRoute !== '#/user/overview') throw new Error('Ordinary user admin guard failed')
+for (const route of ['start', 'user/overview', 'user/search', 'user/analysis', 'user/impact-analysis', 'user/ai-inquiry']) await verifyRoute(route)
 
 const { data: refreshed, error: refreshError } = await userAuth.client.auth.refreshSession({ refresh_token: userAuth.session.refresh_token })
 if (refreshError || !refreshed.session) throw refreshError || new Error('Session refresh failed')
@@ -137,14 +154,83 @@ await page.goto(`${previewUrl}/?verify=admin#/admin/dashboard`, { waitUntil: 'do
 await completeBoot()
 await page.waitForFunction(() => location.hash === '#/admin/dashboard', null, { timeout: 30000 })
 const adminRoute = await page.evaluate(() => location.hash)
-await adminAuth.client.auth.signOut()
+for (const route of ['admin/dashboard', 'admin/disasters', 'admin/users', 'admin/system']) await verifyRoute(route)
+await page.goto(`${previewUrl}/?verify=models#/admin/models`, { waitUntil: 'domcontentloaded', timeout: 120000 })
+await completeBoot()
+await page.waitForSelector('[data-chart="weights"] canvas', { timeout: 60000 })
+const modelPage = await page.evaluate(() => {
+  const weightChart = document.querySelector('[data-chart="weights"]')
+  return {
+    route: location.hash,
+    productionCards: document.querySelectorAll('[data-status="Production"]').length,
+    modelCards: document.querySelectorAll('.model-archive-card').length,
+    charts: [...document.querySelectorAll('.model-chart')].filter((node) => node.querySelector('canvas')).length,
+    weightSeries: Number(weightChart?.dataset.seriesCount),
+    weightPoints: Number(weightChart?.dataset.pointCount),
+    removedProductionCopy: !document.querySelector('.model-production')?.textContent.includes('不是灾害发生预测或实时预警'),
+    removedStatusExplanation: !document.querySelector('.model-evidence-grid')?.textContent.includes('Candidate不代表可一键部署'),
+    severeToLowPresent: document.querySelector('.model-evidence-grid')?.textContent.includes('Severe→Low'),
+    horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+  }
+})
+if (modelPage.route !== '#/admin/models' || modelPage.productionCards !== 1 || modelPage.modelCards !== 6 || modelPage.charts !== 5 || modelPage.weightSeries !== 3 || modelPage.weightPoints !== 15 || !modelPage.removedProductionCopy || !modelPage.removedStatusExplanation || !modelPage.severeToLowPresent || modelPage.horizontalOverflow) throw new Error(`Preview model page failed: ${JSON.stringify(modelPage)}`)
+await page.locator('[data-chart="weights"]').scrollIntoViewIfNeeded()
+const weightBox = await page.locator('[data-chart="weights"]').boundingBox()
+if (!weightBox) throw new Error('Weight chart has no rendered box')
+const plotHeight = weightBox.height - 60 - 38
+await page.mouse.move(weightBox.x + 52 + ((weightBox.width - 72) / 10), weightBox.y + 60 + (1 - 0.23076923076923078 / 0.9) * plotHeight)
+await page.waitForFunction(() => document.querySelector('[data-chart="weights"]')?.textContent.includes('0.2308'), null, { timeout: 5000 })
+const weightTooltip = await page.locator('[data-chart="weights"]').innerText()
+if (!weightTooltip.includes('Precision') || !weightTooltip.includes('Recall') || !weightTooltip.includes('F1')) throw new Error('Weight chart tooltip is incomplete')
+await page.mouse.move(1, 1)
+await page.waitForTimeout(150)
+const weightCanvas = page.locator('[data-chart="weights"] canvas')
+const legendBaseline = await weightCanvas.evaluate((canvas) => canvas.toDataURL())
+let weightLegendToggle = false
+for (let offset = weightBox.width * 0.3; offset <= weightBox.width * 0.7; offset += 16) {
+  await page.mouse.click(weightBox.x + offset, weightBox.y + 12)
+  await page.mouse.move(1, 1)
+  await page.waitForTimeout(100)
+  const changed = await weightCanvas.evaluate((canvas, baseline) => canvas.toDataURL() !== baseline, legendBaseline)
+  if (!changed) continue
+  weightLegendToggle = true
+  await page.mouse.click(weightBox.x + offset, weightBox.y + 12)
+  break
+}
+if (!weightLegendToggle) throw new Error('Weight chart legend toggle was not interactive')
+await page.locator('[data-model-detail="rf-t2-final"]').click()
+await page.waitForSelector('.model-detail-dialog[open]')
+await page.locator('[data-model-detail-close]').click()
+const viewports = []
+for (const viewport of [{ width: 1920, height: 1080 }, { width: 1280, height: 720 }, { width: 960, height: 600 }, { width: 390, height: 844 }]) {
+  await page.setViewportSize(viewport)
+  await page.waitForTimeout(150)
+  viewports.push({ ...viewport, horizontalOverflow: await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth) })
+}
+if (viewports.some((viewport) => viewport.horizontalOverflow)) throw new Error('Preview model page horizontal overflow detected')
+await page.setViewportSize({ width: 1280, height: 720 })
+await verifyRoute('admin/dashboard')
+await page.locator('[data-admin-action="logout"]').click()
+await page.waitForFunction(() => location.hash === '#/start', null, { timeout: 30000 })
+const logoutRoute = await page.evaluate(() => location.hash)
+await page.goto(`${previewUrl}/?verify=after-signout#/admin/models`, { waitUntil: 'domcontentloaded', timeout: 120000 })
+await completeBoot()
+await page.waitForFunction(() => location.hash === '#/auth', null, { timeout: 30000 })
+const afterSignoutRoute = await page.evaluate(() => location.hash)
 
 await browser.close()
 console.log(JSON.stringify({
   health: { status: remote.health.status, model: remote.health.body.model, classes: remote.health.body.classes, elapsed_ms: Math.round(remote.health.elapsedMs) },
   options: { status: remote.options.status, countries: remote.options.body.countries.length, disaster_types: remote.options.body.disaster_types.length, elapsed_ms: Math.round(remote.options.elapsedMs) },
+  ai: { status: remote.ai.status, answer: typeof remote.ai.body.answer === 'string' && remote.ai.body.answer.length > 0, elapsed_ms: Math.round(remote.ai.elapsedMs) },
   predictions: remote.predictions.map((item, index) => ({ case: index + 1, status: item.status, level: item.body.prediction.level, elapsed_ms: Math.round(item.elapsedMs) })),
   prediction_consistency: { max_probability_difference: maxProbabilityDifference, repeat_elapsed_ms: Math.round(remote.repeatedPrediction.elapsedMs) },
-  auth: { ordinary_admin_route: ordinaryRoute, forged_route: forgedRoute, admin_route: adminRoute, refresh: true, sign_out: true },
+  auth: { unauth_route: unauthRoute, ordinary_admin_route: ordinaryRoute, forged_route: forgedRoute, admin_route: adminRoute, refresh: true, logout_route: logoutRoute, after_signout_route: afterSignoutRoute },
+  routes: routeChecks,
+  model_page: modelPage,
+  weight_tooltip: { four_decimal_value: weightTooltip.includes('0.2308'), all_series: true },
+  weight_legend_toggle: weightLegendToggle,
+  viewports,
   console_errors: consoleErrors,
+  page_errors: pageErrors,
 }, null, 2))

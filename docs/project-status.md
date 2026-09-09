@@ -161,6 +161,10 @@ Admin UI and visual design remain experimental.
 
 管理端 UI 和视觉设计仍处于实验阶段。
 
+Stage 4.3-A of the administrator model archive is completed and deployed. It provides a read-only view of the sole Production RF-T2 model and traceable experiment results. Model switching, upload, training, deletion, and deployment controls are not implemented; the page does not change the frozen model-governance boundary, and the broader Admin UI remains Experimental.
+
+管理员模型档案4.3-A已完成并发布：页面只读呈现唯一Production的RF-T2与可追溯实验结果。模型切换、上传、训练、删除和部署控制均未实现；该页面不改变冻结模型治理边界，管理端UI整体仍为Experimental。
+
 Possible changes include:
 
 - layout;
