@@ -22,7 +22,7 @@ const ROUTE_LABELS = {
   [ROUTES.ADMIN_DASHBOARD]: '管理控制台',
   [ROUTES.ADMIN_DISASTERS]: '灾害管理',
   [ROUTES.ADMIN_USERS]: '用户管理',
-  [ROUTES.ADMIN_SYSTEM]: '系统监控',
+  [ROUTES.ADMIN_SYSTEM]: '系统状态',
   [ROUTES.ADMIN_MODELS]: '模型档案',
 }
 

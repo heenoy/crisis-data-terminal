@@ -139,9 +139,9 @@ const SCREEN_BAR_LABELS = {
   },
   'admin/system': {
     tl: '[ADMIN PORTAL / SYSTEM]',
-    tr: '[SYSTEM MONITOR]',
+    tr: '[SYSTEM STATUS]',
     bl: '[ACCESS: ADMIN]',
-    br: '[MODULE: RESERVED]',
+    br: '[CHECK: ON DEMAND]',
   },
   'admin/models': {
     tl: '[ADMIN PORTAL / MODEL ARCHIVE]',
@@ -395,7 +395,7 @@ const AI_ROUTE_MESSAGES = {
   [ROUTES.ADMIN_DASHBOARD]: 'VAULT-0：\n管理控制台已连接。',
   [ROUTES.ADMIN_DISASTERS]: 'VAULT-0：\n灾害档案管理模块已连接。',
   [ROUTES.ADMIN_USERS]: 'VAULT-0：\n用户管理模块已连接。',
-  [ROUTES.ADMIN_SYSTEM]: 'VAULT-0：\n系统监控模块已连接。',
+  [ROUTES.ADMIN_SYSTEM]: 'VAULT-0：\n系统状态检查模块已连接。',
   [ROUTES.ADMIN_MODELS]: 'VAULT-0：\n冻结模型档案为只读状态。',
   start: '欢迎接入 Crisis Data Terminal。',
   dashboard: 'VAULT-0：\n全球灾害数据库已连接。',

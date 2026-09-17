@@ -10,7 +10,7 @@ import { destroyUserAiInquiry, initUserAiInquiry } from './pages/user/aiInquiry.
 import { initAdminDashboard, renderAdminDashboard, resetAdminDashboard } from './pages/admin/dashboard.js'
 import { initAdminDisasterManage, renderAdminDisasterManage } from './pages/admin/disasterManage.js'
 import { initAdminUserManage, renderAdminUserManage } from './pages/admin/userManage.js'
-import { initAdminSystemMonitor, renderAdminSystemMonitor } from './pages/admin/systemMonitor.js'
+import { destroyAdminSystemMonitor, initAdminSystemMonitor, renderAdminSystemMonitor } from './pages/admin/systemMonitor.js'
 import { destroyAdminModelManage, initAdminModelManage, renderAdminModelManage } from './pages/admin/modelManage.js'
 
 const BRAND_SUBTITLE = 'CRISIS DATA TERMINAL / 灾害事件智能分析终端 · Disaster Intelligence Terminal'
@@ -231,6 +231,7 @@ export function renderSystemPage({
   destroyUserOverview()
   destroyUserAiInquiry()
   destroyAdminModelManage()
+  destroyAdminSystemMonitor()
   resetAdminDashboard()
 
   const pages = {

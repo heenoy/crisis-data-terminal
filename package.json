@@ -15,6 +15,8 @@
     "generate:model-registry": "node scripts/generate-model-registry.mjs",
     "test:model-registry": "node scripts/verify-model-registry.mjs",
     "test:admin-model-page": "node scripts/verify-admin-model-page.mjs",
+    "test:system-health": "node scripts/test-system-health.mjs",
+    "test:admin-system-status": "node scripts/verify-admin-system-status.mjs",
     "clean:emdat": "node scripts/clean-emdat.js"
   },
   "devDependencies": {

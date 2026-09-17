@@ -165,6 +165,10 @@ Stage 4.3-A of the administrator model archive is completed and deployed. It pro
 
 管理员模型档案4.3-A已完成并发布：页面只读呈现唯一Production的RF-T2与可追溯实验结果。模型切换、上传、训练、删除和部署控制均未实现；该页面不改变冻结模型治理边界，管理端UI整体仍为Experimental。
 
+Stage 4.4 of the administrator system-status page is completed and deployed. It provides on-demand, read-only checks for the Data API, prediction API, and manually triggered AI generation verification; it does not provide continuous monitoring, alerting, historical status storage, or runtime-resource telemetry. The broader Admin UI remains Experimental.
+
+管理员系统状态页4.4已完成并发布：页面提供Data API、预测API及管理员手动触发AI生成验证的按需只读检查；不提供持续监控、告警、历史状态存储或运行时资源遥测。管理端UI整体仍为Experimental。
+
 Possible changes include:
 
 - layout;

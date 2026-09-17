@@ -20,7 +20,7 @@ function logLine(label, value, id, modifier = '') {
   `
 }
 
-function moduleEntry(route, code, label, secondary = false) {
+function moduleEntry(route, code, label, secondary = false, status = 'READY') {
   return `
     <button
       type="button"
@@ -32,7 +32,7 @@ function moduleEntry(route, code, label, secondary = false) {
         <strong>[ ${code} ]</strong>
         <em>${label}</em>
       </span>
-      <span class="admin-module-entry__status" aria-hidden="true">READY</span>
+      <span class="admin-module-entry__status" aria-hidden="true">${status}</span>
     </button>
   `
 }
@@ -65,7 +65,7 @@ export function renderAdminDashboard() {
           <h2>[ ADMIN MODULE ]</h2>
           ${moduleEntry('admin/disasters', 'DISASTER DATA', '灾害数据管理')}
           ${moduleEntry('admin/users', 'USER CONTROL', '用户管理')}
-          ${moduleEntry('admin/system', 'SYSTEM MONITOR', '系统监控')}
+          ${moduleEntry('admin/system', 'SYSTEM STATUS', '系统状态', false, 'ON DEMAND')}
           ${moduleEntry('admin/models', 'MODEL CONTROL', '模型管理')}
           ${moduleEntry('user/overview', 'DISASTER OVERVIEW', '世界灾害总览', true)}
         </nav>

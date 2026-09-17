@@ -495,3 +495,105 @@
   .model-archive-card__top { align-items: flex-start; flex-direction: column; }
   .model-chart { height: 15rem; }
 }
+
+/* On-demand system health checks */
+.admin-system-status { padding-bottom: 3rem; }
+.system-health-summary,
+.system-health-card,
+.system-health-note {
+  border: 1px solid rgba(124, 255, 151, .35);
+  background: rgba(0, 16, 7, .68);
+  box-shadow: inset 0 0 2rem rgba(33, 255, 91, .025);
+}
+.system-health-summary {
+  display: flex;
+  gap: .9rem;
+  align-items: center;
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+}
+.system-health-summary__mark { font-size: 1.65rem; }
+.system-health-summary strong { display: block; margin-top: .25rem; }
+.system-health-summary[data-state="ready"] { border-color: rgba(87, 242, 135, .7); }
+.system-health-summary[data-state="degraded"] { border-color: rgba(255, 180, 84, .72); }
+.system-health-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.system-health-card {
+  min-width: 0;
+  padding: 1rem;
+}
+.system-health-card[data-state="ready"] { border-color: rgba(87, 242, 135, .58); }
+.system-health-card[data-state="degraded"],
+.system-health-card[data-state="unchecked"] { border-color: rgba(255, 180, 84, .55); }
+.system-health-card[data-state="unavailable"] { border-color: rgba(255, 123, 114, .72); }
+.system-health-card[data-health-card="ai"] { grid-column: 1 / -1; }
+.system-health-card__heading {
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.system-health-card h2 {
+  margin: .3rem 0 .7rem;
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.system-health-badge {
+  flex: 0 0 auto;
+  max-width: 12rem;
+  padding: .3rem .5rem;
+  border: 1px solid currentColor;
+  font-size: .7rem;
+  line-height: 1.35;
+  text-align: center;
+}
+.system-health-card[data-state="loading"] .system-health-badge { color: #58b6ff; }
+.system-health-card[data-state="degraded"] .system-health-badge,
+.system-health-card[data-state="unchecked"] .system-health-badge { color: #ffcf83; }
+.system-health-card[data-state="unavailable"] .system-health-badge { color: #ff8d7f; }
+.system-health-card__body { color: rgba(203, 255, 214, .78); line-height: 1.55; }
+.system-health-card__body p { margin: .45rem 0; overflow-wrap: anywhere; }
+.system-health-card__body code { color: rgba(174, 245, 189, .82); }
+.system-health-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .65rem;
+  margin: .9rem 0 0;
+}
+.system-health-meta div {
+  min-width: 0;
+  padding: .55rem;
+  border-left: 2px solid rgba(87, 242, 135, .4);
+  background: rgba(22, 75, 39, .12);
+}
+.system-health-meta dt { color: rgba(169, 255, 186, .58); font-size: .7rem; }
+.system-health-meta dd { margin: .3rem 0 0; overflow-wrap: anywhere; }
+.system-health-card__action { margin-top: .9rem; padding: .55rem .75rem; }
+.system-health-refresh { padding: .65rem .9rem; white-space: nowrap; }
+.system-health-refresh:disabled,
+.system-health-card__action:disabled { cursor: wait; opacity: .52; }
+.system-health-note {
+  display: flex;
+  gap: .8rem;
+  margin-top: 1rem;
+  padding: .9rem 1rem;
+  color: rgba(203, 255, 214, .7);
+  line-height: 1.55;
+}
+.system-health-note strong { flex: 0 0 auto; color: rgba(174, 245, 189, .9); }
+
+@media (max-width: 760px) {
+  .system-health-grid { grid-template-columns: 1fr; }
+  .system-health-card[data-health-card="ai"] { grid-column: auto; }
+  .system-health-note { flex-direction: column; }
+}
+@media (max-width: 440px) {
+  .system-health-card__heading { flex-direction: column; }
+  .system-health-badge { max-width: none; }
+  .system-health-meta { grid-template-columns: 1fr; }
+}
